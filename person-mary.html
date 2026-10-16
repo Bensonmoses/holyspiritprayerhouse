@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Analytics (GA4) — visitor & click counts -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0PS586KHL7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0PS586KHL7');
+  </script>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Late Palaparthi Mary Kumari | Holy Spirit Prayer House (IPC)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Telugu:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/videos.css?v=20261015">
+  <style>
+    .memorial-hero {
+      background: linear-gradient(160deg, #200A02 0%, #3A1408 50%, #200A02 100%);
+      padding: 5rem 0 0; border-bottom: 3px solid rgba(201,168,76,0.4);
+    }
+    .memorial-hero-inner {
+      display: grid; grid-template-columns: 280px 1fr;
+      gap: 4rem; align-items: end; max-width: 900px; margin: 0 auto; padding: 0 1.5rem;
+    }
+    .memorial-hero-photo {
+      border-radius: var(--radius-lg) var(--radius-lg) 0 0; overflow: hidden;
+      box-shadow: 0 -4px 30px rgba(0,0,0,0.5); margin-top: 2rem;
+    }
+    .memorial-hero-photo img { width:100%; display:block; max-height:380px; object-fit:cover; object-position:center top; }
+    .memorial-hero-info { padding-bottom: 3rem; }
+    .dove-badge { display:inline-flex; align-items:center; gap:0.4rem; background:rgba(201,168,76,0.1); border:1px solid rgba(201,168,76,0.3); color:var(--gold); font-size:0.68rem; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; padding:0.35rem 0.9rem; border-radius:var(--radius-full); margin-bottom:1rem; }
+    .memorial-hero-info h1 { font-family:'Playfair Display',serif; font-size:clamp(1.8rem,4vw,2.7rem); color:#fff; font-style:italic; line-height:1.2; margin-bottom:0.4rem; }
+    .memorial-hero-info .subtitle { color:rgba(255,255,255,0.5); font-size:0.88rem; display:block; margin-bottom:1.5rem; }
+    .memorial-verse { font-family:'Playfair Display',serif; font-style:italic; color:var(--gold); font-size:0.9rem; border-left:2px solid rgba(201,168,76,0.3); padding-left:1rem; line-height:1.7; }
+    .bio-section { padding:4rem 0; }
+    .bio-inner { max-width:820px; margin:0 auto; padding:0 1.5rem; }
+    .bio-inner p { color:var(--text-mid); line-height:1.95; font-size:0.97rem; margin-bottom:1.1rem; }
+    .photo-section { background:var(--off-white); padding:4rem 0; }
+    .photo-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:1rem; }
+    .photo-card { border-radius:var(--radius-md); overflow:hidden; aspect-ratio:4/3; cursor:pointer; box-shadow:var(--shadow-sm); transition:transform 0.2s,box-shadow 0.2s; }
+    .photo-card:hover { transform:translateY(-3px); box-shadow:var(--shadow-lg); }
+    .photo-card img { width:100%; height:100%; object-fit:cover; display:block; }
+    .lightbox { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.95); z-index:9999; align-items:center; justify-content:center; flex-direction:column; }
+    .lightbox.open { display:flex; }
+    .lightbox img { max-width:90vw; max-height:85vh; object-fit:contain; }
+    .lb-close { position:absolute; top:1rem; right:1.5rem; color:#fff; font-size:2.2rem; cursor:pointer; background:none; border:none; }
+    .lb-nav { position:absolute; top:50%; transform:translateY(-50%); color:rgba(255,255,255,0.7); font-size:2.5rem; background:none; border:none; cursor:pointer; padding:1rem; }
+    .lb-prev { left:1rem; } .lb-next { right:1rem; }
+    .lb-count { color:rgba(255,255,255,0.5); font-size:0.8rem; margin-top:0.75rem; }
+    .empty-photos { text-align:center; padding:3rem; color:var(--text-light); }
+    @media(max-width:768px){
+      .memorial-hero-inner { grid-template-columns:1fr; }
+      .memorial-hero-photo { max-width:220px; border-radius:var(--radius-lg); }
+      .memorial-hero { padding-bottom:2rem; }
+    }
+  </style>
+</head>
+<body class="english">
+<div id="site-header"></div>
+
+<section class="memorial-hero">
+  <div class="memorial-hero-inner">
+    <div class="memorial-hero-photo">
+      <img src="images/Mary.jpeg" alt="Late Palaparthi Mary Kumari"
+        onerror="this.style.background='#2A1008';this.style.minHeight='300px';">
+    </div>
+    <div class="memorial-hero-info">
+      <div class="dove-badge">🕊️ In Loving Memory</div>
+      <h1>
+        <span class="english-text">Late Palaparthi Mary Kumari</span>
+        <span class="telugu-text">స్వర్గీయ పాలపర్తి మేరీ కుమారి</span>
+      </h1>
+      <span class="subtitle">
+        <span class="english-text">Beloved Wife of Bishop P. Moses · First Lady of Holy Spirit Prayer House (IPC) · Called to Glory — April 8, 2023</span>
+        <span class="telugu-text">బిషప్ పి. మోషే యొక్క ప్రియమైన భార్య · ఫస్ట్ లేడీ · ప్రభువు సన్నిధికి చేరుకున్నారు — ఏప్రిల్ 8, 2023</span>
+      </span>
+      <div class="memorial-verse">
+        <em>"Precious in the sight of the Lord is the death of His faithful servants."</em><br>
+        <span style="font-size:0.82rem;color:rgba(201,168,76,0.6);">— Psalm 116:15</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section Nav -->
+<nav class="person-section-nav" style="background:#fff;border-bottom:3px solid rgba(155,28,28,0.14);position:sticky;top:0;z-index:80;box-shadow:0 4px 18px rgba(0,0,0,0.09);">
+  <div class="container" style="display:flex;justify-content:center;flex-wrap:wrap;gap:0.9rem;overflow-x:auto;padding:1.1rem 1.5rem;scrollbar-width:none;">
+    <a href="#sec-memorial" class="snav-btn" style="background:linear-gradient(135deg,#9B1C1C,#7a1515);color:#fff;"><span class="english-text">Memorial Services</span><span class="telugu-text">స్మారక సేవలు</span></a>
+    <a href="#sec-messages" class="snav-btn" style="background:linear-gradient(135deg,#1B3A7A,#0D2050);color:#fff;"><span class="english-text">Messages</span><span class="telugu-text">సందేశాలు</span></a>
+    <a href="#sec-songs" class="snav-btn" style="background:linear-gradient(135deg,#C9A84C,#a8893e);color:#fff;"><span class="english-text">Songs</span><span class="telugu-text">పాటలు</span></a>
+    <a href="#sec-pictures" class="snav-btn" style="background:linear-gradient(135deg,#4a4a4a,#222);color:#fff;"><span class="english-text">Pictures</span><span class="telugu-text">చిత్రాలు</span></a>
+  </div>
+</nav>
+<style>
+  .snav-btn { display:inline-flex;align-items:center;gap:0.55rem;padding:0.78rem 1.8rem;border-radius:50px;font-size:0.9rem;font-weight:700;text-decoration:none;white-space:nowrap;letter-spacing:0.04em;transition:opacity 0.22s,transform 0.22s,box-shadow 0.22s;flex-shrink:0;box-shadow:0 4px 14px rgba(0,0,0,0.22); }
+  .snav-btn:hover { opacity:0.92;transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,0.3); }
+</style>
+
+<section class="bio-section">
+  <div class="bio-inner">
+    <span class="section-eyebrow"><span class="english-text">Her Legacy</span><span class="telugu-text">ఆమె వారసత్వం</span></span>
+    <h2 class="section-title" style="margin-bottom:1.5rem;">
+      <span class="english-text">A Life of Faith, Prayer and Sacrifice</span>
+      <span class="telugu-text">విశ్వాసం, ప్రార్థన మరియు త్యాగం యొక్క జీవితం</span>
+    </h2>
+    <p>
+      <span class="english-text">Palaparthi Mary Kumari walked beside Bishop P. Moses from the very beginning of the ministry in 1995 — a faithful companion, a pillar of prayer, and the first lady who gave her life fully to the house of God in Oduru. She was not just a wife to the Bishop; she was a co-laborer in the Gospel, the heartbeat behind countless prayers that were answered.</span>
+      <span class="telugu-text">పాలపర్తి మేరీ కుమారి 1995లో సేవ ప్రారంభం నుండి బిషప్ పి. మోషే పక్కన నడిచారు — విశ్వాసపాత్రమైన జీవిత భాగస్వామి, ప్రార్థన యొక్క స్తంభం మరియు ఒడూరులో దేవుని ఇంటికి తన జీవితాన్ని అంకితం చేసిన ఫస్ట్ లేడీ.</span>
+    </p>
+    <p>
+      <span class="english-text">She raised three children — Palaparthi Estharroj, Palaparthi Benson Moses, and Palaparthi Billygraham Moses — instilling in each of them the love of God, the value of prayer, and the spirit of service. Her quiet strength and gentle wisdom shaped the lives of her family and the many in the congregation who knew her.</span>
+      <span class="telugu-text">ఆమె ముగ్గురు పిల్లలను పెంచింది — ఎస్తర్రోజ్, బెన్సన్ మోసెస్ మరియు బిలీగ్రాహం మోసెస్ — వారిలో దేవుని ప్రేమ, ప్రార్థన విలువ మరియు సేవా స్ఫూర్తిని నింపింది.</span>
+    </p>
+    <p>
+      <span class="english-text">On April 8, 2023, she was called home to glory. Her absence is deeply felt — in the prayers of the church, in the home of Bishop Moses, and in the hearts of all who knew her. But her legacy lives on in every life she touched and in the ministry she helped build over three faithful decades.</span>
+      <span class="telugu-text">ఏప్రిల్ 8, 2023న, ఆమె మహిమకు పిలువబడింది. చర్చి ప్రార్థనలలో, బిషప్ మోషే గృహంలో మరియు ఆమెను తెలిసిన అందరి హృదయాలలో ఆమె లేమి తీవ్రంగా అనుభవించబడుతోంది.</span>
+    </p>
+    <a href="gallery.html?album=Mary" class="btn btn-outline" style="margin-top:0.5rem;">
+      <span class="english-text">📸 Photo Memorial Gallery</span>
+      <span class="telugu-text">📸 ఫోటో స్మారక గ్యాలరీ</span>
+    </a>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     MEMORIAL VIDEOS
+═══════════════════════════════════ -->
+<section id="sec-memorial" style="background:linear-gradient(180deg,#200A02 0%,#3A1408 60%,#200A02 100%);padding:4.5rem 0;border-top:1px solid rgba(201,168,76,0.18);border-bottom:1px solid rgba(201,168,76,0.18);">
+  <div class="container">
+
+    <div style="text-align:center;margin-bottom:2.75rem;">
+      <span style="display:inline-block;font-size:0.67rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:rgba(201,168,76,0.65);margin-bottom:0.5rem;">🕊️ In Her Memory</span>
+      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3.5vw,2.2rem);color:#fff;font-style:italic;margin:0 0 0.4rem;">
+        <span class="english-text">Memorial Services</span>
+        <span class="telugu-text">స్మారక సేవలు</span>
+      </h2>
+      <p style="font-size:0.85rem;color:rgba(255,255,255,0.45);max-width:540px;margin:0 auto;line-height:1.7;">
+        <span class="english-text">Sacred recordings preserved in honour of Late Palaparthi Mary Kumari — her life, her farewell, and the love of those who gathered to remember her.</span>
+        <span class="telugu-text">స్వర్గీయ పాలపర్తి మేరీ కుమారి గౌరవార్థం భద్రపరచిన పవిత్ర రికార్డింగులు.</span>
+      </p>
+    </div>
+
+    <!-- Featured: Biography -->
+    <div style="max-width:760px;margin:0 auto 2.5rem;">
+      <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.75rem;">
+        <span style="background:var(--gold);color:#000;font-size:0.62rem;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;padding:0.22rem 0.7rem;border-radius:var(--radius-full);">Featured</span>
+        <span style="font-size:0.82rem;font-weight:600;color:rgba(255,255,255,0.8);">
+          <span class="english-text">Mary Kumari — Biography</span>
+          <span class="telugu-text">మేరీ కుమారి — జీవిత చరిత్ర</span>
+        </span>
+      </div>
+      <div style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 8px 40px rgba(0,0,0,0.6);border:2px solid rgba(201,168,76,0.35);border-top:3px solid var(--gold);aspect-ratio:16/9;">
+        <iframe src="https://www.youtube.com/embed/0SXPKWOUfuc?rel=0&modestbranding=1"
+          title="Mary Kumari Biography"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          style="width:100%;height:100%;display:block;"></iframe>
+      </div>
+    </div>
+
+    <!-- 4 service videos in 2×2 grid -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;max-width:900px;margin:0 auto;" class="memorial-videos-grid">
+
+      <!-- Funeral in Church -->
+      <div>
+        <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.6rem;">
+          <span style="background:rgba(155,28,28,0.7);color:#fff;font-size:0.6rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:0.18rem 0.6rem;border-radius:var(--radius-full);">
+            <span class="english-text">Funeral</span><span class="telugu-text">అంత్యక్రియలు</span>
+          </span>
+          <span style="font-size:0.78rem;color:rgba(255,255,255,0.7);">
+            <span class="english-text">Service in Church</span>
+            <span class="telugu-text">చర్చిలో సేవ</span>
+          </span>
+        </div>
+        <div style="border-radius:var(--radius-md);overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,0.5);border:1px solid rgba(201,168,76,0.2);border-top:3px solid var(--crimson);aspect-ratio:16/9;">
+          <iframe src="https://www.youtube.com/embed/reiMWQzNAzk?rel=0&modestbranding=1"
+            title="Funeral Service in Church"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            style="width:100%;height:100%;display:block;"></iframe>
+        </div>
+      </div>
+
+      <!-- Funeral along the way -->
+      <div>
+        <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.6rem;">
+          <span style="background:rgba(155,28,28,0.7);color:#fff;font-size:0.6rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:0.18rem 0.6rem;border-radius:var(--radius-full);">
+            <span class="english-text">Funeral</span><span class="telugu-text">అంత్యక్రియలు</span>
+          </span>
+          <span style="font-size:0.78rem;color:rgba(255,255,255,0.7);">
+            <span class="english-text">Procession — Part 1</span>
+            <span class="telugu-text">అంత్యక్రియల ఊరేగింపు</span>
+          </span>
+        </div>
+        <div style="border-radius:var(--radius-md);overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,0.5);border:1px solid rgba(201,168,76,0.2);border-top:3px solid var(--crimson);aspect-ratio:16/9;">
+          <iframe src="https://www.youtube.com/embed/OM5ztKd0seA?rel=0&modestbranding=1"
+            title="Funeral Service Along the Way"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            style="width:100%;height:100%;display:block;"></iframe>
+        </div>
+      </div>
+
+      <!-- Memorial Service 1 -->
+      <div>
+        <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.6rem;">
+          <span style="background:rgba(60,40,10,0.9);border:1px solid rgba(201,168,76,0.35);color:var(--gold);font-size:0.6rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:0.18rem 0.6rem;border-radius:var(--radius-full);">
+            <span class="english-text">Memorial</span><span class="telugu-text">స్మారక</span>
+          </span>
+          <span style="font-size:0.78rem;color:rgba(255,255,255,0.7);">
+            <span class="english-text">Memorial Service — 1</span>
+            <span class="telugu-text">స్మారక సేవ — 1</span>
+          </span>
+        </div>
+        <div style="border-radius:var(--radius-md);overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,0.5);border:1px solid rgba(201,168,76,0.2);border-top:3px solid var(--gold);aspect-ratio:16/9;">
+          <iframe src="https://www.youtube.com/embed/QsXMasMAfd0?rel=0&modestbranding=1"
+            title="Memorial Service 1"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            style="width:100%;height:100%;display:block;"></iframe>
+        </div>
+      </div>
+
+      <!-- Memorial Service 2 -->
+      <div>
+        <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.6rem;">
+          <span style="background:rgba(60,40,10,0.9);border:1px solid rgba(201,168,76,0.35);color:var(--gold);font-size:0.6rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:0.18rem 0.6rem;border-radius:var(--radius-full);">
+            <span class="english-text">Memorial</span><span class="telugu-text">స్మారక</span>
+          </span>
+          <span style="font-size:0.78rem;color:rgba(255,255,255,0.7);">
+            <span class="english-text">Memorial Service — 2</span>
+            <span class="telugu-text">స్మారక సేవ — 2</span>
+          </span>
+        </div>
+        <div style="border-radius:var(--radius-md);overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,0.5);border:1px solid rgba(201,168,76,0.2);border-top:3px solid var(--gold);aspect-ratio:16/9;">
+          <iframe src="https://www.youtube.com/embed/wlIGUxwKbm0?rel=0&modestbranding=1"
+            title="Memorial Service 2"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            style="width:100%;height:100%;display:block;"></iframe>
+        </div>
+      </div>
+
+    </div><!-- /memorial-videos-grid -->
+
+    <!-- 1st Anniversary Memorial Service -->
+    <div style="max-width:760px;margin:2rem auto 0;">
+      <div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:0.75rem;justify-content:center;">
+        <span style="background:rgba(201,168,76,0.18);border:1px solid var(--gold);color:var(--gold);font-size:0.62rem;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;padding:0.22rem 0.75rem;border-radius:var(--radius-full);">1st Anniversary</span>
+        <span style="font-size:0.84rem;font-weight:600;color:rgba(255,255,255,0.85);">
+          <span class="english-text">Memorial Service · April 8, 2024</span>
+          <span class="telugu-text">స్మారక సేవ · ఏప్రిల్ 8, 2024</span>
+        </span>
+      </div>
+      <div style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 8px 40px rgba(0,0,0,0.6);border:2px solid rgba(201,168,76,0.45);border-top:3px solid var(--gold);aspect-ratio:16/9;">
+        <iframe src="https://www.youtube.com/embed/DfiR5nO09H0?rel=0&modestbranding=1"
+          title="1st Anniversary Memorial Service — April 8, 2024"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          style="width:100%;height:100%;display:block;"></iframe>
+      </div>
+      <p style="text-align:center;font-size:0.76rem;color:rgba(255,255,255,0.35);margin-top:0.55rem;font-style:italic;">
+        <span class="english-text">One year after her passing — gathered in love to remember and honour her life</span>
+        <span class="telugu-text">ఆమె నిష్క్రమణ తర్వాత ఒక సంవత్సరం — ఆమె జీవితాన్ని గుర్తు చేసుకోవడానికి ప్రేమతో సమావేశమయ్యారు</span>
+      </p>
+    </div>
+
+    <!-- 2nd & 3rd Anniversary Memorial Services -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;max-width:900px;margin:2rem auto 0;" class="memorial-videos-grid">
+      <div>
+        <div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:0.6rem;justify-content:center;flex-wrap:wrap;">
+          <span style="background:rgba(201,168,76,0.18);border:1px solid var(--gold);color:var(--gold);font-size:0.62rem;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;padding:0.22rem 0.75rem;border-radius:var(--radius-full);">2nd Anniversary</span>
+          <span style="font-size:0.8rem;font-weight:600;color:rgba(255,255,255,0.85);"><span class="english-text">Memorial Service · April 8, 2025 · Message by Bishop Samuel Finny</span><span class="telugu-text">స్మారక సేవ · ఏప్రిల్ 8, 2025 · బిషప్ శామ్యూల్ ఫిన్నీ గారి సందేశం</span></span>
+        </div>
+        <div style="border-radius:var(--radius-md);overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,0.5);border:1px solid rgba(201,168,76,0.3);border-top:3px solid var(--gold);aspect-ratio:16/9;">
+          <iframe src="https://www.youtube.com/embed/WBde0PVFLD4?rel=0&modestbranding=1" title="Memorial Service · April 8, 2025 · Message by Bishop Samuel Finny" frameborder="0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width:100%;height:100%;display:block;"></iframe>
+        </div>
+      </div>
+      <div>
+        <div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:0.6rem;justify-content:center;flex-wrap:wrap;">
+          <span style="background:rgba(201,168,76,0.18);border:1px solid var(--gold);color:var(--gold);font-size:0.62rem;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;padding:0.22rem 0.75rem;border-radius:var(--radius-full);">3rd Anniversary</span>
+          <span style="font-size:0.8rem;font-weight:600;color:rgba(255,255,255,0.85);"><span class="english-text">Memorial Service · April 8, 2026</span><span class="telugu-text">స్మారక సేవ · ఏప్రిల్ 8, 2026</span></span>
+        </div>
+        <div style="border-radius:var(--radius-md);overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,0.5);border:1px solid rgba(201,168,76,0.3);border-top:3px solid var(--gold);aspect-ratio:16/9;">
+          <iframe src="https://www.youtube.com/embed/OzVl0JmhkRk?rel=0&modestbranding=1" title="Memorial Service · April 8, 2026" frameborder="0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width:100%;height:100%;display:block;"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <p style="text-align:center;margin-top:1.75rem;font-size:0.78rem;color:rgba(255,255,255,0.28);font-style:italic;">
+      <span class="english-text">"She is not lost — she is gone before." · These recordings are preserved in love for all who knew her.</span>
+      <span class="telugu-text">"ఆమె పోలేదు — ముందుగా వెళ్ళింది." · ఆమెను తెలిసిన అందరి కోసం ప్రేమతో భద్రపరచబడ్డాయి.</span>
+    </p>
+
+  </div>
+</section>
+
+<style>
+  @media(max-width:700px){
+    .memorial-videos-grid { grid-template-columns:1fr !important; }
+  }
+</style>
+
+<!-- ════ HER MESSAGES ════ -->
+<section id="sec-messages" style="background:linear-gradient(180deg,#fff 0%,#f4f7ff 100%);padding:4rem 0;border-top:2px solid rgba(27,58,122,0.08);">
+  <div class="container">
+    <div style="display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:1rem;margin-bottom:2.25rem;text-align:center;">
+      <span style="width:50px;height:50px;background:linear-gradient(135deg,#1B3A7A,#0D2050);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0;">🎙️</span>
+      <div>
+        <span class="section-eyebrow" style="color:#1B3A7A;opacity:0.8;"><span class="english-text">Sermons & Testimonies</span><span class="telugu-text">ప్రసంగాలు & సాక్ష్యాలు</span></span>
+        <h2 class="section-title" style="margin:0;color:#1B3A7A;"><span class="english-text">Her Messages</span><span class="telugu-text">ఆమె సందేశాలు</span></h2>
+      </div>
+    </div>
+    <div class="vgrid">
+      <figure class="vcard">
+        <a class="vthumb" href="https://www.youtube.com/watch?v=09cm4yja-Rs" target="_blank" rel="noopener" data-yt="09cm4yja-Rs" aria-label="Play: Women's Christmas message — Konteru">
+          <img src="https://i.ytimg.com/vi/09cm4yja-Rs/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
+          <span class="vplay" aria-hidden="true"></span><span class="vlen">31:48</span>
+        </a>
+        <figcaption>
+          <span class="vtag"><span class="english-text">Christmas · Jan 2020</span><span class="telugu-text">క్రిస్మస్ · జనవరి 2020</span></span>
+          <span class="vtitle"><span class="english-text">Women's Christmas message — Konteru</span><span class="telugu-text">స్త్రీల క్రిస్మస్ సందేశం — కొంతేరు</span></span>
+        </figcaption>
+      </figure>
+      <figure class="vcard">
+        <a class="vthumb" href="https://www.youtube.com/watch?v=ti92PFUGxLQ" target="_blank" rel="noopener" data-yt="ti92PFUGxLQ" aria-label="Play: How does God's anointing come down? (1 minute)">
+          <img src="https://i.ytimg.com/vi/ti92PFUGxLQ/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
+          <span class="vplay" aria-hidden="true"></span><span class="vlen">0:44</span>
+        </a>
+        <figcaption>
+          <span class="vtag"><span class="english-text">Short Message · 2023</span><span class="telugu-text">చిన్న సందేశం · 2023</span></span>
+          <span class="vtitle"><span class="english-text">How does God's anointing come down? (1 minute)</span><span class="telugu-text">దేవుని అభిషేకం దిగిరావాలంటే ఏం చేయాలి? (1 నిమిషం)</span></span>
+        </figcaption>
+      </figure>
+      <figure class="vcard">
+        <a class="vthumb" href="https://www.youtube.com/watch?v=HJY8kyfAhhg" target="_blank" rel="noopener" data-yt="HJY8kyfAhhg" aria-label="Play: Special fasting prayers — Day 4 evening">
+          <img src="https://i.ytimg.com/vi/HJY8kyfAhhg/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
+          <span class="vplay" aria-hidden="true"></span><span class="vlen">23:06</span>
+        </a>
+        <figcaption>
+          <span class="vtag"><span class="english-text">Fasting Prayers · Oct 2020</span><span class="telugu-text">ఉపవాస ప్రార్థనలు · అక్టో 2020</span></span>
+          <span class="vtitle"><span class="english-text">Special fasting prayers — Day 4 evening</span><span class="telugu-text">ప్రత్యేక ఉపవాస ప్రార్థనలు — 4వ రోజు సాయంత్రం</span></span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ════ HER SONGS ════ -->
+<section id="sec-songs" style="background:linear-gradient(180deg,#fffbf0 0%,#fff 100%);padding:4rem 0;border-top:2px solid rgba(201,168,76,0.12);">
+  <div class="container">
+    <div style="display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:1rem;margin-bottom:2.25rem;text-align:center;">
+      <span style="width:50px;height:50px;background:linear-gradient(135deg,#C9A84C,#a8893e);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0;">🎵</span>
+      <div>
+        <span class="section-eyebrow" style="color:var(--gold-dark);opacity:0.8;"><span class="english-text">Worship & Praise</span><span class="telugu-text">ఆరాధన & స్తుతి</span></span>
+        <h2 class="section-title" style="margin:0;"><span class="english-text">Her Songs</span><span class="telugu-text">ఆమె పాటలు</span></h2>
+      </div>
+    </div>
+    <div class="vgrid">
+      <figure class="vcard vcard--gold">
+        <a class="vthumb" href="https://www.youtube.com/watch?v=rEBhJC9QyuE" target="_blank" rel="noopener" data-yt="rEBhJC9QyuE" aria-label="Play: Ee Sthuthi Neeke Maa Yesu Devaa">
+          <img src="https://i.ytimg.com/vi/rEBhJC9QyuE/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
+          <span class="vplay" aria-hidden="true"></span><span class="vlen">4:01</span>
+        </a>
+        <figcaption>
+          <span class="vtag"><span class="english-text">Song · 2021</span><span class="telugu-text">పాట · 2021</span></span>
+          <span class="vtitle"><span class="english-text">Ee Sthuthi Neeke Maa Yesu Devaa</span><span class="telugu-text">ఈ స్తుతి నీకే మా యేసు దేవా</span></span>
+        </figcaption>
+      </figure>
+      <figure class="vcard vcard--gold">
+        <a class="vthumb" href="https://www.youtube.com/watch?v=k_RivxIpEOg" target="_blank" rel="noopener" data-yt="k_RivxIpEOg" aria-label="Play: Ankitham Prabhu Naa Jeevitham">
+          <img src="https://i.ytimg.com/vi/k_RivxIpEOg/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
+          <span class="vplay" aria-hidden="true"></span><span class="vlen">5:16</span>
+        </a>
+        <figcaption>
+          <span class="vtag"><span class="english-text">Song · 2020</span><span class="telugu-text">పాట · 2020</span></span>
+          <span class="vtitle"><span class="english-text">Ankitham Prabhu Naa Jeevitham</span><span class="telugu-text">అంకితం ప్రభూ నా జీవితం</span></span>
+        </figcaption>
+      </figure>
+      <figure class="vcard vcard--gold">
+        <a class="vthumb" href="https://www.youtube.com/watch?v=DcnDb8VTasE" target="_blank" rel="noopener" data-yt="DcnDb8VTasE" aria-label="Play: Naa Yesayya Naa Rakshaka — with Bishop P. Moses">
+          <img src="https://i.ytimg.com/vi/DcnDb8VTasE/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
+          <span class="vplay" aria-hidden="true"></span><span class="vlen">4:38</span>
+        </a>
+        <figcaption>
+          <span class="vtag"><span class="english-text">New Song · 2023</span><span class="telugu-text">కొత్త పాట · 2023</span></span>
+          <span class="vtitle"><span class="english-text">Naa Yesayya Naa Rakshaka — with Bishop P. Moses</span><span class="telugu-text">నా యేసయ్యా నా రక్షకా — బిషప్ పి. మోషే గారితో</span></span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="sec-pictures" class="photo-section">
+  <div class="container">
+    <h2 class="section-title" style="text-align:center;margin-bottom:2rem;">
+      <span class="english-text">Cherished Moments</span>
+      <span class="telugu-text">స్మరణీయ క్షణాలు</span>
+    </h2>
+    <div id="photo-grid" class="photo-grid"></div>
+    <div id="empty-msg" class="empty-photos">
+      <div style="font-size:2.5rem;margin-bottom:0.75rem;">🕊️</div>
+      <p><span class="english-text">Memorial photos will appear here once added.</span></p>
+      <a href="gallery.html?album=Mary" class="btn btn-outline" style="margin-top:1rem;">Open Memorial Gallery</a>
+    </div>
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox"><button class="lb-close" id="lb-close">&times;</button><button class="lb-nav lb-prev" id="lb-prev">&#8249;</button><img id="lb-img" src="" alt=""><button class="lb-nav lb-next" id="lb-next">&#8250;</button><div class="lb-count" id="lb-count"></div></div>
+
+<div id="site-footer"></div>
+<script src="js/site.js"></script>
+<script src="js/videos.js?v=20261015"></script>
+<script>
+/* ── Scroll-hide section nav ── */
+(function(){
+  var nav = document.querySelector('nav.person-section-nav');
+  if(!nav) return;
+  nav.style.transition = 'transform 0.3s cubic-bezier(.4,0,.2,1)';
+  var lastY = 0, ticking = false;
+  window.addEventListener('scroll', function(){
+    if(!ticking){ requestAnimationFrame(function(){
+      var y = window.scrollY;
+      nav.style.transform = (y > lastY && y > 80) ? 'translateY(-100%)' : 'translateY(0)';
+      lastY = y; ticking = false;
+    }); ticking = true; }
+  }, {passive:true});
+})();
+</script>
+<script>
+(async () => {
+  let photos = [];
+  try { const r = await fetch('images/manifest.json'); const m = await r.json(); photos = (m.albums['Mary']||{}).photos||[]; } catch {}
+  const grid = document.getElementById('photo-grid'), empty = document.getElementById('empty-msg');
+  if (!photos.length) { empty.style.display='block'; return; }
+  empty.style.display='none';
+  let cur=0;
+  const lb=document.getElementById('lightbox'),lbImg=document.getElementById('lb-img'),lbC=document.getElementById('lb-count');
+  const open=i=>{cur=i;lbImg.src=photos[i].path;lbC.textContent=`${i+1}/${photos.length}`;lb.classList.add('open');document.body.style.overflow='hidden';};
+  const close=()=>{lb.classList.remove('open');document.body.style.overflow='';};
+  document.getElementById('lb-close').onclick=close; document.getElementById('lb-prev').onclick=()=>open((cur-1+photos.length)%photos.length); document.getElementById('lb-next').onclick=()=>open((cur+1)%photos.length);
+  lb.onclick=e=>{if(e.target===lb)close();};
+  document.addEventListener('keydown',e=>{if(!lb.classList.contains('open'))return;if(e.key==='ArrowLeft')open((cur-1+photos.length)%photos.length);if(e.key==='ArrowRight')open((cur+1)%photos.length);if(e.key==='Escape')close();});
+  photos.slice(0,12).forEach((p,i)=>{const c=document.createElement('div');c.className='photo-card';c.innerHTML=`<img src="${p.path}" alt="${p.caption||''}" loading="lazy">`;c.onclick=()=>open(i);grid.appendChild(c);});
+})();
+</script>
+</body>
+</html>

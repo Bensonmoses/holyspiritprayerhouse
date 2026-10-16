@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Analytics (GA4) — visitor & click counts -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0PS586KHL7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0PS586KHL7');
+  </script>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Palaparthi Family — Bishop Palaparthy Moses, Late Mary Kumari, Estharroj, Benson Moses and Billygraham Moses. A family rooted in faith, service and love for God.">
+  <title>The Palaparthi Family | Holy Spirit Prayer House (IPC)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Telugu:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* ── Action Buttons ─────────────────────── */
+    .fam-action-btn {
+      display:inline-flex;align-items:center;gap:0.4rem;
+      padding:0.55rem 1.15rem;border-radius:50px;
+      font-size:0.8rem;font-weight:700;color:#fff;
+      text-decoration:none;white-space:nowrap;
+      box-shadow:0 3px 10px rgba(0,0,0,0.22);
+      transition:opacity 0.2s,transform 0.2s,box-shadow 0.2s;
+    }
+    .fam-action-btn:hover { opacity:0.9;transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,0.3); }
+    .fam-action-btns { display:flex;justify-content:center;align-items:center;gap:0.55rem;flex-wrap:wrap;margin-top:1.25rem; }
+    @media(max-width:480px){ .fam-action-btn { font-size:0.75rem;padding:0.5rem 0.95rem; } }
+
+    /* ── Family Hero ─────────────────────────── */
+    .family-hero {
+      position: relative;
+      background: linear-gradient(135deg, #1A0800 0%, #2E1005 40%, #0D0D0D 100%);
+      padding: 4.5rem 0 3.5rem;
+      text-align: center;
+      overflow: hidden;
+      border-bottom: 3px solid var(--gold);
+    }
+    .family-hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 50% 0%, rgba(201,168,76,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .family-hero .container { position: relative; z-index: 1; }
+    .family-hero-badge {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: rgba(201,168,76,0.12);
+      border: 1px solid rgba(201,168,76,0.4);
+      color: var(--gold-light);
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.2em;
+      text-transform: uppercase; padding: 0.38rem 1rem;
+      border-radius: var(--radius-full); margin-bottom: 1.25rem;
+    }
+    .family-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      color: #fff; margin-bottom: 0.5rem; font-style: italic;
+      text-shadow: 0 2px 16px rgba(0,0,0,0.4);
+    }
+    .family-hero h1 span { color: var(--gold-light); font-style: normal; }
+    .family-hero-sub {
+      font-size: 0.88rem; color: rgba(255,255,255,0.55);
+      letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 2rem;
+    }
+
+    /* ── Family Portrait ─────────────────────── */
+    .portrait-wrap {
+      max-width: 860px; margin: 0 auto 0;
+      border-radius: 20px 20px 0 0;
+      overflow: hidden;
+      box-shadow: 0 -8px 40px rgba(0,0,0,0.35);
+    }
+    .portrait-wrap img {
+      width: 100%; max-height: 460px;
+      object-fit: cover; object-position: center top;
+      display: block;
+    }
+    .portrait-caption {
+      background: var(--crimson);
+      color: rgba(255,255,255,0.85);
+      text-align: center; padding: 0.75rem 1.5rem;
+      font-size: 0.82rem; letter-spacing: 0.06em;
+      font-family: 'Playfair Display', serif; font-style: italic;
+    }
+
+    /* ── Memorial ────────────────────────────── */
+    .memorial-full {
+      background: linear-gradient(180deg, #0a1220 0%, #121e38 45%, #0a1220 100%);
+      padding: 5rem 0;
+      border-top: 5px solid var(--gold);
+      border-bottom: 5px solid var(--gold);
+      box-shadow: inset 0 0 120px rgba(201,168,76,0.07);
+    }
+    .memorial-full::before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 50%; transform: translateX(-50%);
+      top: 0; width: 60%; height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(201,168,76,0.6), transparent);
+    }
+    .memorial-full { position: relative; }
+    .memorial-inner {
+      max-width: 700px; margin: 0 auto;
+      display: flex; flex-direction: column; align-items: center;
+      text-align: center;
+      padding: 0 1.5rem;
+      gap: 0;
+    }
+    .memorial-photo-col { text-align: center; margin-bottom: 1.75rem; }
+    .memorial-photo-frame {
+      width: 210px; height: 210px;
+      border-radius: 50%;
+      border: 4px solid rgba(201,168,76,0.5);
+      overflow: hidden;
+      margin: 0 auto 1.25rem;
+      box-shadow: 0 0 0 8px rgba(201,168,76,0.08), 0 0 60px rgba(201,168,76,0.22), 0 8px 40px rgba(0,0,0,0.5);
+    }
+    .memorial-photo-frame img {
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: center top;
+    }
+    .memorial-dove {
+      font-size: 0.72rem; font-weight: 700;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--gold); display: block; margin-bottom: 0.35rem;
+    }
+    .memorial-years {
+      font-size: 0.78rem; color: rgba(201,168,76,0.55);
+      letter-spacing: 0.1em;
+    }
+    .memorial-text-col { width: 100%; text-align: center; }
+    .memorial-text-col .eyebrow {
+      font-size: 0.67rem; font-weight: 700;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      color: rgba(201,168,76,0.55); margin-bottom: 0.5rem;
+    }
+    .memorial-text-col h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      color: #fff; font-style: italic;
+      line-height: 1.2; margin-bottom: 0.4rem;
+      text-wrap: balance;
+    }
+    .memorial-text-col .subtitle {
+      font-size: 0.82rem; color: rgba(201,168,76,0.5);
+      letter-spacing: 0.09em; margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+    .memorial-text-col p {
+      color: rgba(255,255,255,0.72);
+      line-height: 1.95; font-size: 0.96rem;
+      margin-bottom: 1rem;
+      text-align: left;
+      max-width: 580px; margin-left: auto; margin-right: auto;
+    }
+    .memorial-verse {
+      font-family: 'Playfair Display', serif;
+      font-style: italic; color: var(--gold);
+      font-size: 0.95rem;
+      border-top: 1px solid rgba(201,168,76,0.22);
+      padding-top: 1.5rem; margin-top: 1.5rem;
+      line-height: 1.8; text-align: center;
+      max-width: 520px; margin-left: auto; margin-right: auto;
+    }
+    .memorial-text-col .profile-link {
+      display: inline-flex; justify-content: center;
+      margin-top: 1.75rem;
+    }
+
+    /* ── Bishop Section ──────────────────────── */
+    .bishop-section {
+      padding: 5rem 0;
+      background: var(--off-white);
+    }
+    .bishop-inner {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 3.5rem; align-items: start;
+      max-width: 860px; margin: 0 auto;
+    }
+    .bishop-photo {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--border-light);
+    }
+    .bishop-photo img {
+      width: 100%; aspect-ratio: 3/4;
+      object-fit: cover; object-position: center top;
+      display: block;
+    }
+    .bishop-photo-cap {
+      background: var(--crimson); color: #fff;
+      text-align: center; padding: 0.6rem;
+      font-size: 0.75rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+    }
+    .bishop-info .role {
+      font-size: 0.68rem; font-weight: 700;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--crimson); margin-bottom: 0.4rem;
+    }
+    .bishop-info h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      color: var(--text-dark); margin-bottom: 0.25rem;
+    }
+    .bishop-info .phone-link {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      font-size: 0.88rem; font-weight: 600;
+      color: var(--crimson); margin-bottom: 1.5rem;
+    }
+    .bishop-info p {
+      color: var(--text-mid); line-height: 1.9;
+      font-size: 0.95rem; margin-bottom: 1rem;
+    }
+    .bishop-stats {
+      display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.5rem;
+    }
+    .bstat {
+      background: #fff; border: 1px solid var(--border-light);
+      border-radius: var(--radius-md); padding: 0.85rem 1.1rem;
+      text-align: center; min-width: 80px;
+      box-shadow: var(--shadow-xs);
+    }
+    .bstat strong {
+      display: block; font-family: 'Playfair Display', serif;
+      font-size: 1.5rem; color: var(--crimson); line-height: 1;
+    }
+    .bstat span { font-size: 0.72rem; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.08em; }
+
+    /* ── Children ────────────────────────────── */
+    .children-section { padding: 5rem 0; }
+    .child-block {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 3rem; align-items: start;
+      max-width: 820px; margin: 0 auto 3.5rem;
+      padding: 0 1.5rem;
+    }
+    .child-block.reverse { grid-template-columns: 1fr 220px; }
+    .child-block.reverse .child-photo { order: 2; }
+    .child-block.reverse .child-info { order: 1; }
+    .child-photo {
+      border-radius: var(--radius-lg); overflow: hidden;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border-light);
+    }
+    .child-photo img {
+      width: 100%; aspect-ratio: 3/4;
+      object-fit: cover; object-position: center top;
+      display: block;
+    }
+    .child-photo-cap {
+      padding: 0.55rem 0.75rem;
+      font-size: 0.72rem; font-weight: 700;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      text-align: center; color: #fff;
+    }
+    .child-number {
+      font-size: 0.68rem; font-weight: 700;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+    .child-info h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.4rem, 3vw, 1.9rem);
+      color: var(--text-dark); margin-bottom: 0.25rem; line-height: 1.2;
+    }
+    .child-info .child-role {
+      font-size: 0.83rem; color: var(--text-light);
+      margin-bottom: 1.25rem; letter-spacing: 0.04em;
+    }
+    .child-info p {
+      color: var(--text-mid); line-height: 1.9; font-size: 0.95rem;
+      margin-bottom: 0.85rem;
+    }
+    .child-divider {
+      border: none; border-top: 2px solid var(--border-light);
+      max-width: 820px; margin: 0 auto 3.5rem; padding: 0 1.5rem;
+    }
+
+    /* ── Scripture closing ───────────────────── */
+    .family-closing { padding: 4rem 0; background: var(--off-white); text-align: center; }
+
+    /* ── Clickable person cards ──── */
+    .clickable-photo { cursor: pointer; transition: opacity 0.2s, transform 0.2s; }
+    .clickable-photo:hover { opacity: 0.88; transform: scale(1.015); }
+    .profile-link {
+      display: inline-flex; align-items: center; gap: 0.35rem;
+      font-size: 0.82rem; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--gold);
+      text-decoration: none; margin-top: 1rem;
+      transition: gap 0.2s;
+    }
+    .profile-link:hover { gap: 0.6rem; }
+    .profile-link-dark { color: var(--crimson); }
+    @media (max-width: 768px) {
+      .memorial-photo-frame { width: 160px; height: 160px; }
+
+      /* Bishop — center everything when stacked */
+      .bishop-inner { grid-template-columns: 1fr; gap: 2rem; }
+      .bishop-photo { max-width: 260px; margin: 0 auto; }
+      .bishop-info { text-align: center; }
+      .bishop-info .role { text-align: center; }
+      .bishop-info h2 { text-align: center; }
+      .bishop-info .phone-link { justify-content: center; display: flex; }
+      .bishop-info p { text-align: center; }
+      .bishop-stats { justify-content: center; }
+
+      /* Children — center photos and text when stacked */
+      .child-block,
+      .child-block.reverse { grid-template-columns: 1fr; gap: 1.75rem; padding: 0 1rem; }
+      .child-block.reverse .child-photo { order: 0; }
+      .child-block.reverse .child-info { order: 1; }
+      .child-photo { max-width: 220px; margin: 0 auto; }
+      .child-info { text-align: center; }
+      .child-info .child-number { text-align: center; }
+      .child-info h2 { text-align: center; }
+      .child-info .child-role { text-align: center; }
+      .child-info p { text-align: center; }
+
+      /* Action buttons always centered */
+      .fam-action-btns { justify-content: center; }
+
+      /* Memorial text centered */
+      .memorial-text-col p { text-align: center; }
+    }
+  </style>
+</head>
+<body class="english">
+<div id="site-header"></div>
+
+<!-- ═══════════════════════
+     HERO
+═══════════════════════ -->
+<section class="family-hero">
+  <div class="container">
+    <div class="family-hero-badge">✝ Holy Spirit Prayer House (IPC)</div>
+    <h1>The <span>Palaparthi</span> Family</h1>
+    <p class="family-hero-sub">
+      <span class="english-text">A Family Rooted in Faith · Service · Love</span>
+      <span class="telugu-text">విశ్వాసం · సేవ · ప్రేమలో పాతుకున్న కుటుంబం</span>
+    </p>
+    <div class="portrait-wrap">
+      <img src="images/family.jpg" alt="The Palaparthi Family — Bishop P. Moses, Mary Kumari, Estharroj, Benson Moses and Billygraham Moses"
+        onerror="this.closest('.portrait-wrap').style.display='none'">
+      <div class="portrait-caption">
+        <span class="english-text">Bishop Palaparthy Moses and his beloved family — a legacy of faith built on prayer since 1995</span>
+        <span class="telugu-text">బిషప్ పాలపర్తి మోషే మరియు ఆయన ప్రియమైన కుటుంబం — 1995 నుండి ప్రార్థనపై నిర్మించిన విశ్వాస వారసత్వం</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════
+     LATE MARY KUMARI MEMORIAL
+═══════════════════════ -->
+<section id="fam-mary" class="memorial-full">
+  <div class="memorial-inner">
+    <div class="memorial-photo-col">
+      <a href="person-mary.html" class="clickable-photo" aria-label="View Mary Kumari memorial page">
+      <div class="memorial-photo-frame">
+        <img src="images/Mary.jpeg" alt="Late Palaparthi Mary Kumari"
+          onerror="this.parentElement.style.display='flex';this.parentElement.style.alignItems='center';this.parentElement.style.justifyContent='center';this.parentElement.style.fontSize='3rem';this.style.display='none';this.parentElement.innerHTML='🕊️';">
+      </div>
+      </div></a>
+      <span class="memorial-dove">🕊️ In Loving Memory</span>
+      <span class="memorial-years">
+        <span class="english-text">Called to Glory · 2023</span>
+        <span class="telugu-text">ప్రభువు సన్నిధికి · 2023</span>
+      </span>
+    </div>
+    <div class="memorial-text-col">
+      <div class="eyebrow">
+        <span class="english-text">Beloved Wife · First Lady · Mother</span>
+        <span class="telugu-text">ప్రియమైన భార్య · ఫస్ట్ లేడీ · అమ్మ</span>
+      </div>
+      <h2>
+        <span class="english-text">Late Palaparthi Mary Kumari</span>
+        <span class="telugu-text">స్వర్గీయ పాలపర్తి మేరీ కుమారి</span>
+      </h2>
+      <div class="subtitle">
+        <span class="english-text">Beloved Wife of Bishop Palaparthy Moses · First Lady of Holy Spirit Prayer House (IPC)</span>
+        <span class="telugu-text">బిషప్ పాలపర్తి మోషే యొక్క ప్రియమైన భార్య · హోలీ స్పిరిట్ ప్రార్థన మందిరం (IPC) ఫస్ట్ లేడీ</span>
+      </div>
+      <p>
+        <span class="english-text">Mary Kumari was the faithful companion and pillar of strength alongside Bishop P. Moses through over three decades of ministry. From the very beginning of Holy Spirit Prayer House (IPC) in 1995, she stood firmly by his side — praying, serving, and giving her life fully to the work of God.</span>
+        <span class="telugu-text">మేరీ కుమారి 30 సంవత్సరాలకు పైగా సేవలో బిషప్ పి. మోషే పక్కన విశ్వాసపాత్రమైన భాగస్వామి మరియు బలం యొక్క స్తంభం. 1995లో హోలీ స్పిరిట్ ప్రార్థన మందిరం (IPC) ప్రారంభం నుండి, ఆమె ఆయన పక్కన దృఢంగా నిలిచింది.</span>
+      </p>
+      <p>
+        <span class="english-text">A devoted mother to three children — Estharroj, Benson, and Billygraham — her love, wisdom, and faith shaped each of them into who they are today. She is deeply missed by all who knew her and dearly remembered in every prayer of this ministry.</span>
+        <span class="telugu-text">ముగ్గురు పిల్లలకు అంకితమైన తల్లి — ఎస్తర్రోజ్, బెన్సన్ మరియు బిలీగ్రాహం — ఆమె ప్రేమ, జ్ఞానం మరియు విశ్వాసం వారందరినీ తీర్చి దిద్దాయి.</span>
+      </p>
+      <div class="memorial-verse">
+        <em>"Precious in the sight of the Lord is the death of His faithful servants."</em><br>
+        <span style="font-size:0.82rem;color:rgba(201,168,76,0.7);">— Psalm 116:15</span>
+      </div>
+      <div class="fam-action-btns">
+        <a href="person-mary.html#sec-memorial" class="fam-action-btn" style="background:linear-gradient(135deg,#3A1408,#200A02);border:1px solid rgba(201,168,76,0.4);"><span class="english-text">Memorial</span><span class="telugu-text">స్మారక</span></a>
+        <a href="person-mary.html#sec-songs" class="fam-action-btn" style="background:linear-gradient(135deg,#C9A84C,#a8893e);"><span class="english-text">Songs</span><span class="telugu-text">పాటలు</span></a>
+        <a href="person-mary.html#sec-pictures" class="fam-action-btn" style="background:linear-gradient(135deg,#4a4a4a,#222);"><span class="english-text">Photos</span><span class="telugu-text">చిత్రాలు</span></a>
+        <a href="person-mary.html" class="fam-action-btn" style="background:rgba(201,168,76,0.12);border:1.5px solid rgba(201,168,76,0.65);color:var(--gold,#C9A84C);">→ <span class="english-text">Full Page</span><span class="telugu-text">స్మారక పేజీ</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════
+     BISHOP P. MOSES
+═══════════════════════ -->
+<section id="fam-bishop" class="bishop-section">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:3rem;">
+      <span class="section-eyebrow">
+        <span class="english-text">Founder &amp; Senior Bishop</span>
+        <span class="telugu-text">స్థాపకుడు &amp; సీనియర్ బిషప్</span>
+      </span>
+      <h2 class="section-title">
+        <span class="english-text">Bishop Palaparthy Moses</span>
+        <span class="telugu-text">బిషప్ పాలపర్తి మోషే</span>
+      </h2>
+    </div>
+    <div class="bishop-inner">
+      <a href="person-moses.html" class="bishop-photo clickable-photo" aria-label="View Bishop Moses profile">
+        <img src="images/founder.jpg" alt="Bishop Palaparthy Moses"
+          onerror="this.style.background='var(--off-white)';">
+        <div class="bishop-photo-cap">
+          <span class="english-text">Bishop Palaparthy Moses</span>
+          <span class="telugu-text">బిషప్ పాలపర్తి మోషే</span>
+        </div>
+      </a>
+      <div class="bishop-info">
+        <div class="role">
+          <span class="english-text">Founder · Senior Bishop · IPC</span>
+          <span class="telugu-text">స్థాపకుడు · సీనియర్ బిషప్ · IPC</span>
+        </div>
+        <h2>
+          <span class="english-text">Bishop Palaparthy Moses</span>
+          <span class="telugu-text">బిషప్ పాలపర్తి మోషే</span>
+        </h2>
+        <a href="tel:+919848315170" class="phone-link">📞 +91 98483 15170</a>
+        <p>
+          <span class="english-text">Since 1995, Bishop Palaparthy Moses has faithfully led Holy Spirit Prayer House (IPC) in Oduru, West Godavari — through over 30 years of prayer, evangelism, and community service that has touched thousands of lives across Andhra Pradesh.</span>
+          <span class="telugu-text">1995 నుండి, బిషప్ పాలపర్తి మోషే ఒడూరులో హోలీ స్పిరిట్ ప్రార్థన మందిరాన్ని (IPC) విశ్వాసంగా నడిపించారు — 30 సంవత్సరాలకు పైగా ఆంధ్రప్రదేశ్‌లో వేలాది మంది జీవితాలను తాకిన ప్రార్థన, సువార్త మరియు సమాజ సేవ ద్వారా.</span>
+        </p>
+        <p>
+          <span class="english-text">A Pentecostal heritage: his mother, Pastor Esthar, served as a pastor in the Indian Pentecostal Church (IPC) under Apostle P.L. Paramjyothi. Following in her footsteps, Bishop Moses serves in the Indian Pentecostal Church (IPC) under Bishop Samuel Finny.</span>
+          <span class="telugu-text">పెంతెకొస్తు వారసత్వం: ఆయన తల్లి, పాస్టర్ ఎస్తేరు గారు, అపొస్తలుడు పి.ఎల్. పరంజ్యోతి గారి ఆధ్వర్యంలో ఇండియన్ పెంతెకొస్తు చర్చి (IPC) లో పాస్టర్‌గా సేవ చేశారు. ఆమె అడుగుజాడల్లో, బిషప్ మోషే గారు బిషప్ శామ్యూల్ ఫిన్నీ గారి ఆధ్వర్యంలో ఇండియన్ పెంతెకొస్తు చర్చి (IPC) లో సేవ చేస్తున్నారు.</span>
+        </p>
+        <p>
+          <span class="english-text">He is also the Founder and Director of Mary House of Compassion Trust — an orphanage caring for 15 children in Oduru, giving them a safe home, education, and a future filled with hope. His life is a testimony of God's faithfulness across generations.</span>
+          <span class="telugu-text">ఆయన మేరీ హౌస్ ఆఫ్ కంపాషన్ ట్రస్ట్ స్థాపకుడు మరియు డైరెక్టర్ కూడా — ఒడూరులో 15 మంది పిల్లలను సంరక్షించే అనాథాశ్రమం.</span>
+        </p>
+        <div class="bishop-stats">
+          <div class="bstat"><strong>1995</strong><span><span class="english-text">Founded</span><span class="telugu-text">స్థాపన</span></span></div>
+          <div class="bstat"><strong>30+</strong><span><span class="english-text">Years</span><span class="telugu-text">సంవత్సరాలు</span></span></div>
+          <div class="bstat"><strong>3</strong><span><span class="english-text">Children</span><span class="telugu-text">పిల్లలు</span></span></div>
+        </div>
+        <div class="fam-action-btns">
+          <a href="person-moses.html#sec-messages" class="fam-action-btn" style="background:linear-gradient(135deg,#9B1C1C,#7a1515);"><span class="english-text">Messages</span><span class="telugu-text">సందేశాలు</span></a>
+          <a href="person-moses.html#sec-songs" class="fam-action-btn" style="background:linear-gradient(135deg,#C9A84C,#a8893e);"><span class="english-text">Songs</span><span class="telugu-text">పాటలు</span></a>
+          <a href="person-moses.html#sec-pictures" class="fam-action-btn" style="background:linear-gradient(135deg,#4a4a4a,#222);"><span class="english-text">Photos</span><span class="telugu-text">చిత్రాలు</span></a>
+          <a href="person-moses.html" class="fam-action-btn" style="background:transparent;border:1.5px solid rgba(155,28,28,0.4);color:var(--crimson);">→ <span class="english-text">Full Profile</span><span class="telugu-text">పూర్తి ప్రొఫైల్</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════
+     THREE CHILDREN
+═══════════════════════ -->
+<section id="fam-children" class="children-section">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:3.5rem;">
+      <span class="section-eyebrow">
+        <span class="english-text">Their Children</span>
+        <span class="telugu-text">వారి సంతానం</span>
+      </span>
+      <h2 class="section-title">
+        <span class="english-text">Three Blessings of Faith</span>
+        <span class="telugu-text">విశ్వాసం యొక్క మూడు ఆశీర్వాదాలు</span>
+      </h2>
+    </div>
+
+    <!-- Child 1: Estharroj -->
+    <div class="child-block">
+      <a href="person-esthar.html" class="child-photo clickable-photo" aria-label="View Estharroj profile">
+        <img src="images/Esthar.jpeg" alt="Palaparthi Estharroj"
+          onerror="this.style.background='var(--off-white)';this.style.minHeight='280px';">
+        <div class="child-photo-cap" style="background:linear-gradient(135deg,#7B3A9B,#5B2A7B);">
+          <span class="english-text">Palaparthi Estharroj</span>
+          <span class="telugu-text">పాలపర్తి ఎస్తర్రోజ్</span>
+        </div>
+      </a>
+      <div class="child-info">
+        <div class="child-number" style="color:#7B3A9B;">
+          <span class="english-text">First Child · Daughter</span>
+          <span class="telugu-text">మొదటి సంతానం · కుమార్తె</span>
+        </div>
+        <h2>
+          <span class="english-text">Palaparthi Estharroj</span>
+          <span class="telugu-text">పాలపర్తి ఎస్తర్రోజ్</span>
+        </h2>
+        <div class="child-role">
+          <span class="english-text">Married to Bro. Praneed · Blessed with a Daughter, Jerusha Rose (Melody)</span><span class="telugu-text">బ్రదర్ ప్రణీద్ గారితో వివాహం · కుమార్తె జెరూషా రోజ్ (మెలోడీ) తో ఆశీర్వదించబడింది</span>
+        </div>
+        <p>
+          <span class="english-text">The eldest child of Bishop Palaparthy Moses and Late Mary Kumari, Estharroj has built a beautiful home of her own, grounded in the same faith and love she was raised with. She is married to Bro. Praneed and blessed with a daughter, <strong>Jerusha Rose (Melody)</strong> — making Bishop Moses a proud grandfather.</span>
+          <span class="telugu-text">బిషప్ పాలపర్తి మోషే మరియు స్వర్గీయ మేరీ కుమారి యొక్క పెద్ద సంతానం, ఎస్తర్రోజ్ తాను పెరిగిన అదే విశ్వాసం మరియు ప్రేమతో తన స్వంత అందమైన ఇంటిని నిర్మించింది.</span>
+        </p>
+        <p>
+          <span class="english-text">Her life reflects the grace, warmth, and quiet strength of her mother Mary Kumari — a blessing to her family and to all who know her.</span>
+          <span class="telugu-text">ఆమె జీవితం ఆమె తల్లి మేరీ కుమారి యొక్క కృప, వెచ్చదనం మరియు నిశ్శబ్ద బలాన్ని ప్రతిబింబిస్తుంది.</span>
+        </p>
+        <div class="fam-action-btns">
+          <a href="person-esthar.html#sec-messages" class="fam-action-btn" style="background:linear-gradient(135deg,#7B3A9B,#5B2A7B);"><span class="english-text">Wedding</span><span class="telugu-text">వివాహం</span></a>
+          <a href="person-esthar.html#sec-songs" class="fam-action-btn" style="background:linear-gradient(135deg,#C9A84C,#a8893e);"><span class="english-text">Songs</span><span class="telugu-text">పాటలు</span></a>
+          <a href="person-esthar.html#sec-pictures" class="fam-action-btn" style="background:linear-gradient(135deg,#4a4a4a,#222);"><span class="english-text">Photos</span><span class="telugu-text">చిత్రాలు</span></a>
+          <a href="person-esthar.html" class="fam-action-btn" style="background:transparent;border:1.5px solid rgba(123,58,155,0.4);color:#7B3A9B;">→ <span class="english-text">Full Profile</span><span class="telugu-text">పూర్తి ప్రొఫైల్</span></a>
+          <a href="person-praneed.html" class="fam-action-btn" style="background:transparent;border:1.5px solid rgba(123,58,155,0.4);color:#7B3A9B;">→ <span class="english-text">Bro. Praneed (husband)</span><span class="telugu-text">బ్రదర్ ప్రణీద్ (భర్త)</span></a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="child-divider">
+
+    <!-- Child 2: Benson -->
+    <div class="child-block reverse">
+      <a href="person-benson.html" class="child-photo clickable-photo" aria-label="View Benson Moses profile">
+        <img src="images/Benson-1.jpeg" alt="Palaparthi Benson Moses"
+          onerror="this.style.background='var(--off-white)';this.style.minHeight='280px';">
+        <div class="child-photo-cap" style="background:linear-gradient(135deg,#1B3A7A,#0D2050);">
+          <span class="english-text">Palaparthi Benson Moses</span>
+          <span class="telugu-text">పాలపర్తి బెన్సన్ మోసెస్</span>
+        </div>
+      </a>
+      <div class="child-info">
+        <div class="child-number" style="color:#1B3A7A;">
+          <span class="english-text">Second Child · Son</span>
+          <span class="telugu-text">రెండవ సంతానం · కుమారుడు</span>
+        </div>
+        <h2>
+          <span class="english-text">Palaparthi Benson Moses</span>
+          <span class="telugu-text">పాలపర్తి బెన్సన్ మోసెస్</span>
+        </h2>
+        <div class="child-role">
+          <span class="english-text">Based in the United States of America</span>
+          <span class="telugu-text">అమెరికా సంయుక్త రాష్ట్రాలలో నివసిస్తున్నారు</span>
+        </div>
+        <p>
+          <span class="english-text">The second child of Bishop Palaparthy Moses, Benson lives and works in the United States of America — carrying the family's deep faith, values, and the love of God to every corner of the world he walks into.</span>
+          <span class="telugu-text">బిషప్ పాలపర్తి మోషే యొక్క రెండవ సంతానం, బెన్సన్ అమెరికా సంయుక్త రాష్ట్రాలలో నివసిస్తున్నాడు — కుటుంబ విశ్వాసం మరియు దేవుని ప్రేమను ప్రపంచమంతా తీసుకెళ్ళాడు.</span>
+        </p>
+        <p>
+          <span class="english-text">A source of immense pride and joy for Bishop Moses — his journey abroad is a testament that the calling of God has no borders and His grace follows His children across every continent.</span>
+          <span class="telugu-text">బిషప్ మోషేకు గొప్ప గర్వం మరియు సంతోషం యొక్క మూలం — ఆయన యొక్క విదేశ ప్రయాణం దేవుని పిలుపుకు సరిహద్దులు లేవని సాక్ష్యమిస్తుంది.</span>
+        </p>
+        <div class="fam-action-btns">
+          <a href="person-benson.html#sec-messages" class="fam-action-btn" style="background:linear-gradient(135deg,#1B3A7A,#0D2050);"><span class="english-text">Messages</span><span class="telugu-text">సందేశాలు</span></a>
+          <a href="person-benson.html#sec-songs" class="fam-action-btn" style="background:linear-gradient(135deg,#C9A84C,#a8893e);"><span class="english-text">Songs</span><span class="telugu-text">పాటలు</span></a>
+          <a href="person-benson.html#sec-pictures" class="fam-action-btn" style="background:linear-gradient(135deg,#4a4a4a,#222);"><span class="english-text">Photos</span><span class="telugu-text">చిత్రాలు</span></a>
+          <a href="person-benson.html" class="fam-action-btn" style="background:transparent;border:1.5px solid rgba(27,58,122,0.4);color:#1B3A7A;">→ <span class="english-text">Full Profile</span><span class="telugu-text">పూర్తి ప్రొఫైల్</span></a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="child-divider">
+
+    <!-- Child 3: Billygraham -->
+    <div class="child-block">
+      <a href="person-billygraham.html" class="child-photo clickable-photo" aria-label="View Billygraham Moses profile">
+        <img src="images/Billygraham.jpeg" alt="Palaparthi Billygraham Moses"
+          onerror="this.style.background='var(--off-white)';this.style.minHeight='280px';">
+        <div class="child-photo-cap" style="background:var(--crimson);">
+          <span class="english-text">Palaparthi Billygraham Moses</span>
+          <span class="telugu-text">పాలపర్తి బిలీగ్రాహం మోసెస్</span>
+        </div>
+      </a>
+      <div class="child-info">
+        <div class="child-number" style="color:var(--crimson);">
+          <span class="english-text">Third Child · Son · Minister</span>
+          <span class="telugu-text">మూడవ సంతానం · కుమారుడు · మంత్రి</span>
+        </div>
+        <h2>
+          <span class="english-text">Palaparthi Billygraham Moses</span>
+          <span class="telugu-text">పాలపర్తి బిలీగ్రాహం మోసెస్</span>
+        </h2>
+        <div class="child-role">
+          <span class="english-text">Co-Founder · Minister · Holy Spirit Prayer House (IPC)</span>
+          <span class="telugu-text">సహ-స్థాపకుడు · మంత్రి · హోలీ స్పిరిట్ ప్రార్థన మందిరం (IPC)</span>
+        </div>
+        <p>
+          <span class="english-text">The youngest son of Bishop Palaparthy Moses, Billygraham has chosen to walk in his father's footsteps — dedicating his life to ministry and the work of the Gospel right here in Andhra Pradesh. As co-founder of Holy Spirit Prayer House (IPC), he serves actively in evangelism, youth outreach, and discipleship.</span>
+          <span class="telugu-text">బిషప్ పాలపర్తి మోషే యొక్క చిన్న కుమారుడు, బిలీగ్రాహం తన తండ్రి అడుగుజాడలలో నడవడానికి ఎంచుకున్నాడు — ఆంధ్రప్రదేశ్‌లో సువార్త సేవకు తన జీవితాన్ని అంకితం చేశాడు.</span>
+        </p>
+        <p>
+          <span class="english-text">His heart for the youth, the unreached, and the community of Oduru is a continuation of the same calling that began with his father in 1995 — and it will carry this ministry forward into the next generation.</span>
+          <span class="telugu-text">యువత, చేరని వారు మరియు ఒడూరు సమాజం పట్ల ఆయన హృదయం 1995లో తండ్రితో మొదలైన అదే పిలుపు కొనసాగింపు.</span>
+        </p>
+        <a href="tel:+919866378567" style="display:inline-flex;align-items:center;gap:0.4rem;font-size:0.9rem;font-weight:600;color:var(--crimson);margin-top:0.5rem;">📞 +91 98663 78567</a>
+        <br>
+        <div class="fam-action-btns" style="margin-top:0.75rem;">
+          <a href="person-billygraham.html#sec-messages" class="fam-action-btn" style="background:linear-gradient(135deg,#9B1C1C,#7a1515);"><span class="english-text">Messages</span><span class="telugu-text">సందేశాలు</span></a>
+          <a href="person-billygraham.html#sec-songs" class="fam-action-btn" style="background:linear-gradient(135deg,#C9A84C,#a8893e);"><span class="english-text">Songs</span><span class="telugu-text">పాటలు</span></a>
+          <a href="person-billygraham.html#sec-pictures" class="fam-action-btn" style="background:linear-gradient(135deg,#4a4a4a,#222);"><span class="english-text">Photos</span><span class="telugu-text">చిత్రాలు</span></a>
+          <a href="person-billygraham.html" class="fam-action-btn" style="background:transparent;border:1.5px solid rgba(155,28,28,0.4);color:var(--crimson);">→ <span class="english-text">Full Profile</span><span class="telugu-text">పూర్తి ప్రొఫైల్</span></a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="child-divider">
+
+    <!-- Son-in-law: Praneed -->
+    <div class="child-block reverse">
+      <a href="person-praneed.html" class="child-photo clickable-photo" aria-label="View Bro. Praneed profile">
+        <div style="min-height:320px;display:flex;align-items:center;justify-content:center;background:linear-gradient(160deg,#5B2A7B,#2A0008);">
+          <span style="font-family:'Playfair Display',serif;font-size:6rem;font-style:italic;color:rgba(255,255,255,0.85);" aria-hidden="true">P</span>
+        </div>
+        <div class="child-photo-cap" style="background:linear-gradient(135deg,#7B3A9B,#5B2A7B);"><span class="english-text">Bro. Praneed</span><span class="telugu-text">బ్రదర్ ప్రణీద్</span></div>
+      </a>
+      <div class="child-info">
+        <div class="child-number" style="color:#7B3A9B;"><span class="english-text">Son-in-law · Husband of Estharroj</span><span class="telugu-text">అల్లుడు · ఎస్తర్రోజ్ గారి భర్త</span></div>
+        <h2><span class="english-text">Bro. Praneed</span><span class="telugu-text">బ్రదర్ ప్రణీద్</span></h2>
+        <div class="child-role"><span class="english-text">Preacher · Worship Leader · JBH Ministries</span><span class="telugu-text">వాక్య బోధకులు · ఆరాధన నాయకులు · JBH మినిస్ట్రీస్</span></div>
+        <p><span class="english-text">Bro. Praneed married Estharroj in January 2025 and became part of the Palaparthi family; God has blessed them with a daughter, Jerusha Rose (Melody). He preaches and leads worship regularly at Holy Spirit Prayer House (IPC) — in Sunday worship, the Pentecost fasting prayers and the Christmas celebration at Brahmanacheruvu.</span><span class="telugu-text">బ్రదర్ ప్రణీద్ గారు జనవరి 2025 లో ఎస్తర్రోజ్ గారిని వివాహం చేసుకుని పాలపర్తి కుటుంబంలో భాగమయ్యారు; దేవుడు వారికి కుమార్తె జెరూషా రోజ్ (మెలోడీ) ను అనుగ్రహించాడు. హోలీ స్పిరిట్ ప్రార్థన మందిరం (IPC) లో ఆదివారం ఆరాధనలు, పెంతెకొస్తు ఉపవాస ప్రార్థనలు మరియు బ్రాహ్మణ చెరువు క్రిస్మస్ వేడుకలలో క్రమంగా వాక్యోపదేశం చేస్తూ ఆరాధన నడిపిస్తారు.</span></p>
+        <div class="fam-action-btns">
+          <a href="person-praneed.html#sec-messages" class="fam-action-btn" style="background:linear-gradient(135deg,#9B1C1C,#7a1515);"><span class="english-text">Messages</span><span class="telugu-text">సందేశాలు</span></a>
+          <a href="person-praneed.html#sec-songs" class="fam-action-btn" style="background:linear-gradient(135deg,#C9A84C,#a8893e);"><span class="english-text">Worship</span><span class="telugu-text">ఆరాధన</span></a>
+          <a href="person-esthar.html#sec-messages" class="fam-action-btn" style="background:linear-gradient(135deg,#7B3A9B,#5B2A7B);"><span class="english-text">Wedding</span><span class="telugu-text">వివాహం</span></a>
+          <a href="person-praneed.html" class="fam-action-btn" style="background:transparent;border:1.5px solid rgba(123,58,155,0.4);color:#7B3A9B;">→ <span class="english-text">Full Profile</span><span class="telugu-text">పూర్తి ప్రొఫైల్</span></a>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════
+     LIVE CHANNELS
+═══════════════════════════════════ -->
+<section id="fam-channels" class="section" style="background:linear-gradient(180deg,#fff 0%,#fdf5f2 100%);">
+  <div class="container">
+
+    <div class="section-header section-header--center" data-reveal="up">
+      <span class="section-eyebrow">
+        <span class="english-text">Live From Our Channels</span>
+        <span class="telugu-text">మా ఛానల్స్ నుండి</span>
+      </span>
+      <h2 class="section-title section-title--center">
+        <span class="english-text">Watch · Follow · Connect</span>
+        <span class="telugu-text">చూడండి · అనుసరించండి · కనెక్ట్ అవ్వండి</span>
+      </h2>
+      <p class="section-sub" style="text-align:center;margin:0 auto;">
+        <span class="english-text">Stay connected with Bishop P. Moses and the Holy Spirit Prayer House (IPC) family through our YouTube sermons and Facebook updates — updated automatically every time we post.</span>
+        <span class="telugu-text">YouTube ప్రసంగాలు మరియు Facebook అప్‌డేట్‌ల ద్వారా బిషప్ పి. మోషే మరియు హోలీ స్పిరిట్ ప్రార్థన మందిరం (IPC) కుటుంబంతో అనుసంధానంగా ఉండండి.</span>
+      </p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;margin-top:3rem;" class="channels-grid">
+
+      <!-- YouTube -->
+      <div data-reveal="left">
+        <div style="display:flex;align-items:center;gap:0.65rem;margin-bottom:1rem;">
+          <span style="background:#FF0000;color:#fff;width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:0.85rem;flex-shrink:0;">▶</span>
+          <div>
+            <div style="font-weight:700;font-size:0.95rem;color:var(--text-dark);">YouTube</div>
+            <div style="font-size:0.75rem;color:var(--text-light);">@pastorpmoses · <span class="english-text">Latest Sermons & Videos</span><span class="telugu-text">తాజా ప్రసంగాలు & వీడియోలు</span></div>
+          </div>
+          <a href="https://www.youtube.com/@pastorpmoses" target="_blank" style="margin-left:auto;background:#FF0000;color:#fff;font-size:0.72rem;font-weight:700;padding:0.3rem 0.85rem;border-radius:var(--radius-full);text-decoration:none;white-space:nowrap;"><span class="english-text">Subscribe</span><span class="telugu-text">సభ్యత్వం</span></a>
+        </div>
+        <div style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.12);border:1px solid rgba(155,28,28,0.1);border-top:3px solid #FF0000;height:430px;">
+          <iframe
+            src="https://www.youtube.com/embed/videoseries?list=UU9CjnUlZQi8l56lLCoKsV2g&rel=0&modestbranding=1"
+            title="Holy Spirit Prayer House (IPC) — YouTube Channel"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            style="width:100%;height:100%;display:block;">
+          </iframe>
+        </div>
+        <p style="font-size:0.78rem;color:var(--text-light);margin-top:0.65rem;text-align:center;">
+          <span class="english-text">↑ Auto-updates with every new video we upload</span>
+          <span class="telugu-text">↑ ప్రతి కొత్త వీడియోతో స్వయంచాలకంగా అప్‌డేట్ అవుతుంది</span>
+        </p>
+      </div>
+
+      <!-- Facebook -->
+      <div data-reveal="right">
+        <div style="display:flex;align-items:center;gap:0.65rem;margin-bottom:1rem;">
+          <span style="background:#1877F2;color:#fff;width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;font-weight:700;">f</span>
+          <div>
+            <div style="font-weight:700;font-size:0.95rem;color:var(--text-dark);">Facebook</div>
+            <div style="font-size:0.75rem;color:var(--text-light);">holy.jesus132 · <span class="english-text">Updates & Photos</span><span class="telugu-text">అప్‌డేట్‌లు & ఫోటోలు</span></div>
+          </div>
+          <a href="https://www.facebook.com/holy.jesus132" target="_blank" style="margin-left:auto;background:#1877F2;color:#fff;font-size:0.72rem;font-weight:700;padding:0.3rem 0.85rem;border-radius:var(--radius-full);text-decoration:none;white-space:nowrap;"><span class="english-text">Follow</span><span class="telugu-text">అనుసరించండి</span></a>
+        </div>
+        <div style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.12);border:1px solid rgba(24,119,242,0.15);border-top:3px solid #1877F2;min-height:400px;background:#f0f2f5;">
+          <iframe
+            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fholy.jesus132&tabs=timeline&width=500&height=430&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&lazy=true"
+            style="width:100%;height:430px;border:none;display:block;overflow:hidden;"
+            frameborder="0"
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+          </iframe>
+        </div>
+        <p style="font-size:0.78rem;color:var(--text-light);margin-top:0.65rem;text-align:center;">
+          <span class="english-text">↑ Live Facebook feed — posts appear here automatically</span>
+          <span class="telugu-text">↑ లైవ్ Facebook ఫీడ్ — పోస్ట్‌లు స్వయంచాలకంగా ఇక్కడ కనిపిస్తాయి</span>
+        </p>
+      </div>
+
+    </div><!-- /channels-grid -->
+
+    <!-- Follow row -->
+    <div style="display:flex;align-items:center;justify-content:center;gap:1rem;flex-wrap:wrap;margin-top:2.5rem;" data-reveal="up">
+      <a href="https://www.youtube.com/@pastorpmoses" target="_blank" class="btn" style="background:#FF0000;color:#fff;display:inline-flex;align-items:center;gap:0.5rem;">
+        ▶ <span class="english-text">Open YouTube Channel</span><span class="telugu-text">YouTube ఛానల్ తెరవండి</span>
+      </a>
+      <a href="https://www.facebook.com/holy.jesus132" target="_blank" class="btn" style="background:#1877F2;color:#fff;display:inline-flex;align-items:center;gap:0.5rem;">
+        f <span class="english-text">Open Facebook Page</span><span class="telugu-text">Facebook పేజీ తెరవండి</span>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  @media(max-width:768px){
+    .channels-grid { grid-template-columns:1fr !important; gap:2rem !important; }
+  }
+</style>
+
+<!-- Scripture closing -->
+<section class="scripture-section">
+  <div class="container">
+    <p class="scripture-text">
+      <span class="english-text">"As for me and my house, we will serve the Lord."</span>
+      <span class="telugu-text">"నేను మరియు నా యింటివారము యెహోవాను సేవించెదము."</span>
+    </p>
+    <p class="scripture-ref">
+      <span class="english-text">— Joshua 24:15</span>
+      <span class="telugu-text">— యెహోషువ 24:15</span>
+    </p>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="js/site.js"></script>
+</body>
+</html>

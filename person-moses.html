@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Analytics (GA4) — visitor & click counts -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0PS586KHL7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0PS586KHL7');
+  </script>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bishop Palaparthy Moses — Founder and Senior Bishop of Holy Spirit Prayer House (IPC) since 1995.">
+  <title>Bishop Palaparthy Moses | Holy Spirit Prayer House (IPC)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Telugu:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/videos.css?v=20261015">
+  <style>
+    .person-hero {
+      background: linear-gradient(160deg, #0D0D0D 0%, #1E0A03 50%, #0D0D0D 100%);
+      padding: 5rem 0 0; border-bottom: 3px solid var(--gold);
+    }
+    .person-hero-inner {
+      display: grid; grid-template-columns: 300px 1fr;
+      gap: 4rem; align-items: end; max-width: 960px; margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    .person-hero-photo {
+      border-radius: var(--radius-lg) var(--radius-lg) 0 0; overflow: hidden;
+      box-shadow: 0 -4px 30px rgba(0,0,0,0.4);
+      margin-top: 2rem;
+    }
+    .person-hero-photo img { width: 100%; display: block; max-height: 420px; object-fit: cover; object-position: center top; }
+    .person-hero-info { padding-bottom: 3rem; }
+    .person-role { font-size:0.68rem; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); margin-bottom:0.5rem; }
+    .person-hero-info h1 {
+      font-family:'Playfair Display',serif; font-size:clamp(2rem,4vw,2.9rem);
+      color:#fff; font-style:italic; line-height:1.2; margin-bottom:0.5rem;
+    }
+    .person-hero-info .tel { color:rgba(255,255,255,0.5); font-family:'Noto Sans Telugu',sans-serif; font-size:1rem; margin-bottom:1.5rem; display:block; }
+    .person-phone { display:inline-flex; align-items:center; gap:0.4rem; font-size:0.95rem; font-weight:600; color:var(--gold); text-decoration:none; }
+    .person-bio { padding: 4rem 0; }
+    .person-bio-inner { max-width: 820px; margin: 0 auto; padding: 0 1.5rem; }
+    .person-bio-inner p { color:var(--text-mid); line-height:1.95; font-size:0.97rem; margin-bottom:1.1rem; }
+    .person-stats { display:flex; gap:1rem; flex-wrap:wrap; margin: 2rem 0; }
+    .pstat { background:var(--off-white); border:1px solid var(--border-light); border-radius:var(--radius-md); padding:1rem 1.25rem; text-align:center; min-width:90px; }
+    .pstat strong { display:block; font-family:'Playfair Display',serif; font-size:1.6rem; color:var(--crimson); line-height:1; }
+    .pstat span { font-size:0.72rem; color:var(--text-light); text-transform:uppercase; letter-spacing:0.08em; }
+    .photo-section { background:var(--off-white); padding:4rem 0; }
+    .photo-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:1rem; }
+    .photo-card { border-radius:var(--radius-md); overflow:hidden; aspect-ratio:4/3; cursor:pointer; box-shadow:var(--shadow-sm); transition:transform 0.2s,box-shadow 0.2s; }
+    .photo-card:hover { transform:translateY(-3px); box-shadow:var(--shadow-lg); }
+    .photo-card img { width:100%; height:100%; object-fit:cover; display:block; }
+    .lightbox { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.95); z-index:9999; align-items:center; justify-content:center; flex-direction:column; }
+    .lightbox.open { display:flex; }
+    .lightbox img { max-width:90vw; max-height:85vh; object-fit:contain; border-radius:4px; }
+    .lb-close { position:absolute; top:1rem; right:1.5rem; color:#fff; font-size:2.2rem; cursor:pointer; background:none; border:none; }
+    .lb-nav { position:absolute; top:50%; transform:translateY(-50%); color:rgba(255,255,255,0.7); font-size:2.5rem; background:none; border:none; cursor:pointer; padding:1rem; }
+    .lb-prev { left:1rem; } .lb-next { right:1rem; }
+    .lb-count { color:rgba(255,255,255,0.5); font-size:0.8rem; margin-top:0.75rem; }
+    .empty-photos { text-align:center; padding:3rem; color:var(--text-light); }
+    /* ── Testimony Timeline ─────────────────── */
+    .testimony-timeline { max-width:820px; margin:0 auto; position:relative; padding-left:2rem; }
+    .testimony-timeline::before { content:''; position:absolute; left:18px; top:0; bottom:0; width:2px; background:linear-gradient(to bottom,#1a5c2e,var(--gold),#1a5c2e); opacity:0.3; }
+    .testimony-block { display:flex; gap:1.5rem; margin-bottom:2.75rem; position:relative; }
+    .testimony-icon { flex-shrink:0; width:44px; height:44px; border-radius:50%; background:var(--off-white); border:2px solid rgba(201,168,76,0.4); display:flex; align-items:center; justify-content:center; font-size:1.25rem; margin-left:-2.2rem; position:relative; z-index:1; box-shadow:0 2px 10px rgba(0,0,0,0.08); }
+    .testimony-body { flex:1; padding-bottom:0.5rem; }
+    .testimony-heading { font-family:'Playfair Display',serif; font-size:1.15rem; color:var(--text-dark); margin-bottom:0.85rem; font-style:italic; }
+    .testimony-text { color:var(--text-mid); line-height:1.9; font-size:0.95rem; margin-bottom:0.85rem; }
+    .testimony-quote { background:var(--off-white); border-left:3px solid var(--gold); border-radius:0 var(--radius-sm) var(--radius-sm) 0; padding:0.85rem 1.25rem; margin:0.85rem 0; font-family:'Playfair Display',serif; font-style:italic; font-size:1rem; color:var(--text-dark); line-height:1.7; }
+    @media(max-width:768px){
+      .testimony-timeline { padding-left:1rem; }
+      .testimony-timeline::before { left:10px; }
+      .testimony-icon { margin-left:-1.2rem; width:36px; height:36px; font-size:1rem; }
+      .testimony-block { gap:1rem; }
+      .testimony-heading { font-size:1rem; }
+    }
+    @media(max-width:768px){
+      .person-hero-inner { grid-template-columns:1fr; }
+      .person-hero-photo { max-width:240px; border-radius:var(--radius-lg); }
+      .person-hero { padding-bottom:2rem; }
+      .person-hero-info { padding-bottom:0; }
+    }
+  </style>
+</head>
+<body class="english">
+<div id="site-header"></div>
+
+<section class="person-hero">
+  <div class="person-hero-inner">
+    <div class="person-hero-photo">
+      <img src="images/founder.jpg" alt="Bishop Palaparthy Moses"
+        onerror="this.style.background='#1A0800';this.style.minHeight='320px';">
+    </div>
+    <div class="person-hero-info">
+      <div class="person-role">
+        <span class="english-text">Founder · Senior Bishop · IPC</span>
+        <span class="telugu-text">స్థాపకుడు · సీనియర్ బిషప్ · IPC</span>
+      </div>
+      <h1>
+        <span class="english-text">Bishop Palaparthy Moses</span>
+        <span class="telugu-text">బిషప్ పాలపర్తి మోషే</span>
+      </h1>
+      <span class="tel">
+        <span class="english-text">Holy Spirit Prayer House (IPC) · Oduru, West Godavari · Since 1995</span>
+        <span class="telugu-text">హోలీ స్పిరిట్ ప్రార్థన మందిరం (IPC) · ఒడూరు, పశ్చిమ గోదావరి · 1995 నుండి</span>
+      </span>
+      <a href="tel:+919848315170" class="person-phone">📞 +91 98483 15170</a>
+    </div>
+  </div>
+</section>
+
+<!-- Section Nav -->
+<nav class="person-section-nav" style="background:#fff;border-bottom:3px solid rgba(155,28,28,0.14);position:sticky;top:0;z-index:80;box-shadow:0 4px 18px rgba(0,0,0,0.09);">
+  <div class="container" style="display:flex;justify-content:center;flex-wrap:wrap;gap:0.9rem;overflow-x:auto;padding:1.1rem 1.5rem;scrollbar-width:none;">
+    <a href="#sec-testimony" class="snav-btn" style="background:linear-gradient(135deg,#1a5c2e,#0e3d1e);color:#fff;"><span class="english-text">Testimony</span><span class="telugu-text">సాక్ష్యం</span></a>
+    <a href="#sec-messages" class="snav-btn" style="background:linear-gradient(135deg,#9B1C1C,#7a1515);color:#fff;"><span class="english-text">Messages</span><span class="telugu-text">సందేశాలు</span></a>
+    <a href="#sec-songs" class="snav-btn" style="background:linear-gradient(135deg,#C9A84C,#a8893e);color:#fff;"><span class="english-text">Songs</span><span class="telugu-text">పాటలు</span></a>
+    <a href="#sec-pictures" class="snav-btn" style="background:linear-gradient(135deg,#4a4a4a,#222);color:#fff;"><span class="english-text">Photos</span><span class="telugu-text">ఫోటోలు</span></a>
+  </div>
+</nav>
+<style>
+  .snav-btn { display:inline-flex;align-items:center;gap:0.55rem;padding:0.78rem 1.8rem;border-radius:50px;font-size:0.9rem;font-weight:700;text-decoration:none;white-space:nowrap;letter-spacing:0.04em;transition:opacity 0.22s,transform 0.22s,box-shadow 0.22s;flex-shrink:0;box-shadow:0 4px 14px rgba(0,0,0,0.22); }
+  .snav-btn:hover { opacity:0.92;transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,0.3); }
+</style>
+
+<section class="person-bio">
+  <div class="person-bio-inner">
+    <span class="section-eyebrow">
+      <span class="english-text">His Story</span>
+      <span class="telugu-text">ఆయన కథ</span>
+    </span>
+    <h2 class="section-title" style="margin-bottom:1.5rem;">
+      <span class="english-text">A Life Poured Out for God</span>
+      <span class="telugu-text">దేవుని కోసం అంకితమైన జీవితం</span>
+    </h2>
+    <p>
+      <span class="english-text">In 1995, Bishop Palaparthy Moses heard the call of God and founded Holy Spirit Prayer House (IPC) in Oduru, Penumantra Mandal, West Godavari, Andhra Pradesh. What began as a small gathering of prayer has grown into a full, vibrant church community touching thousands of lives.</span>
+      <span class="telugu-text">1995లో, బిషప్ పాలపర్తి మోషే దేవుని పిలుపు విన్నారు మరియు ఒడూరు, పేనుమంత్ర మండలం, పశ్చిమ గోదావరిలో హోలీ స్పిరిట్ ప్రార్థన మందిరం (IPC) స్థాపించారు.</span>
+    </p>
+    <p>
+      <span class="english-text">His calling grew from a Pentecostal heritage: his mother, Pastor Esthar, served as a pastor in the Indian Pentecostal Church (IPC) under Apostle P.L. Paramjyothi. Following in her footsteps, Bishop Moses serves in the Indian Pentecostal Church (IPC) under Bishop Samuel Finny.</span>
+      <span class="telugu-text">ఆయన పిలుపు పెంతెకొస్తు వారసత్వం నుండి వచ్చింది: ఆయన తల్లి, పాస్టర్ ఎస్తేరు గారు, అపొస్తలుడు పి.ఎల్. పరంజ్యోతి గారి ఆధ్వర్యంలో ఇండియన్ పెంతెకొస్తు చర్చి (IPC) లో పాస్టర్‌గా సేవ చేశారు. ఆమె అడుగుజాడల్లో, బిషప్ మోషే గారు బిషప్ శామ్యూల్ ఫిన్నీ గారి ఆధ్వర్యంలో ఇండియన్ పెంతెకొస్తు చర్చి (IPC) లో సేవ చేస్తున్నారు.</span>
+    </p>
+    <p>
+      <span class="english-text">Over more than 30 years, Bishop Moses has led this ministry through prayer, evangelism, village outreach, Bible teaching, medical camps, food distribution, and the care of orphaned children. His ministry has taken him across India and beyond — including ministry visits to Dubai and Kuwait — carrying the Gospel wherever God opens doors.</span>
+      <span class="telugu-text">30 సంవత్సరాలకు పైగా, బిషప్ మోషే ప్రార్థన, సువార్త, గ్రామ అవుట్‌రీచ్, బైబిల్ బోధన, వైద్య శిబిరాలు, ఆహార పంపిణీ మరియు అనాథ పిల్లల సంరక్షణ ద్వారా ఈ సేవను నడిపించారు.</span>
+    </p>
+    <p>
+      <span class="english-text">He is also the Founder and Director of Mary House of Compassion Trust — an orphanage in Oduru caring for 15 children and giving them a safe home, education, nutrition, and a future full of hope in the Lord Jesus Christ.</span>
+      <span class="telugu-text">ఆయన మేరీ హౌస్ ఆఫ్ కంపాషన్ ట్రస్ట్ స్థాపకుడు మరియు డైరెక్టర్ కూడా — ఒడూరులో 15 పిల్లలను సంరక్షించే అనాథాశ్రమం.</span>
+    </p>
+    <div class="person-stats">
+      <div class="pstat"><strong>1995</strong><span><span class="english-text">Founded</span><span class="telugu-text">స్థాపించారు</span></span></div>
+      <div class="pstat"><strong>30+</strong><span><span class="english-text">Years</span><span class="telugu-text">సంవత్సరాలు</span></span></div>
+      <div class="pstat"><strong>15</strong><span><span class="english-text">Children</span><span class="telugu-text">పిల్లలు</span></span></div>
+      <div class="pstat"><strong>2+</strong><span><span class="english-text">Nations</span><span class="telugu-text">దేశాలు</span></span></div>
+    </div>
+    <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:1rem;">
+      <a href="gallery.html?album=Moses" class="btn btn-outline">
+        <span class="english-text">📸 View All Photos</span>
+        <span class="telugu-text">📸 అన్ని ఫోటోలు చూడండి</span>
+      </a>
+      <a href="gallery.html?album=Moses_Dubai" class="btn btn-outline">Dubai Gallery</a>
+      <a href="gallery.html?album=Moses_Kuwait" class="btn btn-outline">Kuwait Gallery</a>
+    </div>
+  </div>
+</section>
+
+<!-- ════ TESTIMONY ════ -->
+<section id="sec-testimony" style="padding:4rem 0;border-top:2px solid rgba(26,92,46,0.12);background:linear-gradient(180deg,#f9fff9 0%,#fff 100%);">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:3rem;">
+      <span class="section-eyebrow" style="color:#1a5c2e;">
+        <span class="english-text">His Testimony</span>
+        <span class="telugu-text">ఆయన సాక్ష్యం</span>
+      </span>
+      <h2 class="section-title">
+        <span class="english-text">A Faith Born in Fire</span>
+        <span class="telugu-text">అగ్నిలో పుట్టిన విశ్వాసం</span>
+      </h2>
+      <p style="color:var(--text-mid);max-width:580px;margin:0.75rem auto 0;line-height:1.8;font-size:0.95rem;">
+        <span class="english-text">Before the church, before the ministry — there was a mother's tears, a stranger's word, and a God who keeps every promise.</span>
+        <span class="telugu-text">చర్చ్ కంటే ముందు, సేవ కంటే ముందు — ఒక తల్లి కన్నీళ్ళు, ఒక అపరిచితుని మాట, మరియు తన వాగ్దానాలన్నీ నిలబెట్టుకునే దేవుడు.</span>
+      </p>
+    </div>
+
+    <div class="testimony-timeline">
+
+      <!-- 1 -->
+      <div class="testimony-block">
+        <div class="testimony-icon" style="border-color:rgba(26,92,46,0.35);">🙏</div>
+        <div class="testimony-body">
+          <h4 class="testimony-heading">
+            <span class="english-text">A Mother's Cry — Esther of Palakol</span>
+            <span class="telugu-text">ఒక తల్లి మొర — పాలకోల్ ఎస్తేర్</span>
+          </h4>
+          <p class="testimony-text">
+            <span class="english-text">Bishop P. Moses was born into a family of non-believers. His mother, Esther, was from Palakol. She carried the crushing weight of childlessness at a time when such pain brought public shame and blame. She searched everywhere for hope — but found none. One day, while weeping on the street, a stranger stopped and shared about Jesus Christ.</span>
+            <span class="telugu-text">బిషప్ పి. మోషే అవిశ్వాసి కుటుంబంలో జన్మించారు. ఆయన తల్లి ఎస్తేర్ పాలకోల్ నుండి. సంతానం లేకపోవడం వల్ల సమాజం ఆమెను నిందించేది. ఆమె అన్నిచోట్లా ఆశ వెతికింది — కాని ఏమీ దొరకలేదు. ఒక రోజు వీధిలో ఏడుస్తుండగా, ఒక అపరిచిత వ్యక్తి ఆగి యేసుక్రీస్తు గురించి చెప్పాడు.</span>
+          </p>
+          <blockquote class="testimony-quote" style="border-left-color:#1a5c2e;">
+            <span class="english-text">"Believe in Jesus Christ — He will do a miracle."</span>
+            <span class="telugu-text">"యేసుక్రీస్తుపై విశ్వాసముంచండి — ఆయన అద్భుతం చేస్తాడు."</span>
+          </blockquote>
+          <p class="testimony-text">
+            <span class="english-text">Having tried everything else with no answer, Esther chose to believe. By God's grace, she was blessed with a baby girl. Five years later, a second daughter. The community still whispered — no son, they said, means the family name will not continue. Old traditions were cruel. Yet Esther kept praying.</span>
+            <span class="telugu-text">మిగతా అన్నీ ప్రయత్నించి సమాధానం దొరకని ఎస్తేర్ నమ్మాలని నిర్ణయించుకుంది. దేవుని కృపచే ఆమెకు మొదట కుమార్తె పుట్టింది. ఐదు సంవత్సరాల తర్వాత మరొక కుమార్తె. కానీ సమాజం ఇంకా నిందించింది — పాత సంప్రదాయాలు కఠినంగా ఉండేవి. అయినా ఎస్తేర్ ప్రార్థిస్తూ ఉంది.</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="testimony-block">
+        <div class="testimony-icon" style="border-color:rgba(201,168,76,0.4);">✨</div>
+        <div class="testimony-body">
+          <h4 class="testimony-heading">
+            <span class="english-text">God's Answer — The Birth of Moses</span>
+            <span class="telugu-text">దేవుని సమాధానం — మోషే జన్మ</span>
+          </h4>
+          <p class="testimony-text">
+            <span class="english-text">God answered Esther's prayers. She was blessed with a baby boy — <strong>Palaparthy Moses</strong>. Three years later, another son — Palaparthy Rajubabu. What people had called impossible, God had done. The family that once drew only blame now stood as living proof of God's faithfulness.</span>
+            <span class="telugu-text">దేవుడు ఎస్తేర్ ప్రార్థనకు జవాబు ఇచ్చాడు. ఆమెకు మగ శిశువు ప్రసాదించాడు — <strong>పాలపర్తి మోషే</strong>. మూడు సంవత్సరాల తర్వాత మరొక కుమారుడు — పాలపర్తి రాజుబాబు. మనుషులు అసాధ్యమన్నది దేవుడు చేశాడు. ఒకప్పుడు నిందలు మాత్రమే పొందిన కుటుంబం ఇప్పుడు దేవుని విశ్వాసానికి సాక్ష్యంగా నిలిచింది.</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="testimony-block">
+        <div class="testimony-icon" style="border-color:rgba(155,28,28,0.35);">🔥</div>
+        <div class="testimony-body">
+          <h4 class="testimony-heading">
+            <span class="english-text">A Widow Who Lit the Fire — Esther's Ministry</span>
+            <span class="telugu-text">మంటను వెలిగించిన వితంతువు — ఎస్తేర్ సేవ</span>
+          </h4>
+          <p class="testimony-text">
+            <span class="english-text">After her husband passed away, Esther moved to her mother's place and began doing God's work. The same community that once blamed her now had to listen. At first many criticised and questioned her. But God moved through her testimony. One by one, hearts opened. <strong>More than 2,000 people were baptised</strong> because of Esther's witness — a woman who had every reason to give up, but chose faith instead. She served as a pastor in the <strong>Indian Pentecostal Church (IPC)</strong> under <strong>Apostle P.L. Paramjyothi garu</strong> — and that Pentecostal fire passed on to her son.</span>
+            <span class="telugu-text">ఆమె భర్త మరణించిన తర్వాత, ఎస్తేర్ తల్లి ఇంటికి వెళ్ళి దేవుని కార్యమును ప్రారంభించింది. ఒకప్పుడు ఆమెను నిందించిన సమాజం ఇప్పుడు ఆమె మాటలు వినవలసి వచ్చింది. మొదట చాలామంది విమర్శించారు. కానీ దేవుడు ఆమె సాక్ష్యం ద్వారా పని చేశాడు. <strong>2,000 కంటే ఎక్కువ మంది</strong> ఎస్తేర్ వల్ల బాప్తిస్మం పొందారు. ఆమె <strong>అపొస్తలుడు పి.ఎల్. పరంజ్యోతి గారి</strong> ఆధ్వర్యంలో <strong>ఇండియన్ పెంతెకొస్తు చర్చి (IPC)</strong> లో పాస్టర్ గా సేవ చేశారు — ఆ పెంతెకొస్తు అగ్ని ఆమె కుమారునికి అందింది.</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="testimony-block">
+        <div class="testimony-icon" style="border-color:rgba(26,92,46,0.35);">📖</div>
+        <div class="testimony-body">
+          <h4 class="testimony-heading">
+            <span class="english-text">The Calling — From Poduru to Oduru</span>
+            <span class="telugu-text">పిలుపు — పోడూరు నుండి ఒడూరుకు</span>
+          </h4>
+          <p class="testimony-text">
+            <span class="english-text">Moses received Bible training and, guided by his mother's faith, moved from Poduru to Oduru after his marriage to Mary Kumari. One day while travelling on a bus, God spoke clearly to him:</span>
+            <span class="telugu-text">మోషే బైబిల్ శిక్షణ పొంది, తల్లి విశ్వాసం మార్గదర్శకత్వంలో మేరీ కుమారిని పెళ్ళి చేసుకున్న తర్వాత పోడూరు నుండి ఒడూరుకు వెళ్ళాడు. ఒక రోజు బస్సులో ప్రయాణిస్తుండగా దేవుడు స్పష్టంగా మాట్లాడాడు:</span>
+          </p>
+          <blockquote class="testimony-quote" style="border-left-color:#1a5c2e;">
+            <span class="english-text">"You must go and share the Gospel to this place — Brahma Cheruvu."</span>
+            <span class="telugu-text">"నువ్వు ఈ స్థలానికి — బ్రహ్మ చెరువుకు — వెళ్ళి సువార్త చెప్పాలి."</span>
+          </blockquote>
+          <p class="testimony-text">
+            <span class="english-text">Brahma Cheruvu was a village known for drinking, smoking, witchcraft, and black magic — a place many would have walked away from. Moses obeyed. He went. He shared God's word. Slowly, one by one, men and women who were once lost began to believe. That village was transformed — and that act of obedience became the foundation of Holy Spirit Prayer House (IPC), which today stands as a light to thousands in Oduru, West Godavari.</span>
+            <span class="telugu-text">బ్రహ్మ చెరువు మద్యపానం, ధూమపానం, చేతబడి మరియు నల్ల మంత్రానికి ప్రసిద్ధమైన గ్రామం. మోషే విన్నాడు. వెళ్ళాడు. దేవుని వాక్యం పంచాడు. మెల్లమెల్లగా ఒక్కొక్కరుగా నమ్మడం ప్రారంభించారు. ఆ గ్రామం రూపాంతరం చెందింది — మరియు ఆ విధేయత హోలీ స్పిరిట్ ప్రార్థన మందిరానికి పునాది అయింది.</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="testimony-block">
+        <div class="testimony-icon" style="border-color:rgba(201,168,76,0.4);">⛪</div>
+        <div class="testimony-body">
+          <h4 class="testimony-heading"><span class="english-text">Rooted in IPC — Under Bishop Samuel Finny</span><span class="telugu-text">IPC లో వేరు పారి — బిషప్ శామ్యూల్ ఫిన్నీ గారి ఆధ్వర్యంలో</span></h4>
+          <p class="testimony-text"><span class="english-text">The fire his mother carried under Apostle P.L. Paramjyothi garu still burns. Today Bishop P. Moses serves in the <strong>Indian Pentecostal Church (IPC)</strong> under <strong>Bishop Samuel Finny garu</strong>, who has stood with this ministry — opening the mega free medical camp in Oduru in 2020, and bringing the Word at the second memorial service of Mary Kumari in 2025.</span><span class="telugu-text">అపొస్తలుడు పి.ఎల్. పరంజ్యోతి గారి ఆధ్వర్యంలో ఆయన తల్లి మోసిన అగ్ని ఇంకా మండుతూనే ఉంది. ఈ రోజు బిషప్ పి. మోషే గారు <strong>బిషప్ శామ్యూల్ ఫిన్నీ గారి</strong> ఆధ్వర్యంలో <strong>ఇండియన్ పెంతెకొస్తు చర్చి (IPC)</strong> లో సేవ చేస్తున్నారు. బిషప్ ఫిన్నీ గారు ఈ సేవకు తోడుగా నిలిచారు — 2020 లో ఓడూరులో మెగా ఉచిత వైద్య శిబిరాన్ని ప్రారంభించారు, 2025 లో మేరీ కుమారి గారి రెండవ జ్ఞాపకార్థ కూడికలో వాక్యాన్ని అందించారు.</span></p>
+          <div class="vlinks" style="justify-content:flex-start;">
+            <a class="vlink" href="https://www.youtube.com/watch?v=pTH1HzwG56A" target="_blank" rel="noopener">▶ <span class="english-text">Medical camp opening · 2020</span><span class="telugu-text">వైద్య శిబిరం ప్రారంభం · 2020</span></a>
+            <a class="vlink" href="https://www.youtube.com/watch?v=WBde0PVFLD4&amp;t=2040s" target="_blank" rel="noopener">▶ <span class="english-text">Memorial message · 2025</span><span class="telugu-text">జ్ఞాపకార్థ సందేశం · 2025</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /testimony-timeline -->
+  </div>
+</section>
+
+<!-- ════ ONE NAME, ONE FAMILY ════ -->
+<section id="sec-palaparthi" style="padding:4rem 0;border-top:2px solid rgba(201,168,76,0.15);background:linear-gradient(180deg,#fffbf0 0%,#fff 100%);">
+  <div class="container" style="max-width:760px;text-align:center;">
+    <span class="section-eyebrow" style="color:var(--gold-dark);"><span class="english-text">The Palaparthi Family</span><span class="telugu-text">పాలపర్తి కుటుంబం</span></span>
+    <h2 class="section-title" style="margin-bottom:1.5rem;"><span class="english-text">One Name, One Family</span><span class="telugu-text">ఒకే పేరు, ఒకే కుటుంబం</span></h2>
+    <div style="text-align:left;color:var(--text-mid);line-height:1.9;font-size:0.97rem;">
+      <p style="margin-bottom:1rem;"><span class="english-text">God has spread the Palaparthi name far beyond Oduru — and many who carry it serve Him. In a remarkable way, the name itself brought them together: at an airport, the name <strong>"Palaparthy"</strong> on a piece of luggage led <strong>Bro. Palaparthy Vijay</strong> (who works in the United States and serves God there) and <strong>Bro. Palaparthy Suresh</strong> (who serves in ministry in Dubai) to meet — and through them God connected them with <strong>Bishop Palaparthy Moses</strong>.</span><span class="telugu-text">దేవుడు పాలపర్తి అనే పేరును ఓడూరు దాటి విస్తరింపజేశాడు — ఆ పేరు కలిగిన అనేకులు ఆయన సేవలో ఉన్నారు. ఆశ్చర్యకరమైన రీతిలో ఆ పేరే వారిని కలిపింది: ఒక విమానాశ్రయంలో లగేజీ మీద ఉన్న <strong>"పాలపర్తి"</strong> అనే పేరు <strong>బ్రదర్ పాలపర్తి విజయ్</strong> (అమెరికాలో ఉద్యోగం చేస్తూనే దేవుని సేవ చేస్తున్నవారు) గారిని మరియు దుబాయ్ లో పరిచర్య చేస్తున్న <strong>బ్రదర్ పాలపర్తి సురేష్</strong> గారిని కలిపింది — వారి ద్వారా దేవుడు వారిని <strong>బిషప్ పాలపర్తి మోషే</strong> గారితో కలిపాడు.</span></p>
+      <p style="margin-bottom:1rem;"><span class="english-text">Today they meet across nations in prayer and fellowship through the <em>Palaparthy World Group</em> on Zoom. That fellowship bore fruit in February 2025: Bro. Vijay was the first to support Bishop Moses's burden for needy children, and Bro. Suresh opened <strong>Mary House of Compassion Trust</strong> in Oduru.</span><span class="telugu-text">ఈ రోజు వారు <em>పాలపర్తి వరల్డ్ గ్రూప్</em> ద్వారా జూమ్ లో దేశాల మధ్య ప్రార్థన, సహవాసంలో కలుసుకుంటున్నారు. ఆ సహవాసం ఫిబ్రవరి 2025 లో ఫలించింది: అవసరంలో ఉన్న పిల్లల పట్ల బిషప్ మోషే గారి భారానికి మొట్టమొదట సహకరించినది బ్రదర్ విజయ్ గారు, ఓడూరులో <strong>మేరీ హౌస్ ఆఫ్ కంపాషన్ ట్రస్ట్</strong> ను ప్రారంభించినది బ్రదర్ సురేష్ గారు.</span></p>
+    </div>
+    <div style="display:flex;justify-content:center;flex-wrap:wrap;gap:0.75rem;margin-top:0.75rem;">
+      <a href="orphanage.html#how-it-began" class="vbtn"><span class="english-text">→ How the Trust began</span><span class="telugu-text">→ ట్రస్ట్ ఎలా ప్రారంభమైంది</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ════ MESSAGES ════ -->
+<section id="sec-messages" style="background:linear-gradient(180deg,#fff 0%,#fdf5f2 100%);padding:4rem 0;border-top:2px solid rgba(155,28,28,0.08);">
+  <div class="container">
+    <div style="display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:1rem;margin-bottom:2.25rem;text-align:center;">
+      <span style="width:50px;height:50px;background:linear-gradient(135deg,#9B1C1C,#7a1515);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0;">🎙️</span>
+      <div>
+        <span class="section-eyebrow" style="color:var(--crimson);opacity:0.8;"><span class="english-text">Sermons & Teachings</span><span class="telugu-text">ప్రసంగాలు & బోధనలు</span></span>
+        <h2 class="section-title" style="margin:0;"><span class="english-text">Sermons & Messages</span><span class="telugu-text">ప్రసంగాలు & సందేశాలు</span></h2>
+      </div>
+    </div>
+    <div class="vgrid">
+      <figure class="vcard">
+        <a class="vthumb" href="https://www.youtube.com/watch?v=8qMuelcEWno" target="_blank" rel="noopener" data-yt="8qMuelcEWno" aria-label="Play: Life is a vapour — James 4:14">
+          <img src="https://i.ytimg.com/vi/8qMuelcEWno/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
+          <span class="vplay" aria-hidden="true"></span><span class="vlen">36:23</span>
+        </a>
+        <figcaption>
+          <span class="vtag"><span class="english-text">Easter Sunday · 20 Apr 2025</span><span class="telugu-text">ఈస్టర్ ఆదివారం · 20 ఏప్రిల్ 2025</span></span>
+          <span class="vtitle"><span class="english-text">Life is a vapour — James 4:14</span><span class="telugu-text">ఆవిరి వంటిది ఈ జీవితం — యాకోబు 4:14</span></span>
+        </figcaption>
+      </figure>
+      <figure class="vcard">
+        <a class="vthumb" href="https://www.youtube.com/watch?v=cUfJSa5DkDY&amp;t=7504s" target="_blank" rel="noopener" data-yt="cUfJSa5DkDY" data-start="7504" aria-label="Play: The lost son comes home — Luke 15">
+          <img src="https://i.ytimg.com/vi/cUfJSa5DkDY/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
+          <span class="vplay" aria-hidden="true"></span><span class="vlen">3:10:57</span>
+        </a>
+        <figcaption>
+          <span class="vtag"><span class="english-text">Pentecost Fasting · Oct 2026</span><span class="telugu-text">పెంతెకొస్తు ఉపవాస ప్రార్థనలు · అక్టో 2026</span></span>
+          <span class="vtitle"><span class="english-text">The lost son comes home — Luke 15</span><span class="telugu-text">తప్పిపోయిన కుమారుడు — లూకా 15</span></span>
+          <span class="vnote"><span class="english-text">▶ Opens at the message</span><span class="telugu-text">▶ సందేశం వద్ద మొదలవుతుంది</span></span>
+        </figcaption>
+      </figure>
+      <figure class="vcard">
+        <a class="vthumb" href="https://www.youtube.com/watch?v=CEAqBBm74EM" target="_blank" rel="noopener" data-yt="CEAqBBm74EM" aria-label="Play: Sunday message">
+          <img src="https://i.ytimg.com/vi/CEAqBBm74EM/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
+          <span class="vplay" aria-hidden="true"></span><span class="vlen">52:39</span>
+        </a>
+        <figcaption>
+          <span class="vtag"><span class="english-text">Sunday Worship · 2 Feb 2025</span><span class="telugu-text">ఆదివారం ఆరాధన · 2 ఫిబ్ర 2025</span></span>
+          <span class="vtitle"><span class="english-text">Sunday message</span><span class="telugu-text">ఆదివారం సందేశం</span></span>
+        </figcaption>
+      </figure>
+      <figure class="vcard">
+        <a class="vthumb" href="https://www.youtube.com/watch?v=-HrXc_UiS7w" target="_blank" rel="noopener" data-yt="-HrXc_UiS7w" aria-label="Play: Christmas message at IPC Church, Padamatipalem">
+          <img src="https://i.ytimg.com/vi/-HrXc_UiS7w/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
+          <span class="vplay" aria-hidden="true"></span><span class="vlen">1:13:43</span>
+        </a>
+        <figcaption>
+          <span class="vtag"><span class="english-text">Christmas · 24 Dec 2024</span><span class="telugu-text">క్రిస్మస్ · 24 డిసెం 2024</span></span>
+          <span class="vtitle"><span class="english-text">Christmas message at IPC Church, Padamatipalem</span><span class="telugu-text">క్రిస్మస్ సందేశం — IPC చర్చి, పడమటిపాలెం</span></span>
+        </figcaption>
+      </figure>
+      <figure class="vcard">
+        <a class="vthumb" href="https://www.youtube.com/watch?v=97CQNIZiPNk" target="_blank" rel="noopener" data-yt="97CQNIZiPNk" aria-label="Play: Ministry in Kuwait — Telugu Christian Church, Ahmadi">
+          <img src="https://i.ytimg.com/vi/97CQNIZiPNk/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
+          <span class="vplay" aria-hidden="true"></span><span class="vlen">38:24</span>
+        </a>
+        <figcaption>
+          <span class="vtag"><span class="english-text">Kuwait · Apr 2019</span><span class="telugu-text">కువైట్ · ఏప్రిల్ 2019</span></span>
+          <span class="vtitle"><span class="english-text">Ministry in Kuwait — Telugu Christian Church, Ahmadi</span><span class="telugu-text">కువైట్ దేశములో సేవ — తెలుగు క్రైస్తవ సంఘము, అహ్మది</span></span>
+        </figcaption>
+      </figure>
+      <figure class="vcard">
+        <a class="vthumb" href="https://www.youtube.com/watch?v=fNRqiWD7PsI" target="_blank" rel="noopener" data-yt="fNRqiWD7PsI" aria-label="Play: Good Friday special message">
+          <img src="https://i.ytimg.com/vi/fNRqiWD7PsI/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
+          <span class="vplay" aria-hidden="true"></span><span class="vlen">36:14</span>
+        </a>
+        <figcaption>
+          <span class="vtag"><span class="english-text">Good Friday · Apr 2020</span><span class="telugu-text">గుడ్ ఫ్రైడే · ఏప్రిల్ 2020</span></span>
+          <span class="vtitle"><span class="english-text">Good Friday special message</span><span class="telugu-text">గుడ్ ఫ్రైడే ప్రత్యేక సందేశం</span></span>
+        </figcaption>
+      </figure>
+    </div>
+    <div class="vmore"><a href="https://www.youtube.com/@pastorpmoses/videos" target="_blank" rel="noopener" class="vbtn"><span class="english-text">▶ All messages on YouTube</span><span class="telugu-text">▶ YouTube లో అన్ని సందేశాలు</span></a></div>
+  </div>
+</section>
+
+<!-- ════ SONGS ════ -->
+<section id="sec-songs" style="background:linear-gradient(180deg,#fffbf0 0%,#fff 100%);padding:4rem 0;border-top:2px solid rgba(201,168,76,0.12);">
+  <div class="container">
+    <div style="display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:1rem;margin-bottom:2.25rem;text-align:center;">
+      <span style="width:50px;height:50px;background:linear-gradient(135deg,#C9A84C,#a8893e);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0;">🎵</span>
+      <div>
+        <span class="section-eyebrow" style="color:var(--gold-dark);opacity:0.8;"><span class="english-text">Worship & Praise</span><span class="telugu-text">ఆరాధన & స్తుతి</span></span>
+        <h2 class="section-title" style="margin:0;"><span class="english-text">Songs & Worship</span><span class="telugu-text">పాటలు & ఆరాధన</span></h2>
+      </div>
+    </div>
+    <div class="vgrid">
+      <figure class="vcard vcard--gold">
+        <a class="vthumb" href="https://www.youtube.com/watch?v=DcnDb8VTasE" target="_blank" rel="noopener" data-yt="DcnDb8VTasE" aria-label="Play: Naa Yesayya Naa Rakshaka — with Mary Kumari">
+          <img src="https://i.ytimg.com/vi/DcnDb8VTasE/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
+          <span class="vplay" aria-hidden="true"></span><span class="vlen">4:38</span>
+        </a>
+        <figcaption>
+          <span class="vtag"><span class="english-text">New Song · 2023</span><span class="telugu-text">కొత్త పాట · 2023</span></span>
+          <span class="vtitle"><span class="english-text">Naa Yesayya Naa Rakshaka — with Mary Kumari</span><span class="telugu-text">నా యేసయ్యా నా రక్షకా — మేరీ కుమారి గారితో</span></span>
+        </figcaption>
+      </figure>
+      <figure class="vcard vcard--gold">
+        <a class="vthumb" href="https://www.youtube.com/watch?v=sljP2VWuNLU" target="_blank" rel="noopener" data-yt="sljP2VWuNLU" aria-label="Play: Sthuthi Gana Mahimalu Neeke — with Billygraham">
+          <img src="https://i.ytimg.com/vi/sljP2VWuNLU/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
+          <span class="vplay" aria-hidden="true"></span><span class="vlen">7:12</span>
+        </a>
+        <figcaption>
+          <span class="vtag"><span class="english-text">Brahmanacheruvu · 2019</span><span class="telugu-text">బ్రాహ్మణ చెరువు · 2019</span></span>
+          <span class="vtitle"><span class="english-text">Sthuthi Gana Mahimalu Neeke — with Billygraham</span><span class="telugu-text">స్తుతి గణ మహిమలు నీకే — బిల్లీగ్రాహం తో</span></span>
+        </figcaption>
+      </figure>
+      <figure class="vcard vcard--gold">
+        <a class="vthumb" href="https://www.youtube.com/watch?v=yXrxX8H8_w4" target="_blank" rel="noopener" data-yt="yXrxX8H8_w4" aria-label="Play: Heart-touching praise &amp; worship — with Billygraham">
+          <img src="https://i.ytimg.com/vi/yXrxX8H8_w4/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
+          <span class="vplay" aria-hidden="true"></span><span class="vlen">7:30</span>
+        </a>
+        <figcaption>
+          <span class="vtag"><span class="english-text">Worship · Jun 2019</span><span class="telugu-text">ఆరాధన · జూన్ 2019</span></span>
+          <span class="vtitle"><span class="english-text">Heart-touching praise & worship — with Billygraham</span><span class="telugu-text">హృదయాన్ని కదిలించే స్తుతి ఆరాధన — బిల్లీగ్రాహం తో</span></span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- Photo preview from Moses folder -->
+<section id="sec-pictures" class="photo-section">
+  <div class="container">
+    <span class="section-eyebrow" style="display:block;text-align:center;margin-bottom:0.5rem;">
+      <span class="english-text">Photo Gallery</span>
+      <span class="telugu-text">ఫోటో గ్యాలరీ</span>
+    </span>
+    <h2 class="section-title" style="text-align:center;margin-bottom:2rem;">
+      <span class="english-text">Moments of Ministry</span>
+      <span class="telugu-text">సేవ యొక్క క్షణాలు</span>
+    </h2>
+    <div id="photo-grid" class="photo-grid"></div>
+    <div id="empty-msg" class="empty-photos">
+      <div style="font-size:2.5rem;margin-bottom:0.75rem;">📷</div>
+      <p>
+        <span class="english-text">Photos will appear here once added to the Moses album.</span>
+        <span class="telugu-text">మోషే ఆల్బమ్‌కి జోడించిన తర్వాత ఫోటోలు ఇక్కడ కనిపిస్తాయి.</span>
+      </p>
+      <a href="gallery.html?album=Moses" class="btn btn-primary" style="margin-top:1rem;">View Gallery</a>
+    </div>
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox"><button class="lb-close" id="lb-close">&times;</button><button class="lb-nav lb-prev" id="lb-prev">&#8249;</button><img id="lb-img" src="" alt=""><button class="lb-nav lb-next" id="lb-next">&#8250;</button><div class="lb-count" id="lb-count"></div></div>
+
+<div id="site-footer"></div>
+<script src="js/site.js"></script>
+<script src="js/videos.js?v=20261015"></script>
+<script>
+(function(){
+  var nav = document.querySelector('nav.person-section-nav');
+  if(!nav) return;
+  nav.style.transition = 'transform 0.3s cubic-bezier(.4,0,.2,1)';
+  var lastY = 0, ticking = false;
+  window.addEventListener('scroll', function(){
+    if(!ticking){ requestAnimationFrame(function(){
+      var y = window.scrollY;
+      nav.style.transform = (y > lastY && y > 80) ? 'translateY(-100%)' : 'translateY(0)';
+      lastY = y; ticking = false;
+    }); ticking = true; }
+  }, {passive:true});
+})();
+</script>
+<script>
+(async () => {
+  let photos = [];
+  try {
+    const r = await fetch('images/manifest.json');
+    const m = await r.json();
+    photos = (m.albums['Moses'] || {}).photos || [];
+  } catch {}
+  const grid = document.getElementById('photo-grid');
+  const empty = document.getElementById('empty-msg');
+  if (!photos.length) { empty.style.display = 'block'; return; }
+  empty.style.display = 'none';
+  let cur = 0;
+  const lb = document.getElementById('lightbox'), lbImg = document.getElementById('lb-img'), lbC = document.getElementById('lb-count');
+  const open = i => { cur=i; lbImg.src=photos[i].path; lbC.textContent=`${i+1}/${photos.length}`; lb.classList.add('open'); document.body.style.overflow='hidden'; };
+  const close = () => { lb.classList.remove('open'); document.body.style.overflow=''; };
+  document.getElementById('lb-close').onclick = close;
+  document.getElementById('lb-prev').onclick = () => open((cur-1+photos.length)%photos.length);
+  document.getElementById('lb-next').onclick = () => open((cur+1)%photos.length);
+  lb.onclick = e => { if(e.target===lb) close(); };
+  document.addEventListener('keydown', e => { if(!lb.classList.contains('open'))return; if(e.key==='ArrowLeft')open((cur-1+photos.length)%photos.length); if(e.key==='ArrowRight')open((cur+1)%photos.length); if(e.key==='Escape')close(); });
+  photos.slice(0, 12).forEach((p, i) => {
+    const c = document.createElement('div'); c.className='photo-card';
+    c.innerHTML=`<img src="${p.path}" alt="${p.caption||''}" loading="lazy">`;
+    c.onclick = () => open(i); grid.appendChild(c);
+  });
+})();
+</script>
+</body>
+</html>

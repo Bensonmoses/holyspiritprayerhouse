@@ -1,0 +1,137 @@
+{
+  "albums": {
+    "Baptism": {
+      "title": "Baptism",
+      "titleTelugu": "బాప్టిజమ్",
+      "description": "Holy Baptism services at Holy Spirit Prayer House",
+      "cover": "",
+      "photos": []
+    },
+    "Benson": {
+      "title": "Benson Moses",
+      "titleTelugu": "బెన్సన్ మోసెస్",
+      "description": "Palaparthi Benson Moses — Son of Bishop P. Moses",
+      "cover": "Benson-1.jpeg",
+      "photos": []
+    },
+    "Billygraham": {
+      "title": "Billygraham Moses",
+      "titleTelugu": "బిలీగ్రాహం మోసెస్",
+      "description": "Palaparthi Billygraham Moses — Co-founder and Minister",
+      "cover": "Billygraham.jpeg",
+      "photos": []
+    },
+    "Blanket Distribution": {
+      "title": "Blanket Distribution",
+      "titleTelugu": "దుప్పటి పంపిణీ",
+      "description": "Reaching the needy with warmth during winter outreach",
+      "cover": "",
+      "photos": []
+    },
+    "Christmas Celbrations": {
+      "title": "Christmas Celebrations",
+      "titleTelugu": "క్రిస్మస్ వేడుకలు",
+      "description": "Celebrating the birth of Jesus Christ with joy and praise",
+      "cover": "",
+      "photos": []
+    },
+    "Church elders": {
+      "title": "Church Elders",
+      "titleTelugu": "చర్చి పెద్దలు",
+      "description": "The faithful leadership team of Holy Spirit Prayer House",
+      "cover": "",
+      "photos": []
+    },
+    "Esthar": {
+      "title": "Palaparthi Estharroj",
+      "titleTelugu": "పాలపర్తి ఎస్తర్రోజ్",
+      "description": "First child of Bishop P. Moses — Daughter",
+      "cover": "Esthar.jpeg",
+      "photos": []
+    },
+    "Food Distribution": {
+      "title": "Food Distribution",
+      "titleTelugu": "ఆహార పంపిణీ",
+      "description": "Serving meals to the hungry and underprivileged in the community",
+      "cover": "",
+      "photos": []
+    },
+    "Mary": {
+      "title": "Late Mary Kumari",
+      "titleTelugu": "స్వర్గీయ మేరీ కుమారి",
+      "description": "In loving memory of Palaparthi Mary Kumari — First Lady of Holy Spirit Prayer House",
+      "cover": "Mary.jpeg",
+      "photos": []
+    },
+    "Medical-Camp": {
+      "title": "Medical Camp",
+      "titleTelugu": "వైద్య శిబిరం",
+      "description": "Free medical services provided to the community through God's grace",
+      "cover": "",
+      "photos": []
+    },
+    "Moses": {
+      "title": "Bishop Palaparthy Moses",
+      "titleTelugu": "బిషప్ పాలపర్తి మోషే",
+      "description": "Founder and Senior Bishop of Holy Spirit Prayer House",
+      "cover": "founder.jpg",
+      "photos": []
+    },
+    "Moses_Dubai": {
+      "title": "Bishop Moses — Dubai",
+      "titleTelugu": "బిషప్ మోషే — దుబాయ్",
+      "description": "Ministry visit to Dubai — spreading the Gospel across borders",
+      "cover": "",
+      "photos": []
+    },
+    "Moses_Kuwait": {
+      "title": "Bishop Moses — Kuwait",
+      "titleTelugu": "బిషప్ మోషే — కువైట్",
+      "description": "Ministry visit to Kuwait — serving the diaspora community",
+      "cover": "",
+      "photos": []
+    },
+    "New Year Celbrations": {
+      "title": "New Year Celebrations",
+      "titleTelugu": "నూతన సంవత్సర వేడుకలు",
+      "description": "Welcoming each new year with prayer, praise and thanksgiving",
+      "cover": "",
+      "photos": []
+    },
+    "Orphanage": {
+      "title": "Mary House of Compassion",
+      "titleTelugu": "మేరీ హౌస్ ఆఫ్ కంపాషన్",
+      "description": "Life at Mary House of Compassion Trust — our 15 children",
+      "cover": "",
+      "photos": []
+    },
+    "Outreach": {
+      "title": "Outreach Ministry",
+      "titleTelugu": "అవుట్‌రీచ్ సేవ",
+      "description": "Taking the Gospel to the unreached — villages, streets and beyond",
+      "cover": "",
+      "photos": []
+    },
+    "Paricharikulu": {
+      "title": "Paricharikulu",
+      "titleTelugu": "పరిచారికులు",
+      "description": "The dedicated servants and deacons of Holy Spirit Prayer House",
+      "cover": "",
+      "photos": []
+    },
+    "Sunday's School": {
+      "title": "Sunday School",
+      "titleTelugu": "ఆదివారం పాఠశాల",
+      "description": "Teaching the Word of God to the next generation with love",
+      "cover": "",
+      "photos": []
+    },
+    "Women's Ministry": {
+      "title": "Women's Ministry",
+      "titleTelugu": "మహిళా సేవ",
+      "description": "Empowering women through prayer, fellowship and the Word of God",
+      "cover": "",
+      "photos": []
+    }
+  }
+}

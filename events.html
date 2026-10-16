@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Analytics (GA4) — visitor & click counts -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0PS586KHL7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0PS586KHL7');
+  </script>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Events at Holy Spirit Prayer House (IPC) — Sunday services, prayer nights, crusades and special programs in Oduru, West Godavari.">
+  <title>Events | Holy Spirit Prayer House (IPC)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Telugu:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/videos.css?v=20261015">
+  <link rel="stylesheet" href="css/events.css?v=202610130951">
+</head>
+<body class="english">
+<div id="site-header"></div>
+<div id="hsph-live-banner"></div>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="section-eyebrow"><span class="english-text">Calendar</span><span class="telugu-text">క్యాలెండర్</span></span>
+    <h1><span class="english-text">Events &amp; Programs</span><span class="telugu-text">కార్యక్రమాలు &amp; ప్రత్యేక సేవలు</span></h1>
+    <p><span class="english-text">Join us for worship, prayer and community. New to us? Everyone is welcome.</span><span class="telugu-text">ఆరాధన, ప్రార్థన మరియు సమాజానికి మాతో చేరండి. మాకు కొత్తా? అందరికీ స్వాగతం.</span></p>
+  </div>
+</section>
+
+<!-- Current & upcoming programs (built from js/events-data.js) -->
+<section class="section">
+  <div class="container">
+    <span class="section-eyebrow"><span class="english-text">Now &amp; Next</span><span class="telugu-text">ఇప్పుడు &amp; రాబోయేవి</span></span>
+    <h2 class="section-title"><span class="english-text">Current &amp; Upcoming Programs</span><span class="telugu-text">ప్రస్తుత &amp; రాబోయే కార్యక్రమాలు</span></h2>
+    <div id="ev-current" class="ev-list"></div>
+  </div>
+</section>
+
+<!-- Weekly Services -->
+<section class="section section--surface">
+  <div class="container">
+    <span class="section-eyebrow"><span class="english-text">Every Week</span><span class="telugu-text">ప్రతి వారం</span></span>
+    <h2 class="section-title"><span class="english-text">Weekly Services</span><span class="telugu-text">వారపు ఆరాధనలు</span></h2>
+    <div class="ministry-grid" style="margin-top:2.5rem;">
+
+      <div class="ministry-card">
+        <div class="ministry-card__stripe"></div>
+        <div class="ministry-card__body">
+          <div style="background:var(--crimson);color:#fff;font-size:0.75rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:0.3rem 0.8rem;border-radius:999px;display:inline-block;margin-bottom:1rem;">Sunday</div>
+          <div class="ministry-card__icon">⛪</div>
+          <h3><span class="english-text">Morning Prayer</span><span class="telugu-text">ఉదయ ప్రార్థన</span></h3>
+          <p><span class="english-text">9:00 AM — Start the week in God's presence with praise and worship before the main service.</span><span class="telugu-text">9:00 AM — ప్రధాన ఆరాధనకు ముందు స్తుతి మరియు ఆరాధనతో వారాన్ని దేవుని సన్నిధిలో ప్రారంభించండి.</span></p>
+        </div>
+      </div>
+
+      <div class="ministry-card">
+        <div class="ministry-card__stripe"></div>
+        <div class="ministry-card__body">
+          <div style="background:var(--crimson);color:#fff;font-size:0.75rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:0.3rem 0.8rem;border-radius:999px;display:inline-block;margin-bottom:1rem;">Sunday</div>
+          <div class="ministry-card__icon">📖</div>
+          <h3><span class="english-text">Main Worship Service</span><span class="telugu-text">ప్రధాన ఆరాధన సేవ</span></h3>
+          <p><span class="english-text">10:00 AM — Our main weekly gathering, streamed live on YouTube. Worship, preaching by Bishop P. Moses, and prayer ministry. All are welcome.</span><span class="telugu-text">10:00 AM — మా ప్రధాన వారపు సమావేశం (YouTube లో ప్రత్యక్ష ప్రసారం). ఆరాధన, బిషప్ పి. మోషే ద్వారా బోధన మరియు ప్రార్థన సేవ. అందరికీ స్వాగతం.</span></p>
+        </div>
+      </div>
+
+      <div class="ministry-card">
+        <div class="ministry-card__stripe"></div>
+        <div class="ministry-card__body">
+          <div style="background:var(--gold);color:#fff;font-size:0.75rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:0.3rem 0.8rem;border-radius:999px;display:inline-block;margin-bottom:1rem;">Thursday</div>
+          <div class="ministry-card__icon">🙏</div>
+          <h3><span class="english-text">Thursday Prayer Meeting</span><span class="telugu-text">గురువారం ప్రార్థన కూడిక</span></h3>
+          <p><span class="english-text">6:00 PM — Intercession, worship and the Word. Bring your prayer requests and come expecting breakthrough.</span><span class="telugu-text">6:00 PM — విజ్ఞాపన ప్రార్థన, ఆరాధన మరియు వాక్యం. మీ ప్రార్థన విజ్ఞాపనలు తీసుకురండి.</span></p>
+        </div>
+      </div>
+
+      <div class="ministry-card">
+        <div class="ministry-card__stripe"></div>
+        <div class="ministry-card__body">
+          <div style="background:var(--gold);color:#fff;font-size:0.75rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:0.3rem 0.8rem;border-radius:999px;display:inline-block;margin-bottom:1rem;">Friday</div>
+          <div class="ministry-card__icon">🔥</div>
+          <h3><span class="english-text">Youth &amp; Fasting Prayer</span><span class="telugu-text">యువ &amp; ఉపవాస ప్రార్థన</span></h3>
+          <p><span class="english-text">7:00 PM — Youth night with fasting prayer, intense worship and a word for the younger generation.</span><span class="telugu-text">7:00 PM — ఉపవాస ప్రార్థన, తీవ్రమైన ఆరాధన మరియు యువ తరానికి వాక్యంతో యువ రాత్రి.</span></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Recent (completed) programs — hidden automatically while empty -->
+<section class="section" hidden>
+  <div class="container">
+    <span class="section-eyebrow"><span class="english-text">Photos &amp; Videos</span><span class="telugu-text">ఫోటోలు &amp; వీడియోలు</span></span>
+    <h2 class="section-title"><span class="english-text">Recent Programs</span><span class="telugu-text">ఇటీవలి కార్యక్రమాలు</span></h2>
+    <div id="ev-recent" class="ev-list"></div>
+  </div>
+</section>
+
+<!-- Special Events -->
+<section class="section">
+  <div class="container">
+    <span class="section-eyebrow"><span class="english-text">Special Programs</span><span class="telugu-text">ప్రత్యేక కార్యక్రమాలు</span></span>
+    <h2 class="section-title"><span class="english-text">Annual &amp; Special Events</span><span class="telugu-text">వార్షిక &amp; ప్రత్యేక కార్యక్రమాలు</span></h2>
+    <div class="welcome-grid" style="margin-top:2.5rem;">
+      <div class="welcome-card">
+        <div class="welcome-card__icon">🎆</div>
+        <div class="vtag" style="margin-bottom:0.4rem;"><span class="english-text">1 January</span><span class="telugu-text">జనవరి 1</span></div>
+        <h3><span class="english-text">New Year Celebration</span><span class="telugu-text">నూతన సంవత్సర వేడుక</span></h3>
+        <p><span class="english-text">We begin every year together in Oduru with thanksgiving, worship and a word for the new year.</span><span class="telugu-text">ప్రతి సంవత్సరాన్ని ఓడూరులో కృతజ్ఞత, ఆరాధన మరియు నూతన సంవత్సర వాక్యంతో కలిసి ప్రారంభిస్తాము.</span></p>
+        <div class="vlinks"><a class="vlink" href="https://www.youtube.com/watch?v=ip-jXJi-dOo" target="_blank" rel="noopener">▶ <span class="english-text">Watch 2026</span><span class="telugu-text">2026 చూడండి</span></a><a class="vlink" href="https://www.youtube.com/watch?v=xAc3gnxeP14" target="_blank" rel="noopener">▶ <span class="english-text">Watch 2025</span><span class="telugu-text">2025 చూడండి</span></a></div>
+      </div>
+      <div class="welcome-card">
+        <div class="welcome-card__icon">⛺</div>
+        <div class="vtag" style="margin-bottom:0.4rem;"><span class="english-text">Every May · 4 nights</span><span class="telugu-text">ప్రతి మే · 4 రాత్రులు</span></div>
+        <h3><span class="english-text">Gospel &amp; Healing Meetings</span><span class="telugu-text">యేసు క్రీస్తు రాజ్య సువార్త సభలు</span></h3>
+        <p><span class="english-text">Four nights of gospel and healing meetings in Oduru with servants of God from across Andhra Pradesh.</span><span class="telugu-text">ఆంధ్రప్రదేశ్ నలుమూలల నుండి దైవజనులతో ఓడూరులో నాలుగు రాత్రుల సువార్త & స్వస్థత సభలు.</span></p>
+        <div class="vlinks"><a class="vlink" href="https://www.youtube.com/watch?v=CsVl6mM5Cd8" target="_blank" rel="noopener">▶ <span class="english-text">Watch 2026</span><span class="telugu-text">2026 చూడండి</span></a><a class="vlink" href="https://www.youtube.com/watch?v=aQKvuWYwsDo" target="_blank" rel="noopener">▶ <span class="english-text">Watch 2025</span><span class="telugu-text">2025 చూడండి</span></a></div>
+      </div>
+      <div class="welcome-card">
+        <div class="welcome-card__icon">🔥</div>
+        <div class="vtag" style="margin-bottom:0.4rem;"><span class="english-text">12 days</span><span class="telugu-text">12 రోజులు</span></div>
+        <h3><span class="english-text">Pentecost Fasting Prayers</span><span class="telugu-text">పెంతెకొస్తు ఉపవాస ప్రార్థనలు</span></h3>
+        <p><span class="english-text">Twelve days of fasting and prayer — the Altar of Incense meetings, morning and night.</span><span class="telugu-text">పన్నెండు రోజుల ఉపవాస ప్రార్థనలు — ధూపవేదిక కూడికలు, ఉదయం మరియు రాత్రి.</span></p>
+        <div class="vlinks"><a class="vlink" href="https://www.youtube.com/watch?v=6iD4mw73LYY" target="_blank" rel="noopener">▶ <span class="english-text">Watch 2026</span><span class="telugu-text">2026 చూడండి</span></a><a class="vlink" href="https://www.youtube.com/watch?v=ScePJ9x8B48" target="_blank" rel="noopener">▶ <span class="english-text">Watch 2025</span><span class="telugu-text">2025 చూడండి</span></a></div>
+      </div>
+      <div class="welcome-card">
+        <div class="welcome-card__icon">🎉</div>
+        <div class="vtag" style="margin-bottom:0.4rem;"><span class="english-text">Every year</span><span class="telugu-text">ప్రతి సంవత్సరం</span></div>
+        <h3><span class="english-text">Church Anniversary</span><span class="telugu-text">చర్చ్ వార్షికోత్సవం</span></h3>
+        <p><span class="english-text">A grand celebration of God's faithfulness since 1995 — with special guests, worship and thanksgiving. One of the most joyful days of the year.</span><span class="telugu-text">1995 నుండి దేవుని నమ్మకత్వానికి గొప్ప వేడుక — ప్రత్యేక అతిథులు, ఆరాధన మరియు కృతజ్ఞతతో.</span></p>
+      </div>
+      <div class="welcome-card">
+        <div class="welcome-card__icon">📖</div>
+        <div class="vtag" style="margin-bottom:0.4rem;"><span class="english-text">Through the year</span><span class="telugu-text">సంవత్సరమంతా</span></div>
+        <h3><span class="english-text">Gospel Crusades</span><span class="telugu-text">సువార్త మహాకూటాలు</span></h3>
+        <p><span class="english-text">Open-air crusades in villages across West Godavari. Thousands gather to hear the Gospel and witness healings and miracles through prayer.</span><span class="telugu-text">పశ్చిమ గోదావరి అంతటా గ్రామాల్లో బహిరంగ మహాకూటాలు. వేలాది మంది సువార్త వినడానికి మరియు అద్భుతాలను చూడటానికి గుమికూడతారు.</span></p>
+      </div>
+      <div class="welcome-card">
+        <div class="welcome-card__icon">🎄</div>
+        <div class="vtag" style="margin-bottom:0.4rem;"><span class="english-text">25 December</span><span class="telugu-text">డిసెంబర్ 25</span></div>
+        <h3><span class="english-text">Christmas Sandhadi — Brahmanacheruvu</span><span class="telugu-text">క్రిస్మస్ సందడి — బ్రాహ్మణ చెరువు</span></h3>
+        <p><span class="english-text">A joyful Christmas celebration for the entire community at Brahmanacheruvu, where the ministry began — including special gifts for the orphanage children and a community feast.</span><span class="telugu-text">సేవ ప్రారంభమైన బ్రాహ్మణ చెరువులో మొత్తం సమాజానికి ఆనందకరమైన క్రిస్మస్ వేడుక — అనాథాశ్రమ పిల్లలకు ప్రత్యేక బహుమతులు మరియు సమాజ విందు సహా.</span></p>
+        <div class="vlinks"><a class="vlink" href="https://www.youtube.com/watch?v=YJgCFrQmFTY" target="_blank" rel="noopener">▶ <span class="english-text">Watch 2025</span><span class="telugu-text">2025 చూడండి</span></a><a class="vlink" href="https://www.youtube.com/watch?v=CG5weSM7nMs" target="_blank" rel="noopener">▶ <span class="english-text">Watch 2024</span><span class="telugu-text">2024 చూడండి</span></a></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Stay updated -->
+<section class="cta-band">
+  <div class="container" style="text-align:center;">
+    <h2 class="section-title"><span class="english-text">Stay Updated</span><span class="telugu-text">నవీకరణలు పొందండి</span></h2>
+    <p class="section-sub" style="margin:0 auto 2rem;"><span class="english-text">Follow us on YouTube, Instagram and Facebook for event announcements, live streams and ministry updates. Or message us on WhatsApp.</span><span class="telugu-text">ఈవెంట్ ప్రకటనలు, లైవ్ స్ట్రీమ్‌లు మరియు సేవ నవీకరణల కోసం YouTube, Instagram మరియు Facebook లో ఫాలో అవ్వండి.</span></p>
+    <div class="cta-actions">
+      <a href="https://www.youtube.com/@pastorpmoses" target="_blank" class="btn btn-primary"><span class="english-text">▶ YouTube Channel</span><span class="telugu-text">▶ YouTube ఛానల్</span></a>
+      <a href="https://wa.me/919848315170?text=Tell%20me%20about%20upcoming%20events" target="_blank" class="btn btn-gold"><span class="english-text">💬 WhatsApp for Events</span><span class="telugu-text">💬 ఈవెంట్స్ కోసం WhatsApp</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- Scripture -->
+<section class="scripture-section">
+  <div class="container">
+    <p class="scripture-text"><span class="english-text">"Let us not give up meeting together, as some are in the habit of doing, but let us encourage one another."</span><span class="telugu-text">"కొందరి అలవాటు అయినట్లు మన సమావేశమును మానుకొనక, ఒకరినొకరు హెచ్చరించుకొందాం."</span></p>
+    <p class="scripture-ref"><span class="english-text">— Hebrews 10:25</span><span class="telugu-text">— హెబ్రీయులకు 10:25</span></p>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="js/site.js"></script>
+<script src="js/videos.js?v=20261015"></script>
+<script src="js/events.js?v=202610130951"></script>
+</body></html>

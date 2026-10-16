@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Analytics (GA4) — visitor & click counts -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0PS586KHL7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0PS586KHL7');
+  </script>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mary House of Compassion Trust — Orphanage ministry by Bishop P. Moses in Oduru, West Godavari. Currently caring for 15+ children with love, education and hope.">
+  <title>Orphanage — Mary House of Compassion Trust | Holy Spirit Prayer House (IPC)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Telugu:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/videos.css?v=20261015">
+  <style>
+    /* ── Hero: same structure/feel as home page ── */
+    .trust-hero {
+      position: relative;
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background: #1a0505;
+      border-bottom: 3px solid var(--gold);
+    }
+    .trust-hero__bg {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: center;
+      opacity: 1;
+      transition: opacity 1.4s ease-in-out;
+      z-index: 0; pointer-events: none;
+      /* same darkening as home page hero */
+      filter: brightness(0.32) saturate(0.55);
+    }
+    .trust-hero__overlay {
+      position: absolute; inset: 0; z-index: 1; pointer-events: none;
+      background: linear-gradient(135deg,
+        rgba(0,0,0,0.72) 0%,
+        rgba(107,15,15,0.30) 50%,
+        rgba(0,0,0,0.76) 100%);
+    }
+    .trust-hero__overlay::after {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 50% 0%, rgba(201,168,76,0.13) 0%, transparent 65%);
+    }
+    .trust-hero .container { position: relative; z-index: 2; }
+
+    /* Hero content — same as home page .hero-content */
+    .trust-hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      padding: 4rem 1.5rem;
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    /* Badge — identical to .hero-badge */
+    .trust-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      background: rgba(201,168,76,0.13);
+      border: 1px solid rgba(201,168,76,0.38);
+      color: var(--gold-light);
+      font-size: 0.77rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 0.4rem 1.1rem;
+      border-radius: var(--radius-full);
+      margin-bottom: 1.6rem;
+    }
+
+    /* Title — matches .hero-title exactly */
+    .trust-name {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.4rem, 6vw, 4.2rem);
+      font-weight: 700;
+      font-style: normal;
+      color: #fff;
+      line-height: 1.1;
+      margin-bottom: 1.3rem;
+      text-shadow: 0 2px 24px rgba(0,0,0,0.5);
+    }
+    .trust-name em {
+      font-style: normal;
+      color: var(--gold-light);
+    }
+
+    /* Tagline — matches .hero-tagline exactly */
+    .trust-tagline {
+      font-size: clamp(1rem, 2vw, 1.18rem);
+      color: rgba(255,255,255,0.78);
+      line-height: 1.85;
+      margin-bottom: 2.5rem;
+      max-width: 540px;
+      letter-spacing: normal;
+      text-transform: none;
+    }
+
+    /* Action buttons row — like .hero-actions */
+    .trust-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @media(max-width:600px) {
+      .trust-hero { min-height: 80vh; }
+      .trust-name { font-size: 2rem; }
+      .trust-tagline { font-size: 0.97rem; }
+    }
+
+    /* Services grid */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    .service-card {
+      background: linear-gradient(150deg, #fff 40%, #fdf0ec 100%);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+      box-shadow: 0 2px 16px rgba(155,28,28,0.09);
+      border: 1px solid rgba(155,28,28,0.13);
+      border-top: 3px solid var(--crimson);
+      transition: all var(--transition);
+    }
+    .service-card:hover { transform: translateY(-5px); box-shadow: 0 10px 36px rgba(155,28,28,0.15); border-color: rgba(155,28,28,0.28); border-top-color: var(--crimson); background: linear-gradient(150deg,#fff 30%,#fce8e3 100%); }
+    .service-card__icon { font-size: 2rem; margin-bottom: 0.75rem; }
+    .service-card h3 { font-size: 1rem; margin-bottom: 0.5rem; color: var(--text-dark); }
+    .service-card p  { font-size: 0.88rem; color: var(--text-mid); line-height: 1.75; }
+
+    /* Goal band */
+    .goal-band {
+      background: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold) 100%);
+      padding: 3rem 0;
+      text-align: center;
+      color: var(--dark);
+    }
+    .goal-band h2 { color: var(--dark); font-size: clamp(1.4rem,3vw,2rem); margin-bottom: 0.75rem; }
+    .goal-band p  { color: rgba(13,13,13,0.75); font-size: 1rem; max-width: 650px; margin: 0 auto; line-height: 1.85; }
+
+    @media(max-width:768px) {
+      .two-col-orphan { grid-template-columns: 1fr !important; }
+      .services-grid { grid-template-columns: 1fr 1fr; gap: 1rem; }
+      .children-section { padding: 3rem 0; }
+      .children-grid { grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem; }
+      .contact-tiles-grid { grid-template-columns: 1fr 1fr !important; gap: 0.75rem !important; }
+      .contact-tiles-grid a[style*="grid-column:span 2"],
+      .contact-tiles-grid div[style*="grid-column:span 2"] { grid-column: span 2 !important; }
+    }
+    @media(max-width:480px) {
+      .services-grid { grid-template-columns: 1fr; gap: 0.85rem; }
+      .children-grid { grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+      .contact-tiles-grid { grid-template-columns: 1fr !important; }
+      .contact-tiles-grid a[style*="grid-column:span 2"],
+      .contact-tiles-grid div[style*="grid-column:span 2"] { grid-column: span 1 !important; }
+    }
+
+    /* ── Meet the Children Grid ──────────────── */
+    .children-section { padding: 5rem 0; background: linear-gradient(180deg, #fdf5f2 0%, #f9eeea 50%, #fdf5f2 100%); }
+    .children-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+    .child-card {
+      background: linear-gradient(160deg, #fff 45%, #fdf0ec 100%);
+      border-radius: var(--radius-lg);
+      box-shadow: 0 2px 16px rgba(155,28,28,0.09);
+      border: 1px solid rgba(155,28,28,0.13);
+      border-top: 3px solid var(--crimson);
+      overflow: hidden;
+      transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+    }
+    .child-card:hover { transform: translateY(-7px); box-shadow: 0 12px 40px rgba(155,28,28,0.16); border-color: rgba(155,28,28,0.28); border-top-color: var(--crimson); background: linear-gradient(160deg,#fff 30%,#fce8e3 100%); }
+    .child-card__photo {
+      width: 100%; aspect-ratio: 1/1; /* square head-and-shoulders portrait */
+      overflow: hidden; position: relative;
+      background: linear-gradient(135deg, #8B1515, #5A0E0E);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .child-card__photo img {
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: center 15%; display: block;
+      transform: scale(1.2); transform-origin: center 10%; /* close portrait: big face + a little shoulder */
+    }
+    .child-card__fallback {
+      font-size: 4rem; color: rgba(255,255,255,0.25);
+      position: absolute; inset: 0;
+      display: none; align-items: center; justify-content: center;
+    }
+    .child-card__fallback.visible { display: flex; }
+    .child-card__num {
+      position: absolute; top: 0.65rem; left: 0.65rem;
+      background: rgba(0,0,0,0.5);
+      color: #fff; font-size: 0.64rem; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      padding: 0.22rem 0.55rem;
+      border-radius: var(--radius-full);
+      backdrop-filter: blur(6px);
+    }
+    .child-card__sponsor-badge {
+      position: absolute; top: 0.65rem; right: 0.65rem;
+      background: var(--gold); color: var(--dark);
+      font-size: 0.6rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 0.22rem 0.5rem;
+      border-radius: var(--radius-full);
+    }
+    .child-card__body {
+      padding: 1.1rem 1.1rem 1.3rem;
+      flex: 1; display: flex; flex-direction: column;
+      align-items: center; text-align: center;
+    }
+    .child-card__name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.08rem; font-weight: 600;
+      color: var(--text-dark); margin-bottom: 0.2rem;
+      text-align: center;
+    }
+    .child-card__age {
+      font-size: 0.72rem; color: var(--crimson);
+      font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase; margin-bottom: 0.6rem;
+      text-align: center;
+    }
+    .child-card__desc {
+      font-size: 0.87rem; color: var(--text-mid);
+      line-height: 1.65; flex: 1; margin-bottom: 1rem;
+      text-align: center;
+    }
+    .child-card__btn {
+      display: inline-flex; align-items: center; gap: 0.3rem;
+      background: var(--crimson); color: #fff;
+      font-size: 0.75rem; font-weight: 700;
+      letter-spacing: 0.07em; text-transform: uppercase;
+      padding: 0.5rem 0.9rem; border-radius: var(--radius-full);
+      text-decoration: none; transition: background 0.18s;
+      align-self: center;
+    }
+    .child-card__btn:hover { background: #7B1313; }
+
+    /* Individual child page styles */
+    .child-hero {
+      padding: 4rem 0 3rem;
+      background: linear-gradient(160deg, #1A0505 0%, #7B1313 50%, #1A0505 100%);
+      text-align: center;
+      border-bottom: 3px solid var(--gold);
+    }
+    .child-hero__photo {
+      width: 180px; height: 180px; border-radius: 50%;
+      border: 4px solid rgba(201,168,76,0.5); overflow: hidden;
+      margin: 0 auto 1.5rem;
+      box-shadow: 0 0 0 8px rgba(201,168,76,0.1), 0 0 50px rgba(201,168,76,0.2);
+      background: #3A1414;
+    }
+    .child-hero__photo img { width:100%; height:100%; object-fit:cover; object-position:center top; }
+    .child-hero__num {
+      display: inline-block;
+      background: rgba(201,168,76,0.2); border: 1px solid rgba(201,168,76,0.4);
+      color: var(--gold); font-size: 0.7rem; font-weight: 700;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      padding: 0.32rem 0.9rem; border-radius: var(--radius-full);
+      margin-bottom: 0.85rem;
+    }
+    .child-hero__name {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3rem); color: #fff;
+      font-style: italic; margin-bottom: 0.3rem; line-height: 1.2;
+    }
+    .child-hero__age {
+      font-size: 0.85rem; color: rgba(255,255,255,0.55);
+      letter-spacing: 0.15em; text-transform: uppercase;
+    }
+    .child-sponsor-box {
+      background: var(--crimson); color: #fff;
+      border-radius: var(--radius-lg); padding: 2.5rem;
+      text-align: center;
+    }
+    .child-sponsor-box h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem; margin-bottom: 0.5rem;
+    }
+    .child-sponsor-box p { opacity: 0.85; font-size: 0.95rem; margin-bottom: 1.5rem; }
+    .sponsor-amounts {
+      display: flex; gap: 1rem; justify-content: center;
+      flex-wrap: wrap; margin-bottom: 1.5rem;
+    }
+    .sponsor-amount {
+      background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.25);
+      border-radius: var(--radius-md); padding: 0.85rem 1.25rem; text-align: center;
+    }
+    .sponsor-amount strong { display: block; font-size: 1.3rem; }
+    .sponsor-amount span { font-size: 0.72rem; opacity: 0.75; letter-spacing: 0.08em; text-transform: uppercase; }
+    .child-gallery-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 0.75rem; margin-top: 2rem;
+    }
+    .child-gallery-grid img {
+      width: 100%; aspect-ratio: 1; object-fit: cover;
+      border-radius: var(--radius-md); cursor: pointer;
+      transition: transform 0.2s; display: block;
+    }
+    .child-gallery-grid img:hover { transform: scale(1.03); }
+    @media(max-width:600px) {
+      .children-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+      .child-gallery-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body class="english">
+<div id="site-header"></div>
+
+<!-- ═══════════════════════════════════
+     TRUST HERO
+═══════════════════════════════════ -->
+<section class="trust-hero">
+  <img class="trust-hero__bg" id="heroBg1" src="images/Orphanage/Main-1.jpeg" alt="">
+  <img class="trust-hero__bg" id="heroBg2" src="images/Orphanage/Main-2.jpeg" alt="" style="opacity:0;">
+  <div class="trust-hero__overlay"></div>
+  <div class="container">
+    <div class="trust-hero-content">
+      <div class="trust-badge">
+        ✝&nbsp;
+        <span class="english-text">Orphanage Ministry · Oduru, West Godavari</span>
+        <span class="telugu-text">అనాథాశ్రమ సేవ · ఒడూరు, పశ్చిమ గోదావరి</span>
+      </div>
+      <h1 class="trust-name">
+        <span class="english-text"><em>Mary</em> House of<br>Compassion Trust</span>
+        <span class="telugu-text"><em>మేరీ</em> హౌస్ ఆఫ్<br>కంపాషన్ ట్రస్ట్</span>
+      </h1>
+      <p class="trust-tagline">
+        <span class="english-text">Founded by Bishop P. Moses — providing safe homes, education, and a future full of hope to orphaned and needy children across Andhra Pradesh.</span>
+        <span class="telugu-text">బిషప్ పి. మోషే స్థాపించారు — ఆంధ్రప్రదేశ్‌లో అనాథ పిల్లలకు సురక్షిత నివాసాలు, విద్య మరియు ఆశతో నిండిన భవిష్యత్తు అందిస్తున్నారు.</span>
+      </p>
+      <div class="trust-actions">
+        <a href="#meet-children" class="btn btn-primary">
+          <span class="english-text">Meet the Children</span>
+          <span class="telugu-text">పిల్లలను కలవండి</span>
+        </a>
+        <a href="#support" class="btn btn-outline">
+          <span class="english-text">Support This Ministry</span>
+          <span class="telugu-text">ఈ సేవకు సహాయం చేయండి</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════
+     ABOUT THE ORPHANAGE
+═══════════════════════════════════ -->
+<section class="section" style="background:linear-gradient(180deg,#fff 0%,#fdf5f2 100%);">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;" class="two-col-orphan">
+      <div>
+        <span class="section-eyebrow"><span class="english-text">About the Trust</span><span class="telugu-text">ట్రస్ట్ గురించి</span></span>
+        <h2 class="section-title">
+          <span class="english-text">A Home Built on Love &amp; Faith</span>
+          <span class="telugu-text">ప్రేమ &amp; విశ్వాసంపై నిర్మించిన నివాసం</span>
+        </h2>
+        <p style="color:var(--text-mid);line-height:1.9;margin-bottom:1rem;">
+          <span class="english-text">Mary House of Compassion Trust is an orphanage and child welfare ministry based in Oduru, West Godavari, Andhra Pradesh. Founded by Bishop P. Moses under Holy Spirit Prayer House (IPC), the trust has been serving orphaned, abandoned, and needy children for over two decades.</span>
+          <span class="telugu-text">మేరీ హౌస్ ఆఫ్ కంపాషన్ ట్రస్ట్ అనేది ఒడూరు, పశ్చిమ గోదావరి, ఆంధ్రప్రదేశ్‌లో ఉన్న అనాథాశ్రమం మరియు శిశు సంక్షేమ సేవ. బిషప్ పి. మోషే స్థాపించారు.</span>
+        </p>
+        <p style="color:var(--text-mid);line-height:1.9;margin-bottom:1rem;">
+          <span class="english-text">The trust provides a safe, loving home environment where children grow up with joy, receive quality education, nutritious food, health care, and — most importantly — are raised in the knowledge of God's love and purpose for their lives.</span>
+          <span class="telugu-text">ట్రస్ట్ ఒక సురక్షితమైన, ప్రేమగల ఇంటి వాతావరణం అందిస్తుంది, అక్కడ పిల్లలు ఆనందంతో పెరుగుతారు, నాణ్యమైన విద్య, పౌష్టికాహారం మరియు ఆరోగ్య సంరక్షణ పొందుతారు.</span>
+        </p>
+        <p style="color:var(--text-mid);line-height:1.9;margin-bottom:2rem;">
+          <span class="english-text">Many children who grew up in this trust have gone on to higher education and are now living productive, independent lives — a testament to the transforming power of compassion and faith.</span>
+          <span class="telugu-text">ఈ ట్రస్ట్‌లో పెరిగిన అనేక మంది పిల్లలు ఉన్నత విద్యలో చేరి ఇప్పుడు ఉత్పాదక, స్వతంత్ర జీవితాలు జీవిస్తున్నారు.</span>
+        </p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+          <a href="#meet-children" class="btn btn-primary"><span class="english-text">Sponsor a Child</span><span class="telugu-text">పిల్లవాడిని స్పాన్సర్ చేయండి</span></a>
+          <a href="https://wa.me/919848315170?text=I%20want%20to%20know%20more%20about%20Mary%20House%20of%20Compassion%20Trust" target="_blank" class="btn btn-gold"><span class="english-text">💬 WhatsApp Us</span><span class="telugu-text">💬 WhatsApp చేయండి</span></a>
+        </div>
+      </div>
+      <div>
+        <img src="images/main-photo-orphanage.jpeg" alt="Children at Mary House of Compassion Trust"
+          style="border-radius:var(--radius-lg);width:100%;object-fit:cover;min-height:280px;box-shadow:var(--shadow-lg);"
+          onerror="this.style.background='var(--off-white)';this.style.minHeight='280px';this.alt='';this.style.display='flex';">
+        <!-- Stats below image -->
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;margin-top:1.5rem;">
+          <div style="background:var(--crimson);border-radius:var(--radius-md);padding:1.25rem 0.75rem;text-align:center;color:#fff;">
+            <div style="font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:700;line-height:1;">14+</div>
+            <div style="font-size:0.72rem;text-transform:uppercase;letter-spacing:0.1em;opacity:0.85;margin-top:0.25rem;"><span class="english-text">Children</span><span class="telugu-text">పిల్లలు</span></div>
+          </div>
+          <div style="background:var(--gold);border-radius:var(--radius-md);padding:1.25rem 0.75rem;text-align:center;color:var(--dark);">
+            <div style="font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:700;line-height:1;">1+</div>
+            <div style="font-size:0.72rem;text-transform:uppercase;letter-spacing:0.1em;opacity:0.75;margin-top:0.25rem;"><span class="english-text">Years</span><span class="telugu-text">సంవత్సరాలు</span></div>
+          </div>
+          <div style="background:var(--dark-2);border-radius:var(--radius-md);padding:1.25rem 0.75rem;text-align:center;color:#fff;">
+            <div style="font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:700;line-height:1;">100%</div>
+            <div style="font-size:0.72rem;text-transform:uppercase;letter-spacing:0.1em;opacity:0.85;margin-top:0.25rem;"><span class="english-text">In School</span><span class="telugu-text">పాఠశాలలో</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════
+     SERVICES PROVIDED
+═══════════════════════════════════ -->
+<section class="section section--surface" style="background:linear-gradient(160deg,#fdf5f2 0%,#f5e8e4 40%,#fdf5f2 100%);">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow"><span class="english-text">What We Provide</span><span class="telugu-text">మేమేం అందిస్తాం</span></span>
+      <h2 class="section-title"><span class="english-text">Complete Care for Every Child</span><span class="telugu-text">ప్రతి పిల్లవాడికి సంపూర్ణ సంరక్షణ</span></h2>
+      <p class="section-sub">
+        <span class="english-text">Every service is rooted in the belief that every child deserves joy, security, and a future full of purpose.</span>
+        <span class="telugu-text">ప్రతి పిల్లవాడికి ఆనందం, భద్రత మరియు ఉద్దేశ్యంతో నిండిన భవిష్యత్తు అర్హం అనే నమ్మకంలో ప్రతి సేవ ఆధారపడి ఉంది.</span>
+      </p>
+    </div>
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="service-card__icon">🏠</div>
+        <h3><span class="english-text">Safe &amp; Loving Home</span><span class="telugu-text">సురక్షిత &amp; ప్రేమగల నివాసం</span></h3>
+        <p><span class="english-text">A warm, secure home environment where children live with love and grow up in joy — just as every child deserves.</span><span class="telugu-text">పిల్లలు ప్రేమతో జీవించి ఆనందంగా పెరిగే వెచ్చని, సురక్షిత ఇంటి వాతావరణం.</span></p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-card__icon">🍚</div>
+        <h3><span class="english-text">Nutritious Meals Daily</span><span class="telugu-text">రోజువారీ పౌష్టికాహారం</span></h3>
+        <p><span class="english-text">Three healthy, balanced meals every day ensuring every child grows strong and healthy in body and mind.</span><span class="telugu-text">ప్రతి రోజు మూడు ఆరోగ్యకరమైన, సమతుల్య భోజనాలు — ప్రతి పిల్లవాడు శరీరంలో మరియు మనసులో బలంగా పెరగడం నిర్ధారిస్తుంది.</span></p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-card__icon">🏥</div>
+        <h3><span class="english-text">Health Care &amp; Medical Support</span><span class="telugu-text">ఆరోగ్య సంరక్షణ &amp; వైద్య మద్దతు</span></h3>
+        <p><span class="english-text">Regular health check-ups, vaccinations, and immediate medical care for all children in the trust.</span><span class="telugu-text">ట్రస్ట్‌లోని అన్ని పిల్లలకు క్రమం తప్పకుండా ఆరోగ్య పరీక్షలు, టీకాలు మరియు తక్షణ వైద్య సంరక్షణ.</span></p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-card__icon">📚</div>
+        <h3><span class="english-text">Education &amp; Skill Development</span><span class="telugu-text">విద్య &amp; నైపుణ్య అభివృద్ధి</span></h3>
+        <p><span class="english-text">Every child is enrolled in school. For those who want to study — education; for those who want to learn trades — vocational training.</span><span class="telugu-text">చదవాలనుకుంటే వారికి విద్య, చేతిపనులు నేర్చుకోవాలనుకుంటే వారికి వృత్తి శిక్షణ.</span></p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-card__icon">✝️</div>
+        <h3><span class="english-text">Spiritual Guidance</span><span class="telugu-text">ఆధ్యాత్మిక మార్గదర్శకత్వం</span></h3>
+        <p><span class="english-text">Children are raised in the knowledge of God's love — guided along God's path to walk in faith and purpose throughout life.</span><span class="telugu-text">దేవుని ప్రేమ జ్ఞానంలో పిల్లలు పెంచబడతారు — జీవితమంతా విశ్వాసంలో నడవడానికి దేవుని మార్గంలో నడిపించబడతారు.</span></p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-card__icon">🛠️</div>
+        <h3><span class="english-text">Life Skills &amp; Self-Sufficiency</span><span class="telugu-text">జీవన నైపుణ్యాలు &amp; స్వయం సమృద్ధి</span></h3>
+        <p><span class="english-text">Character development, life skills, and vocational training to prepare every child to live independently and succeed in the future.</span><span class="telugu-text">సద్గుణాల అభివృద్ధి, జీవన నైపుణ్యాల శిక్షణ — భవిష్యత్తులో స్వయం సమృద్ధి మార్గం.</span></p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-card__icon">🕐</div>
+        <h3><span class="english-text">24/7 Care &amp; Supervision</span><span class="telugu-text">24/7 సంరక్షణ &amp; పర్యవేక్షణ</span></h3>
+        <p><span class="english-text">Round-the-clock care and support — continuous supervision for the well-being of every child, every day, every hour.</span><span class="telugu-text">24/7 సంరక్షణ మరియు మద్దతు — ప్రతి పిల్లవాడి శ్రేయస్సు కోసం నిరంతర పర్యవేక్షణ.</span></p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-card__icon">💞</div>
+        <h3><span class="english-text">Love &amp; Compassion</span><span class="telugu-text">ప్రేమ &amp; కరుణ</span></h3>
+        <p><span class="english-text">More than services — we give what matters most: unconditional love, belonging, and the assurance that every child is deeply valued.</span><span class="telugu-text">సేవలకు మించి — మనం ఏం ముఖ్యమో అది ఇస్తాం: నిబంధనలు లేని ప్రేమ మరియు చెందే భావన.</span></p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════
+     MEET THE CHILDREN
+═══════════════════════════════════ -->
+<section class="children-section" id="meet-children">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">
+        <span class="english-text">❤️ 15+ Children · 15 Stories of Hope</span>
+        <span class="telugu-text">❤️ 15+ పిల్లలు · 15 ఆశ కథలు</span>
+      </span>
+      <h2 class="section-title">
+        <span class="english-text">Meet Our Children</span>
+        <span class="telugu-text">మా పిల్లలను కలవండి</span>
+      </h2>
+      <p class="section-sub">
+        <span class="english-text">Click on any child to read their story and discover how you can be the answer to their prayer — every child deserves a champion.</span>
+        <span class="telugu-text">ఏ పిల్లవాడి కథ చదవాలన్నా క్లిక్ చేయండి — ప్రతి పిల్లవాడికి ఒక వీరుడు అవసరం.</span>
+      </p>
+    </div>
+    <div class="children-grid">
+
+      <a href="orphan-1.html" class="child-card">
+        <div class="child-card__photo">
+          <img src="images/Orphanage/Child-1.jpeg" alt="Child 1"
+            onerror="this.style.display='none';this.nextElementSibling.classList.add('visible')">
+          <div class="child-card__fallback">🧒</div>
+          <span class="child-card__num">Child 1</span>
+          <span class="child-card__sponsor-badge">Sponsor</span>
+        </div>
+        <div class="child-card__body">
+          <div class="child-card__name">
+            <span class="english-text">Upasana</span>
+            <span class="telugu-text">ఉపాసన</span>
+          </div>
+          <div class="child-card__age">
+            <span class="english-text">Age · 2nd Class</span>
+            <span class="telugu-text">2వ తరగతి</span>
+          </div>
+          <p class="child-card__desc">
+            <span class="english-text">Sweet and studious — Upasana dreams of becoming a Teacher. Her favourite subjects are English and she is one of three siblings at the Trust.</span>
+            <span class="telugu-text">వివరాలు త్వరలో వస్తాయి. ఈ పిల్లవాడి కథ చదవడానికి క్లిక్ చేయండి.</span>
+          </p>
+          <span class="child-card__btn">
+            <span class="english-text">Meet This Child →</span>
+            <span class="telugu-text">పిల్లవాడిని కలవండి →</span>
+          </span>
+        </div>
+      </a>
+
+      <a href="orphan-2.html" class="child-card">
+        <div class="child-card__photo">
+          <img src="images/Orphanage/Child-2.jpeg" alt="Child 2" onerror="this.style.display='none';this.nextElementSibling.classList.add('visible')">
+          <div class="child-card__fallback">🧒</div>
+          <span class="child-card__num">Child 2</span>
+          <span class="child-card__sponsor-badge">Sponsor</span>
+        </div>
+        <div class="child-card__body">
+          <div class="child-card__name">
+            <span class="english-text">Sujith</span>
+            <span class="telugu-text">సుజిత్</span>
+          </div>
+          <div class="child-card__age">
+            <span class="english-text">Age · 3rd Class</span>
+            <span class="telugu-text">3వ తరగతి</span>
+          </div>
+          <p class="child-card__desc">
+            <span class="english-text">Full of energy and heart, Sujith dreams of joining the Indian Army. He loves English and playing with his friends here at the Trust.</span>
+            <span class="telugu-text">వివరాలు త్వరలో వస్తాయి. ఈ పిల్లవాడి కథ చదవడానికి క్లిక్ చేయండి.</span>
+          </p>
+          <span class="child-card__btn">
+            <span class="english-text">Meet This Child →</span>
+            <span class="telugu-text">పిల్లవాడిని కలవండి →</span>
+          </span>
+        </div>
+      </a>
+
+      <a href="orphan-3.html" class="child-card">
+        <div class="child-card__photo">
+          <img src="images/Orphanage/Child-3.jpeg" alt="Child 3" onerror="this.style.display='none';this.nextElementSibling.classList.add('visible')">
+          <div class="child-card__fallback">🧒</div>
+          <span class="child-card__num">Child 3</span>
+          <span class="child-card__sponsor-badge">Sponsor</span>
+        </div>
+        <div class="child-card__body">
+          <div class="child-card__name">
+            <span class="english-text">Harsha Sai</span>
+            <span class="telugu-text">హర్ష సాయి</span>
+          </div>
+          <div class="child-card__age">
+            <span class="english-text">Age · 3rd Class</span>
+            <span class="telugu-text">3వ తరగతి</span>
+          </div>
+          <p class="child-card__desc">
+            <span class="english-text">A cheerful and energetic boy who dreams of the Army. Harsha Sai is the brother of Lakshmi and Upasana — all three siblings are family here.</span>
+            <span class="telugu-text">వివరాలు త్వరలో వస్తాయి. ఈ పిల్లవాడి కథ చదవడానికి క్లిక్ చేయండి.</span>
+          </p>
+          <span class="child-card__btn">
+            <span class="english-text">Meet This Child →</span>
+            <span class="telugu-text">పిల్లవాడిని కలవండి →</span>
+          </span>
+        </div>
+      </a>
+
+      <a href="orphan-4.html" class="child-card">
+        <div class="child-card__photo">
+          <img src="images/Orphanage/Child-4.jpeg" alt="Child 4" onerror="this.style.display='none';this.nextElementSibling.classList.add('visible')">
+          <div class="child-card__fallback">🧒</div>
+          <span class="child-card__num">Child 4</span>
+          <span class="child-card__sponsor-badge">Sponsor</span>
+        </div>
+        <div class="child-card__body">
+          <div class="child-card__name">
+            <span class="english-text">Lakshmi</span>
+            <span class="telugu-text">లక్ష్మి</span>
+          </div>
+          <div class="child-card__age">
+            <span class="english-text">Age 11 7th Class</span>
+            <span class="telugu-text">వయసు 11 · 7వ తరగతి</span>
+          </div>
+          <p class="child-card__desc">
+            <span class="english-text">Quiet, determined, and deeply compassionate — Lakshmi dreams of becoming a Doctor. She loves writing and sings joyfully in worship.</span>
+            <span class="telugu-text">వివరాలు త్వరలో వస్తాయి. ఈ పిల్లవాడి కథ చదవడానికి క్లిక్ చేయండి.</span>
+          </p>
+          <span class="child-card__btn">
+            <span class="english-text">Meet This Child →</span>
+            <span class="telugu-text">పిల్లవాడిని కలవండి →</span>
+          </span>
+        </div>
+      </a>
+
+      <a href="orphan-5.html" class="child-card">
+        <div class="child-card__photo">
+          <img src="images/Orphanage/Child-5.jpeg" alt="Child 5" onerror="this.style.display='none';this.nextElementSibling.classList.add('visible')">
+          <div class="child-card__fallback">🧒</div>
+          <span class="child-card__num">Child 5</span>
+          <span class="child-card__sponsor-badge">Sponsor</span>
+        </div>
+        <div class="child-card__body">
+          <div class="child-card__name">
+            <span class="english-text">Sathvik</span>
+            <span class="telugu-text">సాత్విక్</span>
+          </div>
+          <div class="child-card__age">
+            <span class="english-text">Age 10 5th Class</span>
+            <span class="telugu-text">వయసు 10 · 5వ తరగతి</span>
+          </div>
+          <p class="child-card__desc">
+            <span class="english-text">Sathvik's studies are now rated Excellent. He plays drums in church ministry and dreams of becoming a Police Officer.</span>
+            <span class="telugu-text">వివరాలు త్వరలో వస్తాయి. ఈ పిల్లవాడి కథ చదవడానికి క్లిక్ చేయండి.</span>
+          </p>
+          <span class="child-card__btn">
+            <span class="english-text">Meet This Child →</span>
+            <span class="telugu-text">పిల్లవాడిని కలవండి →</span>
+          </span>
+        </div>
+      </a>
+
+      <a href="orphan-6.html" class="child-card">
+        <div class="child-card__photo">
+          <img src="images/Orphanage/Child-6.jpeg" alt="Sundar Kumar" onerror="this.style.display='none';this.nextElementSibling.classList.add('visible')">
+          <div class="child-card__fallback">🧒</div>
+          <span class="child-card__num">Child 6</span>
+          <span class="child-card__sponsor-badge">Sponsor</span>
+        </div>
+        <div class="child-card__body">
+          <div class="child-card__name">
+            <span class="english-text">Sundar Kumar</span>
+            <span class="telugu-text">సుందర్ కుమార్</span>
+          </div>
+          <div class="child-card__age">
+            <span class="english-text">Age 15 · Inter 1st Year</span>
+            <span class="telugu-text">వయసు 15 · ఇంటర్ 1వ సంవత్సరం</span>
+          </div>
+          <p class="child-card__desc">
+            <span class="english-text">Dreams of becoming a Police Officer. Active in church and growing strong in faith.</span>
+            <span class="telugu-text">పోలీస్ ఆఫీసర్ అవ్వాలని కలలు కంటున్నాడు.</span>
+          </p>
+          <span class="child-card__btn">
+            <span class="english-text">Meet Sundar →</span>
+            <span class="telugu-text">సుందర్‌ని కలవండి →</span>
+          </span>
+        </div>
+      </a>
+
+      <a href="orphan-7.html" class="child-card">
+        <div class="child-card__photo">
+          <img src="images/Orphanage/Child-7.jpeg" alt="Neerikshana Raju" onerror="this.style.display='none';this.nextElementSibling.classList.add('visible')">
+          <div class="child-card__fallback">🧒</div>
+          <span class="child-card__num">Child 7</span>
+          <span class="child-card__sponsor-badge">Sponsor</span>
+        </div>
+        <div class="child-card__body">
+          <div class="child-card__name">
+            <span class="english-text">Neerikshana Raju</span>
+            <span class="telugu-text">నీరీక్షణ రాజు</span>
+          </div>
+          <div class="child-card__age">
+            <span class="english-text">Age 16 · Inter 2nd Year</span>
+            <span class="telugu-text">వయసు 16 · ఇంటర్ 2వ సంవత్సరం</span>
+          </div>
+          <p class="child-card__desc">
+            <span class="english-text">Passionate about Civics and dreams of serving as a Police Constable. Excellent spiritual growth.</span>
+            <span class="telugu-text">పోలీస్ కానిస్టేబుల్ అవ్వాలని కలలు కంటున్నాడు.</span>
+          </p>
+          <span class="child-card__btn">
+            <span class="english-text">Meet Neerikshana →</span>
+            <span class="telugu-text">నీరీక్షణని కలవండి →</span>
+          </span>
+        </div>
+      </a>
+
+      <a href="orphan-8.html" class="child-card">
+        <div class="child-card__photo">
+          <img src="images/Orphanage/Child-8.jpeg" alt="Child 8" onerror="this.style.display='none';this.nextElementSibling.classList.add('visible')">
+          <div class="child-card__fallback">🧒</div>
+          <span class="child-card__num">Child 8</span>
+          <span class="child-card__sponsor-badge">Sponsor</span>
+        </div>
+        <div class="child-card__body">
+          <div class="child-card__name">
+            <span class="english-text">Solomon</span>
+            <span class="telugu-text">సోలమన్</span>
+          </div>
+          <div class="child-card__age">
+            <span class="english-text">Age 14 9th Class</span>
+            <span class="telugu-text">వయసు 14 · 9వ తరగతి</span>
+          </div>
+          <p class="child-card__desc">
+            <span class="english-text">Solomon has been at the Trust since 2022 — our longest-serving family member. He plays drums in worship, loves Maths, and dreams of being a Police Officer.</span>
+            <span class="telugu-text">వివరాలు త్వరలో వస్తాయి. ఈ పిల్లవాడి కథ చదవడానికి క్లిక్ చేయండి.</span>
+          </p>
+          <span class="child-card__btn">
+            <span class="english-text">Meet This Child →</span>
+            <span class="telugu-text">పిల్లవాడిని కలవండి →</span>
+          </span>
+        </div>
+      </a>
+
+      <a href="orphan-9.html" class="child-card">
+        <div class="child-card__photo">
+          <img src="images/Orphanage/Child-9.jpeg" alt="Child 9" onerror="this.style.display='none';this.nextElementSibling.classList.add('visible')">
+          <div class="child-card__fallback">🧒</div>
+          <span class="child-card__num">Child 9</span>
+          <span class="child-card__sponsor-badge">Sponsor</span>
+        </div>
+        <div class="child-card__body">
+          <div class="child-card__name">
+            <span class="english-text">Hanok</span>
+            <span class="telugu-text">హనోక్</span>
+          </div>
+          <div class="child-card__age">
+            <span class="english-text">1st Class · Loves English</span>
+            <span class="telugu-text">1వ తరగతి · ఆంగ్లం ఇష్టం</span>
+          </div>
+          <p class="child-card__desc">
+            <span class="english-text">A joyful young boy — today learning, growing in faith, and dreaming of becoming a Doctor.</span>
+            <span class="telugu-text">సంతోషమైన చిన్న అబ్బాయి — నేడు నేర్చుకుంటున్నాడు, విశ్వాసంలో పెరుగుతున్నాడు మరియు డాక్టర్ అవ్వాలని కలలు కంటున్నాడు.</span>
+          </p>
+          <span class="child-card__btn">
+            <span class="english-text">Meet This Child →</span>
+            <span class="telugu-text">పిల్లవాడిని కలవండి →</span>
+          </span>
+        </div>
+      </a>
+
+      <a href="orphan-10.html" class="child-card">
+        <div class="child-card__photo">
+          <img src="images/Orphanage/Child-10.jpeg" alt="Child 10" onerror="this.style.display='none';this.nextElementSibling.classList.add('visible')">
+          <div class="child-card__fallback">🧒</div>
+          <span class="child-card__num">Child 10</span>
+          <span class="child-card__sponsor-badge">Sponsor</span>
+        </div>
+        <div class="child-card__body">
+          <div class="child-card__name">
+            <span class="english-text">Chandu</span>
+            <span class="telugu-text">చందు</span>
+          </div>
+          <div class="child-card__age">
+            <span class="english-text">Age 14 10th Class</span>
+            <span class="telugu-text">వయసు 14 · 10వ తరగతి</span>
+          </div>
+          <p class="child-card__desc">
+            <span class="english-text">Chandu is in 10th class — a critical year. He is pushing hard through board exams toward his dream of becoming a Police Officer.</span>
+            <span class="telugu-text">వివరాలు త్వరలో వస్తాయి. ఈ పిల్లవాడి కథ చదవడానికి క్లిక్ చేయండి.</span>
+          </p>
+          <span class="child-card__btn">
+            <span class="english-text">Meet This Child →</span>
+            <span class="telugu-text">పిల్లవాడిని కలవండి →</span>
+          </span>
+        </div>
+      </a>
+
+      <a href="orphan-11.html" class="child-card">
+        <div class="child-card__photo">
+          <img src="images/Orphanage/Child-11.jpeg" alt="Child 11" onerror="this.style.display='none';this.nextElementSibling.classList.add('visible')">
+          <div class="child-card__fallback">🧒</div>
+          <span class="child-card__num">Child 11</span>
+          <span class="child-card__sponsor-badge">Sponsor</span>
+        </div>
+        <div class="child-card__body">
+          <div class="child-card__name">
+            <span class="english-text">Anil Kumar</span>
+            <span class="telugu-text">అనిల్ కుమార్</span>
+          </div>
+          <div class="child-card__age">
+            <span class="english-text">11 years · 8th Class · Loves Telugu</span>
+            <span class="telugu-text">11 సంవత్సరాలు · 8వ తరగతి · తెలుగు ఇష్టం</span>
+          </div>
+          <p class="child-card__desc">
+            <span class="english-text">A young man who loves music and reading — growing in faith, education, and his dream of becoming a Police officer.</span>
+            <span class="telugu-text">సంగీతం మరియు చదవడం ఇష్టం — విశ్వాసం, విద్య మరియు పోలీసు అధికారి అవ్వాలనే కలలో పెరుగుతున్నాడు.</span>
+          </p>
+          <span class="child-card__btn">
+            <span class="english-text">Meet This Child →</span>
+            <span class="telugu-text">పిల్లవాడిని కలవండి →</span>
+          </span>
+        </div>
+      </a>
+
+      <a href="orphan-12.html" class="child-card">
+        <div class="child-card__photo">
+          <img src="images/Orphanage/Child-12.jpeg" alt="Child 12" onerror="this.style.display='none';this.nextElementSibling.classList.add('visible')">
+          <div class="child-card__fallback">🧒</div>
+          <span class="child-card__num">Child 12</span>
+          <span class="child-card__sponsor-badge">Sponsor</span>
+        </div>
+        <div class="child-card__body">
+          <div class="child-card__name">
+            <span class="english-text">Chandu</span>
+            <span class="telugu-text">చందు</span>
+          </div>
+          <div class="child-card__age">
+            <span class="english-text">11 years · 8th Class · Loves Telugu</span>
+            <span class="telugu-text">11 సంవత్సరాలు · 8వ తరగతి · తెలుగు ఇష్టం</span>
+          </div>
+          <p class="child-card__desc">
+            <span class="english-text">Brother of Sathvik (Child 5) — both brothers growing together in faith, music, and education at Mary House of Compassion Trust.</span>
+            <span class="telugu-text">సాత్విక్ (పిల్లవాడు 5) యొక్క అన్న — ఇద్దరు సోదరులు మేరీ హౌస్‌లో విశ్వాసం, సంగీతం మరియు చదువులో కలిసి పెరుగుతున్నారు.</span>
+          </p>
+          <span class="child-card__btn">
+            <span class="english-text">Meet This Child →</span>
+            <span class="telugu-text">పిల్లవాడిని కలవండి →</span>
+          </span>
+        </div>
+      </a>
+
+      <a href="orphan-13.html" class="child-card">
+        <div class="child-card__photo">
+          <img src="images/children/child-13.jpg" alt="Child 13" onerror="this.style.display='none';this.nextElementSibling.classList.add('visible')">
+          <div class="child-card__fallback">🧒</div>
+          <span class="child-card__num">Child 13</span>
+          <span class="child-card__sponsor-badge">Sponsor</span>
+        </div>
+        <div class="child-card__body">
+          <div class="child-card__name">
+            <span class="english-text">[ Name Coming Soon ]</span>
+            <span class="telugu-text">[ పేరు త్వరలో వస్తుంది ]</span>
+          </div>
+          <div class="child-card__age">
+            <span class="english-text">Age · Class —</span>
+            <span class="telugu-text">వయసు · తరగతి —</span>
+          </div>
+          <p class="child-card__desc">
+            <span class="english-text">Details coming soon. Click to read this child's story and how you can help.</span>
+            <span class="telugu-text">వివరాలు త్వరలో వస్తాయి. ఈ పిల్లవాడి కథ చదవడానికి క్లిక్ చేయండి.</span>
+          </p>
+          <span class="child-card__btn">
+            <span class="english-text">Meet This Child →</span>
+            <span class="telugu-text">పిల్లవాడిని కలవండి →</span>
+          </span>
+        </div>
+      </a>
+
+      <a href="orphan-14.html" class="child-card">
+        <div class="child-card__photo">
+          <img src="images/children/child-14.jpg" alt="Child 14" onerror="this.style.display='none';this.nextElementSibling.classList.add('visible')">
+          <div class="child-card__fallback">🧒</div>
+          <span class="child-card__num">Child 14</span>
+          <span class="child-card__sponsor-badge">Sponsor</span>
+        </div>
+        <div class="child-card__body">
+          <div class="child-card__name">
+            <span class="english-text">[ Name Coming Soon ]</span>
+            <span class="telugu-text">[ పేరు త్వరలో వస్తుంది ]</span>
+          </div>
+          <div class="child-card__age">
+            <span class="english-text">Age · Class —</span>
+            <span class="telugu-text">వయసు · తరగతి —</span>
+          </div>
+          <p class="child-card__desc">
+            <span class="english-text">Details coming soon. Click to read this child's story and how you can help.</span>
+            <span class="telugu-text">వివరాలు త్వరలో వస్తాయి. ఈ పిల్లవాడి కథ చదవడానికి క్లిక్ చేయండి.</span>
+          </p>
+          <span class="child-card__btn">
+            <span class="english-text">Meet This Child →</span>
+            <span class="telugu-text">పిల్లవాడిని కలవండి →</span>
+          </span>
+        </div>
+      </a>
+
+      
+
+    </div>
+  </div>
+</section>
+
+<!-- How the Trust began (from the launch video) -->
+<section class="section" id="how-it-began" style="background:#fff;text-align:center;">
+  <div class="container">
+    <span class="section-eyebrow"><span class="english-text">How It Began</span><span class="telugu-text">ఎలా ప్రారంభమైంది</span></span>
+    <h2 class="section-title"><span class="english-text">From One Christmas Meal to a Home</span><span class="telugu-text">ఒక క్రిస్మస్ భోజనం నుండి ఒక ఇల్లు వరకు</span></h2>
+    <div style="max-width:720px;margin:1.5rem auto 2.25rem;color:var(--text-mid);line-height:1.9;font-size:0.97rem;text-align:left;">
+      <p style="margin-bottom:1rem;"><span class="english-text">At Christmas 2024, Bishop P. Moses held a programme for children living in a slum area and served them a festive meal. Seeing their joy, a burden was born: this happiness should not last just one day — these children should know joy and peace all year round.</span><span class="telugu-text">2024 క్రిస్మస్ సమయంలో బిషప్ పి. మోషే గారు ఒక మురికివాడ ప్రాంతంలోని పిల్లల కొరకు కార్యక్రమం నిర్వహించి వారికి పండుగ భోజనం పెట్టారు. వారి సంతోషాన్ని చూసి ఒక భారం కలిగింది: ఈ సంతోషం ఒక్క రోజుకే పరిమితం కాకూడదు — ఈ పిల్లలు సంవత్సరమంతా సంతోషం, సమాధానం అనుభవించాలి.</span></p>
+      <p style="margin-bottom:1rem;"><span class="english-text">Bishop Moses shared this burden with <strong>Bro. Palaparthy Vijay</strong>, who works in the United States and serves God there alongside his job. They prayed together, and Bro. Vijay was the first to come forward to support the children — from his own hard-earned income. His word to the church was Hebrews 13:16: <em>"Do not forget to do good and to share with others, for with such sacrifices God is pleased."</em></span><span class="telugu-text">బిషప్ మోషే గారు ఈ భారాన్ని అమెరికాలో ఉద్యోగం చేస్తూనే దేవుని సేవ చేస్తున్న <strong>బ్రదర్ పాలపర్తి విజయ్</strong> గారితో పంచుకున్నారు. వారు కలిసి ప్రార్థించారు, పిల్లలకు సహాయం చేయడానికి మొట్టమొదట ముందుకు వచ్చినది బ్రదర్ విజయ్ గారే — తన కష్టార్జితం నుండి. సంఘానికి ఆయన చెప్పిన వాక్యం హెబ్రీయులకు 13:16: <em>"మేలు చేయుటయు ధర్మము చేయుటయు మరువకుడి; అట్టి యాగములు దేవునికిష్టమైనవి."</em></span></p>
+      <p style="margin-bottom:1rem;"><span class="english-text">In February 2025, at a faith and thanksgiving prayer gathering in Oduru, the work was dedicated to God as <strong>Mary House of Compassion Trust</strong>. It was opened by <strong>Bro. Palaparthy Suresh</strong>, who serves in ministry in Dubai and stands with the Trust in prayer, counsel and support, while Bro. Vijay joined live from America. The name says what it gives: compassion — mercy, kindness and love.</span><span class="telugu-text">ఫిబ్రవరి 2025 లో ఓడూరులో జరిగిన విశ్వాస & కృతజ్ఞతా ప్రార్థన కూడికలో ఈ సేవ <strong>మేరీ హౌస్ ఆఫ్ కంపాషన్ ట్రస్ట్</strong> గా దేవునికి సమర్పించబడింది. దుబాయ్ లో పరిచర్య చేస్తున్న <strong>బ్రదర్ పాలపర్తి సురేష్</strong> గారు దీనిని ప్రారంభించారు — ఆయన ప్రార్థన, సలహాలు మరియు సహకారంతో ట్రస్ట్ కు తోడుగా ఉన్నారు; బ్రదర్ విజయ్ గారు అమెరికా నుండి ప్రత్యక్షంగా పాల్గొన్నారు. ఆ పేరే అది ఇచ్చేదాన్ని తెలియజేస్తుంది: కంపాషన్ — దయ, కనికరము, ప్రేమ.</span></p>
+      <p style="text-align:center;font-family:'Playfair Display',serif;font-style:italic;font-size:1.1rem;color:var(--crimson);margin:0;"><span class="english-text">It began with one Christmas meal. By God's grace, it has become a home.</span><span class="telugu-text">ఒక క్రిస్మస్ భోజనంతో మొదలైంది. దేవుని కృపచేత అది ఒక ఇల్లుగా మారింది.</span></p>
+    </div>
+    <div class="vgrid vgrid--2">
+      <figure class="vcard">
+        <a class="vthumb" href="https://www.youtube.com/watch?v=WsDnTu25jaE" target="_blank" rel="noopener" data-yt="WsDnTu25jaE" aria-label="Play: Faith &amp; Thanksgiving Prayer Gathering — full service">
+          <img src="https://i.ytimg.com/vi/WsDnTu25jaE/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
+          <span class="vplay" aria-hidden="true"></span><span class="vlen">2:49:58</span>
+        </a>
+        <figcaption>
+          <span class="vtag"><span class="english-text">Trust Launch · Feb 2025</span><span class="telugu-text">ట్రస్ట్ ప్రారంభం · ఫిబ్ర 2025</span></span>
+          <span class="vtitle"><span class="english-text">Faith & Thanksgiving Prayer Gathering — full service</span><span class="telugu-text">విశ్వాస & కృతజ్ఞతా ప్రార్థన కూడిక — పూర్తి కార్యక్రమం</span></span>
+        </figcaption>
+      </figure>
+      <figure class="vcard">
+        <a class="vthumb" href="https://www.youtube.com/watch?v=WsDnTu25jaE&amp;t=7778s" target="_blank" rel="noopener" data-yt="WsDnTu25jaE" data-start="7778" aria-label="Play: Bro. Palaparthy Vijay speaks from America &amp; the Trust is opened">
+          <img src="https://i.ytimg.com/vi/WsDnTu25jaE/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
+          <span class="vplay" aria-hidden="true"></span><span class="vlen">2:49:58</span>
+        </a>
+        <figcaption>
+          <span class="vtag"><span class="english-text">Trust Launch · Feb 2025</span><span class="telugu-text">ట్రస్ట్ ప్రారంభం · ఫిబ్ర 2025</span></span>
+          <span class="vtitle"><span class="english-text">Bro. Palaparthy Vijay speaks from America & the Trust is opened</span><span class="telugu-text">అమెరికా నుండి బ్రదర్ పాలపర్తి విజయ్ గారి మాటలు & ట్రస్ట్ ప్రారంభం</span></span>
+          <span class="vnote"><span class="english-text">▶ Opens at his words</span><span class="telugu-text">▶ ఆయన మాటల వద్ద మొదలవుతుంది</span></span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════
+     MISSION / GOAL
+═══════════════════════════════════ -->
+<section class="goal-band">
+  <div class="container">
+    <div style="font-size:2.5rem;margin-bottom:0.75rem;">🌟</div>
+    <h2>
+      <span class="english-text">Our Mission</span>
+      <span class="telugu-text">మా లక్ష్యం</span>
+    </h2>
+    <p>
+      <span class="english-text">"To build a future for every child filled with joy, hope, and purpose — to shelter the abandoned like lamps in the dark, and make their lives shine with happiness."</span>
+      <span class="telugu-text">ప్రతి పిల్లవాడికి ఆనందం, ఆశ, మరియు ఉద్దేశ్యంతో నిండిన భవిష్యత్తును నిర్మించడం. కొడగట్టిన దీపాల్లాంటి పిల్లలకు ఆశ్రయమిచ్చి, వారి భవిష్యత్తును ఆనందమయంగా తీర్చి దిద్దడం.</span>
+    </p>
+    <p style="margin-top:1.25rem;font-size:0.82rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--dark);">
+      <span class="english-text">— Bishop P. Moses, Founder &amp; Director, Mary House of Compassion Trust</span>
+      <span class="telugu-text">— బిషప్ పి. మోషే, స్థాపకుడు &amp; డైరెక్టర్</span>
+    </p>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════
+     SCRIPTURE
+═══════════════════════════════════ -->
+<section class="scripture-section">
+  <div class="container">
+    <p class="scripture-text">
+      <span class="english-text">"Do not forget to do good and to share with others, for with such sacrifices God is pleased."</span>
+      <span class="telugu-text">"ఉపకారమును ధర్మమున చేయ మరచిపోకుడి, అట్టి యాగములు దేవునికి ఇష్టమైనవి."</span>
+    </p>
+    <p class="scripture-ref">
+      <span class="english-text">— Hebrews 13:16</span>
+      <span class="telugu-text">— హెబ్రీ 13:16</span>
+    </p>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════
+     HOW TO HELP CTA
+═══════════════════════════════════ -->
+<section class="cta-band" style="background:linear-gradient(180deg,#fff 0%,#fdf5f2 60%,#f9eeea 100%);border-top:1px solid rgba(155,28,28,0.1);">
+  <div class="container">
+    <span class="section-eyebrow"><span class="english-text">Make a Difference</span><span class="telugu-text">తేడా చేయండి</span></span>
+    <h2 class="section-title">
+      <span class="english-text">Be a Light in a Child's Life</span>
+      <span class="telugu-text">పిల్లవాడి జీవితంలో వెలుతురు అవ్వండి</span>
+    </h2>
+    <p class="section-sub" style="margin:0 auto 0;">
+      <span class="english-text">A monthly donation of just ₹500 can feed a child for a month. ₹2,000/month sponsors education and care. Your support becomes a child's story of hope.</span>
+      <span class="telugu-text">నెలకు కేవలం ₹500 విరాళం ఒక నెల పిల్లవాడికి ఆహారం ఇవ్వగలదు. ₹2,000/నెల విద్య మరియు సంరక్షణను స్పాన్సర్ చేస్తుంది.</span>
+    </p>
+    <div class="cta-actions">
+      <a href="#meet-children" class="btn btn-primary"><span class="english-text">Sponsor a Child</span><span class="telugu-text">పిల్లవాడిని స్పాన్సర్ చేయండి</span></a>
+      <a href="https://wa.me/919848315170?text=I%20want%20to%20sponsor%20a%20child%20at%20Mary%20House%20of%20Compassion%20Trust" target="_blank" class="btn btn-gold"><span class="english-text">💬 WhatsApp Us</span><span class="telugu-text">💬 WhatsApp చేయండి</span></a>
+      <a href="volunteer.html" class="btn btn-ghost"><span class="english-text">Volunteer</span><span class="telugu-text">స్వచ్ఛంద సేవ</span></a>
+    </div>
+
+    <!-- Contact info block -->
+    <div style="margin-top:3rem;max-width:700px;margin-left:auto;margin-right:auto;">
+
+      <p style="text-align:center;font-family:'Playfair Display',serif;font-size:1.1rem;font-style:italic;color:var(--text-dark);margin-bottom:1.5rem;">
+        <span class="english-text">Mary House of Compassion Trust</span>
+        <span class="telugu-text">మేరీ హౌస్ ఆఫ్ కంపాషన్ ట్రస్ట్</span>
+      </p>
+
+      <div class="contact-tiles-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+
+        <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:0.5rem;background:linear-gradient(150deg,#fff 40%,#fdf0ec 100%);border:1px solid rgba(155,28,28,0.13);border-top:3px solid var(--crimson);border-radius:var(--radius-lg);box-shadow:0 2px 16px rgba(155,28,28,0.09);padding:1.25rem 1rem;">
+          <span style="font-size:1.6rem;">📞</span>
+          <div style="font-size:0.65rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-light);"><span class="english-text">Phone</span><span class="telugu-text">ఫోన్</span></div>
+          <div style="display:flex;flex-direction:column;gap:0.25rem;width:100%;">
+            <div>
+              <div style="font-size:0.6rem;color:var(--text-light);margin-bottom:0.05rem;"><span class="english-text">Bishop P. Moses</span><span class="telugu-text">బిషప్ పి. మోషే</span></div>
+              <a href="tel:+919848315170" style="font-weight:700;color:var(--crimson);font-size:0.85rem;text-decoration:none;">+91 98483 15170</a>
+            </div>
+            <div style="border-top:1px solid rgba(155,28,28,0.1);padding-top:0.25rem;">
+              <div style="font-size:0.6rem;color:var(--text-light);margin-bottom:0.05rem;"><span class="english-text">Bro P. Billygraham</span><span class="telugu-text">బ్రదర్ పి. బిల్లీ గ్రహామ్</span></div>
+              <a href="tel:+919866378567" style="font-weight:700;color:var(--crimson);font-size:0.85rem;text-decoration:none;">+91 98663 78567</a>
+            </div>
+          </div>
+        </div>
+
+        <a href="https://wa.me/919848315170?text=I%20want%20to%20know%20more%20about%20Mary%20House%20of%20Compassion%20Trust" target="_blank" style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:0.5rem;background:linear-gradient(150deg,#fff 40%,#fdf0ec 100%);border:1px solid rgba(155,28,28,0.13);border-top:3px solid var(--crimson);border-radius:var(--radius-lg);box-shadow:0 2px 16px rgba(155,28,28,0.09);padding:1.5rem 1rem;text-decoration:none;transition:box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 8px 32px rgba(155,28,28,0.13)';this.style.borderColor='rgba(155,28,28,0.28)'" onmouseout="this.style.boxShadow='0 2px 12px rgba(155,28,28,0.07)';this.style.borderColor='rgba(155,28,28,0.12)'">
+          <span style="font-size:1.8rem;">💬</span>
+          <div style="font-size:0.68rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-light);">WhatsApp</div>
+          <div style="font-weight:700;color:#25D366;font-size:0.9rem;"><span class="english-text">Chat with us</span><span class="telugu-text">మాతో మాట్లాడండి</span></div>
+        </a>
+
+        <a href="mailto:maryhouseofcompassiontrust@holyspiritprayerhouse.com" style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:0.5rem;background:linear-gradient(150deg,#fff 40%,#fdf0ec 100%);border:1px solid rgba(155,28,28,0.13);border-top:3px solid var(--crimson);border-radius:var(--radius-lg);box-shadow:0 2px 16px rgba(155,28,28,0.09);padding:1.5rem 1rem;text-decoration:none;transition:box-shadow 0.2s;grid-column:span 2;" onmouseover="this.style.boxShadow='0 8px 32px rgba(155,28,28,0.13)';this.style.borderColor='rgba(155,28,28,0.28)'" onmouseout="this.style.boxShadow='0 2px 12px rgba(155,28,28,0.07)';this.style.borderColor='rgba(155,28,28,0.12)'">
+          <span style="font-size:1.8rem;">✉️</span>
+          <div style="font-size:0.68rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-light);"><span class="english-text">Email</span><span class="telugu-text">ఇమెయిల్</span></div>
+          <div style="font-weight:700;color:var(--crimson);font-size:0.82rem;word-break:break-all;">maryhouseofcompassiontrust@holyspiritprayerhouse.com</div>
+        </a>
+
+        <a href="https://www.youtube.com/@pastorpmoses" target="_blank" style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:0.5rem;background:linear-gradient(150deg,#fff 40%,#fdf0ec 100%);border:1px solid rgba(155,28,28,0.13);border-top:3px solid var(--crimson);border-radius:var(--radius-lg);box-shadow:0 2px 16px rgba(155,28,28,0.09);padding:1.5rem 1rem;text-decoration:none;transition:box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 8px 32px rgba(155,28,28,0.13)';this.style.borderColor='rgba(155,28,28,0.28)'" onmouseout="this.style.boxShadow='0 2px 12px rgba(155,28,28,0.07)';this.style.borderColor='rgba(155,28,28,0.12)'">
+          <span style="font-size:1.8rem;">▶️</span>
+          <div style="font-size:0.68rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-light);">YouTube</div>
+          <div style="font-weight:700;color:#FF0000;font-size:0.9rem;">@pastorpmoses</div>
+        </a>
+
+        <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:0.5rem;background:linear-gradient(150deg,#fff 40%,#fdf0ec 100%);border:1px solid rgba(155,28,28,0.13);border-top:3px solid var(--crimson);border-radius:var(--radius-lg);box-shadow:0 2px 16px rgba(155,28,28,0.09);padding:1.5rem 1rem;">
+          <span style="font-size:1.8rem;">📍</span>
+          <div style="font-size:0.68rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-light);"><span class="english-text">Address</span><span class="telugu-text">చిరునామా</span></div>
+          <div style="font-weight:600;color:var(--text-dark);font-size:0.82rem;line-height:1.4;"><span class="english-text">Oduru, West Godavari, AP — 534126</span><span class="telugu-text">ఒడూరు, పశ్చిమ గోదావరి, AP — 534126</span></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div id="site-footer"></div>
+<script src="js/site.js"></script>
+<script src="js/videos.js?v=20261015"></script>
+
+<script>
+/* ── Hero background slideshow — swaps Main-1 and Main-2 every 5 seconds ── */
+(function(){
+  var bg1 = document.getElementById('heroBg1');
+  var bg2 = document.getElementById('heroBg2');
+  if (!bg1 || !bg2) return;
+  var showingFirst = true;
+  setInterval(function(){
+    if (showingFirst) {
+      bg1.style.opacity = '0';
+      bg2.style.opacity = '1';
+    } else {
+      bg2.style.opacity = '0';
+      bg1.style.opacity = '1';
+    }
+    showingFirst = !showingFirst;
+  }, 5000);
+})();
+</script>
+</body></html>

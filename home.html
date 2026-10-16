@@ -1,0 +1,165 @@
+<!-- HTML STARTS -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Analytics (GA4) — visitor & click counts -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0PS586KHL7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0PS586KHL7');
+  </script>
+  <!-- Basic Metadata -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive for mobile -->
+  <meta name="description" content="Holy Spirit Prayer House (IPC) - A place for faith, love, and community outreach.">
+  <meta name="keywords" content="Church, Holy Spirit, Prayer, Ministries, Donations">
+  <meta name="author" content="Holy Spirit Prayer House (IPC)">
+  <title>Holy Spirit Prayer House (IPC) | హోలీ స్పిరిట్ ప్రార్థన మందిరం (IPC)</title>
+  <link rel="icon" type="image/png" href="images/favicon.png"> <!-- Site tab icon -->
+
+  <!-- Google Fonts (used throughout the site) -->
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet"> <!-- Title font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet"> <!-- Body font -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+Telugu&display=swap" rel="stylesheet"> <!-- Telugu font -->
+
+  <!-- External Stylesheets -->
+  <link rel="stylesheet" href="css/styles.css">        <!-- Main layout and styling -->
+  <link rel="stylesheet" href="css/founder.css">       <!-- Founder section styles -->
+  <link rel="stylesheet" href="css/chatbot.css">       <!-- Chatbot button & popup styles -->
+
+  <!-- Language Toggle Script -->
+  <script>
+    // Save selected language to localStorage and apply it to <body>
+    function toggleLanguage(lang) {
+      localStorage.setItem("preferredLanguage", lang);
+      document.body.classList.remove("english", "telugu");
+      document.body.classList.add(lang);
+    }
+
+    // Load saved language on page load
+    document.addEventListener("DOMContentLoaded", function() {
+      const savedLang = localStorage.getItem("preferredLanguage") || "english";
+      document.body.classList.remove("english", "telugu");
+      document.body.classList.add(savedLang);
+    });
+  </script>
+
+  <!-- Inline Style for Language Toggle + Default Appearance -->
+  <style>
+    .language-toggle {
+      text-align: center;            /* Center the language buttons */
+      padding: 20px 0;               /* Vertical space */
+    }
+
+    .language-toggle button {
+      margin: 0 5px;                 /* Space between buttons */
+      padding: 8px 16px;             /* Button padding */
+      font-size: 14px;
+      cursor: pointer;
+      border: none;
+      background-color: #fff;        /* Bright white background */
+      font-family: 'Roboto', sans-serif;
+      color: #5f6368;
+      border-radius: 4px;
+      transition: background-color 0.3s, box-shadow 0.3s;
+    }
+
+    .language-toggle button:hover {
+      background-color: #f8f9fa;     /* Light grey on hover */
+      box-shadow: 0 1px 2px rgba(0,0,0,0.1); /* Soft shadow */
+    }
+
+    /* Language toggle behavior: show only selected language */
+    .telugu .english-text { display: none; }  /* Hide English when Telugu is active */
+    .english .telugu-text { display: none; }  /* Hide Telugu when English is active */
+  </style>
+</head>
+<body class="english">
+
+  <!-- Language Switcher UI -->
+  <div class="language-toggle">
+    <button onclick="toggleLanguage('english')">English</button>
+    <button onclick="toggleLanguage('telugu')">తెలుగు</button>
+  </div>
+
+  <!-- Header Section: Logo + Navigation (Desktop + Mobile) -->
+  <header id="mainHeader">
+    <div class="header-container">
+      <div class="logo">
+        <img src="images/logo_new.jpeg" alt="Holy Spirit Prayer House (IPC) Logo">
+      </div>
+      <nav class="desktop-nav">
+        <!-- Top navigation links (English + Telugu) -->
+        <ul class="nav-links">
+          <!-- Each link contains two spans: English & Telugu -->
+          <li><a href="index.html"><span class="english-text">Home</span><span class="telugu-text">హోమ్</span></a></li>
+          <li><a href="about.html"><span class="english-text">About</span><span class="telugu-text">గురించి</span></a></li>
+          <li><a href="sermons.html"><span class="english-text">Sermons</span><span class="telugu-text">ప్రసంగాలు</span></a></li>
+          <li><a href="ministries.html"><span class="english-text">Ministries</span><span class="telugu-text">సేవలు</span></a></li>
+          <li><a href="orphanage.html"><span class="english-text">Orphanage</span><span class="telugu-text">అనాథాశ్రమం</span></a></li>
+          <li><a href="events.html"><span class="english-text">Events</span><span class="telugu-text">ఈవెంట్స్</span></a></li>
+          <li><a href="contact.html"><span class="english-text">Contact</span><span class="telugu-text">సంప్రదించండి</span></a></li>
+          <li><a href="volunteer.html"><span class="english-text">Get Involved</span><span class="telugu-text">చేరడం</span></a></li>
+          <li><a href="donate.html" class="donate-btn"><span class="english-text">Donate Now</span><span class="telugu-text">దానం చేయండి</span></a></li>
+        </ul>
+      </nav>
+      <button id="menuButton" class="mobile-menu-button" aria-label="Open Menu">☰</button>
+    </div>
+
+    <!-- Mobile version of the nav menu -->
+    <nav class="mobile-nav" id="mobileNav">
+      <ul class="nav-links">
+        <li><a href="index.html"><span class="english-text">Home</span><span class="telugu-text">హోమ్</span></a></li>
+        <li><a href="about.html"><span class="english-text">About</span><span class="telugu-text">గురించి</span></a></li>
+        <li><a href="sermons.html"><span class="english-text">Sermons</span><span class="telugu-text">ప్రసంగాలు</span></a></li>
+        <li><a href="ministries.html"><span class="english-text">Ministries</span><span class="telugu-text">సేవలు</span></a></li>
+        <li><a href="orphanage.html"><span class="english-text">Orphanage</span><span class="telugu-text">అనాథాశ్రమం</span></a></li>
+        <li><a href="events.html"><span class="english-text">Events</span><span class="telugu-text">ఈవెంట్స్</span></a></li>
+        <li><a href="contact.html"><span class="english-text">Contact</span><span class="telugu-text">సంప్రదించండి</span></a></li>
+        <li><a href="volunteer.html"><span class="english-text">Get Involved</span><span class="telugu-text">చేరడం</span></a></li>
+        <li><a href="donate.html" class="donate-btn"><span class="english-text">Donate Now</span><span class="telugu-text">దానం చేయండి</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+
+  
+  
+  <!-- Home Content -->
+  <main id="home">
+    <section class="hero">
+      <div class="overlay"></div>
+      <div class="hero-container">
+        <div class="hero-content">
+          <h1 class="page-title">
+            <span class="english-text">Holy Spirit Prayer House (IPC)</span>
+            <span class="telugu-text">హోలీ స్పిరిట్ ప్రార్థన మందిరం (IPC)</span>
+          </h1>
+          <p>
+            <span class="english-text">Bringing Hope, Love, and Support to the Community</span>
+            <span class="telugu-text">భక్తి, ప్రేమ, మద్దతు సమాజానికి అందించడమే మా లక్ష్యం</span>
+          </p>
+          <a href="visit.html" class="cta-button">
+            <span class="english-text">Plan Your Visit</span>
+            <span class="telugu-text">మీ పర్యటన ప్లాన్ చేయండి</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Additional Home page content (e.g., featured news, testimonials) goes here -->
+  </main>
+  
+  <!-- Include Footer (or paste footer HTML here) -->
+  <footer>
+    <!-- [Paste your footer content here from footer.html] -->
+  </footer>
+  
+  <!-- External JavaScript Files -->
+  <script src="js/chatbot.js" defer></script>
+  <script src="js/script.js" defer></script>
+</body>
+</html>

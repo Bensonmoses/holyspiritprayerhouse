@@ -1,0 +1,123 @@
+/* ══════════════════════════════════════════════════════════════════
+   EVENTS DATA — the only file to edit when there is a church update.
+   ══════════════════════════════════════════════════════════════════
+   Times are India time (IST). The page works out by itself whether a
+   session is Upcoming, Today, LIVE or Completed from date + time.
+
+   Program fields
+     id        unique, lowercase-with-dashes
+     title     { en, te }
+     place     { en, te }
+     poster    image path (16:9 or any shape)
+     sessions  list of days / meetings (one item for a single program)
+
+   Session fields
+     date      "YYYY-MM-DD"
+     time      "HH:MM" 24-hour IST, or null if not announced yet
+     label     { en, te }            e.g. Day 1 · Night
+     speaker   { en, te }            optional
+     poster    that day's own poster (optional) — shown in "Today / Up next"
+     live      YouTube/Facebook live link — shows "LIVE NOW" while it is on
+     video     recording link (YouTube) — shown after it ends
+     photos    [ "images/Events/<id>/day1-1.jpg", ... ]   (square thumbnails)
+     collage   one wide highlights image — shown full width under the day
+   ══════════════════════════════════════════════════════════════════ */
+
+window.HSPH_EVENTS = [
+  {
+    id: "pentecost-fasting-2026",
+    title: {
+      en: "Pentecost Prayer — Altar of Incense Fasting Meetings",
+      te: "పెంతెకొస్తు ప్రార్ధన ధూపవేదిక ఉపవాస కూడికలు"
+    },
+    tagline: { en: "12 Days of Fasting Prayer", te: "12 రోజుల ఉపవాస ప్రార్థనలు" },
+    place: {
+      en: "I.P.C Church, Oduru, West Godavari",
+      te: "ఐ.పి.సి చర్చి, ఓడూరు, ప.గో. జిల్లా"
+    },
+    hosts: { en: "Bishop P. Moses", te: "బిషప్ పి. మోజెస్" },
+    verse: { en: "So the church … had peace and was being built up. — Acts 9:31",
+             te: "సంఘము క్షేమాభివృద్ధి నొందుచు సమాధానము కలిగియుండెను. — అపొ 9:31" },
+    poster: "images/Events/pentecost-fasting-2026/poster.jpg",
+    sessions: [
+      { date: "2026-10-11", time: "19:00",
+        label:   { en: "Day 1 · Night", te: "మొదటి రోజు రాత్రి" },
+        speaker: { en: "Bishop K. Daniel", te: "బిషప్ కె. దానియేల్ గారు" },
+        poster:  "images/Events/pentecost-fasting-2026/poster.jpg",
+        video:   "https://youtube.com/live/6iD4mw73LYY",
+        collage: "images/Events/pentecost-fasting-2026/day-01-collab.jpeg",
+        photos:  [] },
+      { date: "2026-10-12", time: "10:00",
+        label:   { en: "Day 2 · Morning", te: "రెండవ రోజు పగలు" },
+        speaker: { en: "Bishop Dr. B. Prema Sekhar", te: "బిషప్ డా. బి. ప్రేమ శేఖర్ గారు" },
+        poster:  "images/Events/pentecost-fasting-2026/day-02-poster.jpg",
+        live:    "https://www.youtube.com/live/9YM2pcQwpKU" },
+      { date: "2026-10-12", time: "18:00",
+        label:   { en: "Day 2 · Night", te: "రెండవ రోజు రాత్రి" },
+        speaker: { en: "Bishop Dr. B. Prema Sekhar", te: "బిషప్ డా. బి. ప్రేమ శేఖర్ గారు" },
+        poster:  "images/Events/pentecost-fasting-2026/day-02-night-poster.jpg",
+        live:    "https://www.youtube.com/live/_-EVw_vImF0",
+        collage: "images/Events/pentecost-fasting-2026/day-02-night-collab.jpeg" },
+      { date: "2026-10-13", time: "10:00",
+        label:   { en: "Day 3 · Morning", te: "మూడవ రోజు పగలు" },
+        speaker: { en: "Brother Praneed", te: "బ్రదర్ ప్రణీద్ గారు" },
+        poster:  "images/Events/pentecost-fasting-2026/day-03-poster.jpg",
+        live:    "https://www.youtube.com/live/BGHTulapFfc" },
+      { date: "2026-10-13", time: "18:00",
+        label:   { en: "Day 3 · Night", te: "మూడవ రోజు రాత్రి" },
+        speaker: { en: "Brother P. Billy Graham Moses", te: "బ్రదర్ పి. బిల్లిగ్రహం మోజెస్ గారు" },
+        poster:  "images/Events/pentecost-fasting-2026/day-03-night-poster.jpg",
+        live:    "https://youtube.com/live/cUfJSa5DkDY",
+        collage: "images/Events/pentecost-fasting-2026/day-03-night-collab.jpeg" },
+      { date: "2026-10-14", time: "10:00",
+        label:   { en: "Day 4 · Morning", te: "నాల్గవ రోజు పగలు" },
+        speaker: { en: "Rev. Father P. Rajababu", te: "రెవ. ఫాదర్ పి. రాజబాబు గారు" },
+        poster:  "images/Events/pentecost-fasting-2026/day-04-poster.jpg",
+        live:    "https://youtube.com/live/JIjSim4Omvc",
+        collage: "images/Events/pentecost-fasting-2026/day-04-morning-collab.jpeg" },
+      { date: "2026-10-14", time: "18:00",
+        label:   { en: "Day 4 · Night", te: "నాల్గవ రోజు రాత్రి" },
+        speaker: { en: "Rev. V. Shalem Raju", te: "రెవ. వి. షాలేం రాజు గారు" },
+        poster:  "images/Events/pentecost-fasting-2026/day-04-night-poster.jpg",
+        live:    "https://youtube.com/live/Imlx-g_b8h4" },
+      { date: "2026-10-15", time: "10:00",
+        label:   { en: "Day 5 · Morning", te: "ఐదవ రోజు పగలు" },
+        speaker: { en: "Rev. V. Shalem Raju", te: "రెవ. వి. షాలేం రాజు గారు" },
+        poster:  "images/Events/pentecost-fasting-2026/day-05-poster.jpg",
+        live:    "https://youtube.com/live/-t8K8ShoPQ0",
+        collage: "images/Events/pentecost-fasting-2026/day-05-morning-collab.jpeg" },
+      { date: "2026-10-15", time: "18:00",
+        label:   { en: "Day 5 · Night", te: "ఐదవ రోజు రాత్రి" },
+        speaker: { en: "Rev. V. Shalem Raju", te: "రెవ. వి. షాలేం రాజు గారు" },
+        poster:  "images/Events/pentecost-fasting-2026/day-05-night-poster.jpg",
+        live:    "https://youtube.com/live/NBGaSfCVTLw" },
+      { date: "2026-10-16", time: null, label: { en: "Day 6",  te: "ఆరవ రోజు" } },
+      { date: "2026-10-17", time: null, label: { en: "Day 7",  te: "ఏడవ రోజు" } },
+      { date: "2026-10-18", time: null, label: { en: "Day 8",  te: "ఎనిమిదవ రోజు" } },
+      { date: "2026-10-19", time: null, label: { en: "Day 9",  te: "తొమ్మిదవ రోజు" } },
+      { date: "2026-10-20", time: null, label: { en: "Day 10", te: "పదవ రోజు" } },
+      { date: "2026-10-21", time: null, label: { en: "Day 11", te: "పదకొండవ రోజు" } },
+      { date: "2026-10-22", time: null, label: { en: "Day 12", te: "పన్నెండవ రోజు" } }
+    ]
+  },
+
+  {
+    id: "a-day-with-jesus-2026",
+    title: { en: "A Day with Jesus", te: "యేసుతో ఒకరోజు" },
+    tagline: { en: "Special Meeting", te: "ప్రత్యేక కూడిక" },
+    place: {
+      en: "I.P.C Church, Oduru, West Godavari",
+      te: "ఐ.పి.సి చర్చి, ఓడూరు, ప.గో. జిల్లా"
+    },
+    hosts: { en: "Bishop P. Moses", te: "బిషప్ పి. మోజెస్" },
+    poster: "images/Events/a-day-with-jesus-2026/poster.jpg",
+    sessions: [
+      { date: "2026-10-04", time: "19:00", status: "done",
+        label:   { en: "Evening Meeting", te: "సాయంత్రం కూడిక" },
+        speaker: { en: "Rev. Joseph Stanley · Grace Generation Church, USA",
+                   te: "రెవ. జోసెఫ్ స్టాన్లీ గారు · గ్రేస్ జనరేషన్ చర్చి, USA" },
+        video:   "https://youtube.com/live/CFnnHih_eoI",
+        photos:  [] }
+    ]
+  }
+];

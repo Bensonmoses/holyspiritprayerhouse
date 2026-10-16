@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Analytics (GA4) — visitor & click counts -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0PS586KHL7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0PS586KHL7');
+  </script>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sathvik — Mary House of Compassion Trust. Sponsor this child and transform their future.">
+  <title>Sathvik — Mary House of Compassion Trust | Holy Spirit Prayer House (IPC)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Telugu:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .child-hero {
+      padding: 4.5rem 0 3.5rem;
+      background: linear-gradient(160deg, #1A0505 0%, #7B1313 55%, #1A0505 100%);
+      text-align: center;
+      border-bottom: 3px solid var(--gold);
+      position: relative; overflow: hidden;
+    }
+    .child-hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 50% 0%, rgba(201,168,76,0.12) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .child-hero .container { position: relative; z-index: 1; }
+    .child-hero__photo {
+      width: 190px; height: 190px; border-radius: 50%;
+      border: 4px solid rgba(201,168,76,0.5); overflow: hidden;
+      margin: 0 auto 1.5rem;
+      box-shadow: 0 0 0 10px rgba(201,168,76,0.08), 0 0 60px rgba(201,168,76,0.22), 0 10px 40px rgba(0,0,0,0.5);
+      background: linear-gradient(135deg, #4A0E0E, #7B1313);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .child-hero__photo img { width:100%; height:100%; object-fit:cover; object-position:center top; }
+    .child-hero__photo-fallback { font-size:5rem; color:rgba(255,255,255,0.2); }
+    .child-hero__badge {
+      display: inline-block;
+      background: rgba(201,168,76,0.18); border: 1px solid rgba(201,168,76,0.45);
+      color: var(--gold); font-size: 0.7rem; font-weight: 700;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      padding: 0.32rem 0.9rem; border-radius: var(--radius-full); margin-bottom: 1rem;
+    }
+    .child-hero__name {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3rem); color: #fff;
+      font-style: italic; margin-bottom: 0.35rem; line-height: 1.2;
+    }
+    .child-hero__meta {
+      font-size: 0.85rem; color: rgba(255,255,255,0.5);
+      letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 1.5rem;
+    }
+    .child-hero__actions { display:flex; gap:0.85rem; justify-content:center; flex-wrap:wrap; }
+    .btn-sponsor {
+      background: var(--gold); color: var(--dark);
+      font-weight: 700; letter-spacing: 0.06em;
+      padding: 0.75rem 1.75rem; border-radius: var(--radius-full);
+      text-decoration: none; font-size: 0.9rem; transition: background 0.18s;
+    }
+    .btn-sponsor:hover { background: #b8922a; }
+    .btn-back {
+      background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.75);
+      border: 1px solid rgba(255,255,255,0.2);
+      padding: 0.75rem 1.5rem; border-radius: var(--radius-full);
+      text-decoration: none; font-size: 0.88rem; transition: background 0.18s;
+    }
+    .btn-back:hover { background: rgba(255,255,255,0.18); color: #fff; }
+
+    .child-story { padding: 4.5rem 0; }
+    .child-story__inner {
+      display: grid; grid-template-columns: 1fr 340px;
+      gap: 4rem; align-items: start;
+      max-width: 960px; margin: 0 auto;
+    }
+    .child-story__text h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.75rem; color: var(--text-dark); margin-bottom: 1.25rem;
+    }
+    .child-story__text p { color:var(--text-mid); line-height:1.95; font-size:0.96rem; margin-bottom:1rem; }
+    .child-needs {
+      background: var(--off-white); border-radius: var(--radius-lg);
+      padding: 1.75rem; border: 1px solid var(--border-light);
+    }
+    .child-needs h3 { font-size: 1rem; margin-bottom: 1.25rem; color: var(--text-dark); }
+    .need-item { display:flex; gap:0.85rem; align-items:flex-start; margin-bottom:1.1rem; }
+    .need-item__icon { font-size:1.4rem; flex-shrink:0; margin-top:0.1rem; }
+    .need-item__text { font-size:0.85rem; color:var(--text-mid); line-height:1.7; }
+    .need-item__text strong { display:block; color:var(--text-dark); margin-bottom:0.2rem; font-size:0.88rem; }
+
+    .child-gallery { padding: 4rem 0; background: var(--off-white); }
+    .gallery-grid {
+      display: grid; grid-template-columns: repeat(4,1fr); gap: 0.75rem; margin-top: 1.5rem;
+    }
+    .gallery-item {
+      aspect-ratio: 1; background: linear-gradient(135deg,#e8d5d5,#f0e0e0);
+      border-radius: var(--radius-md); display:flex; align-items:center; justify-content:center;
+      font-size: 2rem; color: rgba(155,28,28,0.3);
+    }
+
+    .sponsor-section { padding: 4.5rem 0; }
+    .sponsor-box {
+      max-width: 680px; margin: 0 auto; text-align: center;
+      background: linear-gradient(160deg, #1A0505 0%, #7B1313 60%, #1A0505 100%);
+      border-radius: var(--radius-xl); padding: 3rem 2.5rem;
+      color: #fff; border: 1px solid rgba(201,168,76,0.25);
+    }
+    .sponsor-box h2 { font-family:'Playfair Display',serif; font-size:1.9rem; margin-bottom:0.5rem; font-style:italic; }
+    .sponsor-box p { opacity:0.82; font-size:0.97rem; max-width:520px; margin:0 auto 2rem; line-height:1.8; }
+    .sponsor-tiers { display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; margin-bottom:2rem; }
+    .sponsor-tier {
+      background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15);
+      border-radius: var(--radius-md); padding: 1rem 1.25rem; text-align:center; min-width:130px;
+    }
+    .sponsor-tier strong { display:block; font-size:1.4rem; font-family:'Playfair Display',serif; }
+    .sponsor-tier span { font-size:0.7rem; opacity:0.7; letter-spacing:0.1em; text-transform:uppercase; }
+    .sponsor-tier small { display:block; font-size:0.78rem; opacity:0.6; margin-top:0.25rem; }
+    .sponsor-actions { display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; }
+    .btn-wa {
+      background: #25D366; color: #fff; font-weight:700;
+      padding: 0.75rem 1.5rem; border-radius: var(--radius-full);
+      text-decoration:none; font-size:0.9rem; transition: background 0.18s;
+    }
+    .btn-wa:hover { background: #1da851; }
+    .btn-call {
+      background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.82);
+      border: 1px solid rgba(255,255,255,0.2); border-radius: var(--radius-full);
+      padding: 0.75rem 1.25rem; text-decoration:none; font-size:0.88rem; transition: background 0.18s;
+    }
+    .btn-call:hover { background: rgba(255,255,255,0.18); color:#fff; }
+    .sponsor-includes {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1rem; margin-top: 2rem; text-align:center;
+    }
+    .sponsor-includes div { font-size:0.82rem; opacity:0.75; line-height:1.5; }
+    .sponsor-includes div span { display:block; font-size:1.3rem; margin-bottom:0.25rem; }
+    .tier-usd {
+      display: block; font-size: 1rem; font-family: 'Inter', sans-serif;
+      font-weight: 600; opacity: 0.75; margin-top: 0.15rem; letter-spacing: 0;
+    }
+    @media(max-width:768px) {
+      .child-story__inner { grid-template-columns:1fr; gap:2rem; }
+      .gallery-grid { grid-template-columns: repeat(2,1fr); }
+      .sponsor-includes { grid-template-columns:1fr 1fr; }
+      .sponsor-tier { min-width:100px; }
+    }
+  </style>
+</head>
+<body class="english">
+<div id="site-header"></div>
+
+<section class="child-hero">
+  <div class="container">
+    <div class="child-hero__photo">
+      <img src="images/Orphanage/Child-5.jpeg" alt="Sathvik"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <div class="child-hero__photo-fallback" style="display:none">🧒</div>
+    </div>
+    <div class="child-hero__badge">
+      <span class="english-text">✝ Mary House of Compassion Trust · Child 5</span>
+      <span class="telugu-text">✝ మేరీ హౌస్ ఆఫ్ కంపాషన్ ట్రస్ట్ · పిల్లవాడు 5</span>
+    </div>
+    <h1 class="child-hero__name">
+      <span class="english-text">Sathvik</span>
+      <span class="telugu-text">సాత్విక్</span>
+    </h1>
+    <div class="child-hero__meta">
+      <span class="english-text">Age: 10 &nbsp;·&nbsp; 5th Class &nbsp;·&nbsp; At the Trust since 2025</span>
+      <span class="telugu-text">వయసు: 10 &nbsp;·&nbsp; 5వ తరగతి &nbsp;·&nbsp; 2025 నుండి</span>
+    </div>
+    <div class="child-hero__actions">
+      <a href="https://wa.me/919848315170?text=I%20want%20to%20sponsor%20Sathvik%20(Child%205)%20at%20Mary%20House%20of%20Compassion%20Trust"
+        target="_blank" class="btn-sponsor">
+        <span class="english-text">❤️ Sponsor This Child</span>
+        <span class="telugu-text">❤️ ఈ పిల్లవాడిని స్పాన్సర్ చేయండి</span>
+      </a>
+      <a href="orphanage.html" class="btn-back">
+        <span class="english-text">← All Children</span>
+        <span class="telugu-text">← అందరు పిల్లలు</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="child-story">
+  <div class="container">
+    <div class="child-story__inner">
+
+      <div class="child-story__text">
+        <h2>
+          <span class="english-text">Sathvik's Story</span>
+          <span class="telugu-text">సాత్విక్ కథ</span>
+        </h2>
+        <p>
+          <span class="english-text">Sathvik is part of our family at Mary House of Compassion Trust, together with his elder brother Chandu (Child 12). He is healthy and active — a child with a quiet brightness whose potential is blooming in a caring home.</span>
+          <span class="telugu-text">సాత్విక్ తన అన్న చందు (పిల్లవాడు 12) తో కలిసి మేరీ హౌస్ ఆఫ్ కంపాషన్ ట్రస్ట్‌లో మా కుటుంబంలో భాగం. అతను ఆరోగ్యంగా, చురుకుగా ఉన్నాడు.</span>
+        </p>
+        <p>
+          <span class="english-text">In 5th class, Sathvik has a deep love for the Telugu language — and a joyful love for food! Today his teachers describe his studies as Excellent: the fruit of care, stability and a real chance to learn.</span>
+          <span class="telugu-text">5వ తరగతిలో, సాత్విక్ తెలుగు భాషపై లోతైన ప్రేమ కలిగి ఉన్నాడు. ఈ రోజు అతని ఉపాధ్యాయులు అతని చదువును అద్భుతంగా వర్ణిస్తున్నారు.</span>
+        </p>
+        <p>
+          <span class="english-text">Sathvik is also a growing presence in the spiritual life of the Trust. He has taken to playing the drums in church ministry, and his involvement and enthusiasm have grown steadily since he arrived. His dream is to become a Police Officer — and with the discipline, faith, and excellence he is building right now at the Trust, that dream is well within reach.</span>
+          <span class="telugu-text">సాత్విక్ ట్రస్ట్ యొక్క ఆధ్యాత్మిక జీవితంలో కూడా పెరుగుతున్న ఉనికిగా ఉన్నాడు. అతను చర్చి మినిస్ట్రీలో డ్రమ్స్ వాయించడం నేర్చుకుంటున్నాడు. పోలీస్ అధికారి కావాలని అతని కల.</span>
+        </p>
+        <div style="margin-top:2rem;padding:1.5rem;background:linear-gradient(135deg,rgba(155,28,28,0.07),rgba(155,28,28,0.03));border-radius:var(--radius-lg);border-left:3px solid var(--crimson);">
+          <p style="margin:0;font-family:'Playfair Display',serif;font-style:italic;color:var(--crimson);font-size:1rem;line-height:1.8;">
+            <span class="english-text">"Sathvik's academic transformation has been extraordinary. Today his teachers describe his progress as excellent. That is what happens when a child simply gets the chance they were always meant to have."</span>
+            <span class="telugu-text">"సాత్విక్ యొక్క విద్యా పరివర్తన అసాధారణమైనది. ఈరోజు అతని ఉపాధ్యాయులు అతని పురోగతిని అద్భుతంగా వర్ణిస్తున్నారు."</span>
+          </p>
+          <p style="margin:0.5rem 0 0;font-size:0.8rem;color:var(--text-light);">— Bishop P. Moses</p>
+        </div>
+      </div>
+
+      <div>
+        <div class="child-needs">
+          <h3>
+            <span class="english-text">🙏 What This Child Needs</span>
+            <span class="telugu-text">🙏 ఈ పిల్లవాడికి ఏమి కావాలి</span>
+          </h3>
+          <div class="need-item">
+            <div class="need-item__icon">📚</div>
+            <div class="need-item__text">
+              <strong><span class="english-text">Education</span><span class="telugu-text">విద్య</span></strong>
+              <span class="english-text">School fees, books, uniform, and stationery — ensuring he never misses a day of learning.</span>
+              <span class="telugu-text">స్కూల్ ఫీజులు, పుస్తకాలు, యూనిఫాం మరియు స్టేషనరీ.</span>
+            </div>
+          </div>
+          <div class="need-item">
+            <div class="need-item__icon">🍚</div>
+            <div class="need-item__text">
+              <strong><span class="english-text">Nutritious Meals</span><span class="telugu-text">పౌష్టికాహారం</span></strong>
+              <span class="english-text">Three healthy meals every day — the fuel to study, grow, and thrive.</span>
+              <span class="telugu-text">ప్రతి రోజు మూడు ఆరోగ్యకరమైన భోజనాలు.</span>
+            </div>
+          </div>
+          <div class="need-item">
+            <div class="need-item__icon">🏥</div>
+            <div class="need-item__text">
+              <strong><span class="english-text">Healthcare</span><span class="telugu-text">ఆరోగ్య సంరక్షణ</span></strong>
+              <span class="english-text">Regular check-ups, medicines, and immediate care whenever needed.</span>
+              <span class="telugu-text">క్రమం తప్పకుండా ఆరోగ్య పరీక్షలు మరియు మందులు.</span>
+            </div>
+          </div>
+          <div class="need-item">
+            <div class="need-item__icon">🥁</div>
+            <div class="need-item__text">
+              <strong><span class="english-text">Music Ministry</span><span class="telugu-text">సంగీత మంత్రిత్వం</span></strong>
+              <span class="english-text">Continuing to develop his gift on the drums in our church worship ministry.</span>
+              <span class="telugu-text">చర్చి ఆరాధనలో డ్రమ్స్‌పై తన ప్రతిభను అభివృద్ధి చేయడం.</span>
+            </div>
+          </div>
+          <div class="need-item">
+            <div class="need-item__icon">❤️</div>
+            <div class="need-item__text">
+              <strong><span class="english-text">Love &amp; Belonging</span><span class="telugu-text">ప్రేమ &amp; చెందే భావన</span></strong>
+              <span class="english-text">The assurance that someone in the world believes in him and prays for him.</span>
+              <span class="telugu-text">ప్రపంచంలో ఎవరైనా అతన్ని నమ్ముతున్నారని నిశ్చయత.</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:1.25rem;background:#fff;border-radius:var(--radius-lg);padding:1.5rem;border:1px solid var(--border-light);box-shadow:var(--shadow-xs);">
+          <h4 style="font-size:0.78rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--crimson);margin-bottom:1rem;">
+            <span class="english-text">Quick Facts</span>
+            <span class="telugu-text">క్విక్ ఫ్యాక్ట్స్</span>
+          </h4>
+          <div style="display:grid;gap:0.6rem;font-size:0.88rem;color:var(--text-mid);">
+            <div><strong style="color:var(--text-dark);display:inline-block;width:95px;"><span class="english-text">Name:</span><span class="telugu-text">పేరు:</span></strong> <span class="english-text">Sathvik</span><span class="telugu-text">సాత్విక్</span></div>
+            <div><strong style="color:var(--text-dark);display:inline-block;width:95px;"><span class="english-text">Age:</span><span class="telugu-text">వయసు:</span></strong> <span class="english-text">10 years</span><span class="telugu-text">10 సంవత్సరాలు</span></div>
+            <div><strong style="color:var(--text-dark);display:inline-block;width:95px;"><span class="english-text">Class:</span><span class="telugu-text">తరగతి:</span></strong> <span class="english-text">5th Class</span><span class="telugu-text">5వ తరగతి</span></div>
+            <div><strong style="color:var(--text-dark);display:inline-block;width:95px;"><span class="english-text">Favourite:</span><span class="telugu-text">ఇష్టమైనది:</span></strong> <span class="english-text">Telugu &amp; Music</span><span class="telugu-text">తెలుగు &amp; సంగీతం</span></div>
+            <div><strong style="color:var(--text-dark);display:inline-block;width:95px;"><span class="english-text">Dream:</span><span class="telugu-text">కల:</span></strong> <span class="english-text">Police Officer</span><span class="telugu-text">పోలీసు అధికారి</span></div>
+            <div><strong style="color:var(--text-dark);display:inline-block;width:95px;"><span class="english-text">Academics:</span><span class="telugu-text">చదువు:</span></strong> <span class="english-text">Excellent ⭐</span><span class="telugu-text">అత్యుత్తమం ⭐</span></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="child-gallery">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">
+        <span class="english-text">📸 Photo Gallery</span>
+        <span class="telugu-text">📸 ఫోటో గ్యాలరీ</span>
+      </span>
+      <h2 class="section-title">
+        <span class="english-text">Moments from Sathvik's Life</span>
+        <span class="telugu-text">సాత్విక్ జీవితంలో క్షణాలు</span>
+      </h2>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item">📷</div>
+      <div class="gallery-item">📷</div>
+      <div class="gallery-item">📷</div>
+      <div class="gallery-item">📷</div>
+      <div class="gallery-item">📷</div>
+      <div class="gallery-item">📷</div>
+      <div class="gallery-item">📷</div>
+      <div class="gallery-item">📷</div>
+    </div>
+    <p style="text-align:center;margin-top:1.5rem;font-size:0.85rem;color:var(--text-light);">
+      <span class="english-text">Photos coming soon</span>
+      <span class="telugu-text">ఫోటోలు త్వరలో వస్తాయి</span>
+    </p>
+  </div>
+</section>
+
+<section class="sponsor-section">
+  <div class="container">
+    <div class="sponsor-box">
+      <h2>
+        <span class="english-text">Sponsor Sathvik</span>
+        <span class="telugu-text">సాత్విక్‌ను స్పాన్సర్ చేయండి</span>
+      </h2>
+      <p>
+        <span class="english-text">Your monthly support gives Sathvik education, meals, healthcare, and the certainty that someone in the world loves and prays for him.</span>
+        <span class="telugu-text">మీ నెలవారీ మద్దతు సాత్విక్‌కు విద్య, భోజనం, ఆరోగ్య సంరక్షణ మరియు ప్రేమ అందిస్తుంది.</span>
+      </p>
+      <div class="sponsor-tiers">
+        <div class="sponsor-tier">
+          <strong>₹4,500 <span class="tier-usd">(~$54)</span></strong>
+          <span><span class="english-text">Per Month</span><span class="telugu-text">నెలకు</span></span>
+          <small><span class="english-text">Meals for 30 days (₹150/day)</span><span class="telugu-text">30 రోజుల భోజనం</span></small>
+        </div>
+        <div class="sponsor-tier">
+          <strong>₹5,700 <span class="tier-usd">(~$68)</span></strong>
+          <span><span class="english-text">Per Month</span><span class="telugu-text">నెలకు</span></span>
+          <small><span class="english-text">Meals + School fees</span><span class="telugu-text">భోజనం + విద్య</span></small>
+        </div>
+        <div class="sponsor-tier">
+          <strong>₹8,800 <span class="tier-usd">(~$105)</span></strong>
+          <span><span class="english-text">Per Month</span><span class="telugu-text">నెలకు</span></span>
+          <small><span class="english-text">Full care — meals, edu, health, clothing &amp; transport</span><span class="telugu-text">పూర్తి సంరక్షణ</span></small>
+        </div>
+        <div class="sponsor-tier">
+          <strong><span class="english-text">Any Amount</span><span class="telugu-text">ఏదైనా మొత్తం</span></strong>
+          <span><span class="english-text">You choose</span><span class="telugu-text">మీరు నిర్ణయించండి</span></span>
+          <small><span class="english-text">Every rupee helps</span><span class="telugu-text">ప్రతి రూపాయి సహాయపడుతుంది</span></small>
+        </div>
+      </div>
+      <div class="sponsor-actions">
+        <a href="https://wa.me/919848315170?text=I%20want%20to%20sponsor%20Sathvik%20(Child%205)%20at%20Mary%20House%20of%20Compassion%20Trust"
+          target="_blank" class="btn-wa">
+          <span class="english-text">💬 WhatsApp to Sponsor</span>
+          <span class="telugu-text">💬 WhatsApp లో స్పాన్సర్ చేయండి</span>
+        </a>
+        <a href="tel:+919848315170" class="btn-call">
+          <span class="english-text">📞 Bishop Moses</span>
+          <span class="telugu-text">📞 బిషప్ మోషే</span>
+        </a>
+        <a href="tel:+919866378567" class="btn-call">
+          <span class="english-text">📞 Bro Billygraham</span>
+          <span class="telugu-text">📞 బ్రదర్ బిల్లీ గ్రహామ్</span>
+        </a>
+        <a href="mailto:maryhouseofcompassiontrust@holyspiritprayerhouse.com" class="btn-call">
+          <span class="english-text">✉ Email Us</span>
+          <span class="telugu-text">✉ మాకు మెయిల్ చేయండి</span>
+        </a>
+      </div>
+      <div class="sponsor-includes">
+        <div><span>🍚</span><span class="english-text">Nutritious meals every day</span><span class="telugu-text">రోజువారీ పౌష్టికాహారం</span></div>
+        <div><span>📚</span><span class="english-text">School fees, books &amp; uniform</span><span class="telugu-text">స్కూల్ ఫీజులు, పుస్తకాలు</span></div>
+        <div><span>🏥</span><span class="english-text">Healthcare &amp; medical support</span><span class="telugu-text">ఆరోగ్య సంరక్షణ</span></div>
+        <div><span>✝️</span><span class="english-text">Spiritual guidance &amp; prayer</span><span class="telugu-text">ఆధ్యాత్మిక మార్గదర్శకత్వం</span></div>
+        <div><span>❤️</span><span class="english-text">Updates &amp; photos of the child</span><span class="telugu-text">పిల్లవాడి అప్‌డేట్‌లు &amp; ఫోటోలు</span></div>
+        <div><span>🙏</span><span class="english-text">Tax exemption receipt</span><span class="telugu-text">పన్ను మినహాయింపు రసీదు</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding:4rem 0;background:linear-gradient(135deg,#1A0505 0%,#7B1313 50%,#1A0505 100%);text-align:center;">
+  <div class="container">
+    <p style="font-family:'Playfair Display',serif;font-size:clamp(1.1rem,2.5vw,1.5rem);color:rgba(255,255,255,0.9);font-style:italic;max-width:680px;margin:0 auto 0.75rem;line-height:1.75;">
+      <span class="english-text">"For I know the plans I have for you, declares the Lord, plans to prosper you and not to harm you, plans to give you hope and a future."</span>
+      <span class="telugu-text">"మీ గురించి నాకు తెలిసిన పథకములు నేను ఎరుగుదును; అవి మీకు అపాయము కలిగించుటకు కాదు, మంచి చేయుటకే; అవి మీకు భవిష్యత్తును ఆశను అనుగ్రహించుటకే."</span>
+    </p>
+    <p style="color:var(--gold);font-size:0.85rem;letter-spacing:0.15em;text-transform:uppercase;">Jeremiah 29:11</p>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="js/site.js"></script>
+</body>
+</html>

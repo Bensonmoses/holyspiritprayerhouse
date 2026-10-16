@@ -1,0 +1,158 @@
+/* Events hub — programs, day-by-day sessions, live banner. Uses site tokens from styles.css */
+
+section[hidden], .ev-day[hidden] { display: none !important; }
+
+/* ── Status chips ───────────────────────────────────────── */
+.ev-chip {
+  display: inline-flex; align-items: center; gap: .3rem;
+  font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+  padding: .28rem .7rem; border-radius: var(--radius-full); white-space: nowrap;
+}
+.ev-chip--live     { background: var(--crimson); color: #fff; animation: ev-pulse 1.6s ease-in-out infinite; }
+.ev-chip--today    { background: var(--gold); color: #fff; }
+.ev-chip--upcoming { background: var(--off-white); color: var(--text-mid); border: 1px solid var(--border-light); }
+.ev-chip--done     { background: #E7F2EA; color: #24663A; }
+@keyframes ev-pulse { 0%,100% { box-shadow: 0 0 0 0 rgba(155,28,28,.45); } 50% { box-shadow: 0 0 0 7px rgba(155,28,28,0); } }
+@media (prefers-reduced-motion: reduce) { .ev-chip--live, .ev-live-banner__dot { animation: none; } }
+
+/* ── Live banner (Events + Home) ────────────────────────── */
+.ev-live-banner { background: linear-gradient(90deg, var(--crimson-dark), var(--crimson)); color: #fff; }
+.ev-live-banner__inner { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; padding-block: .85rem; }
+.ev-live-banner__dot { width: 12px; height: 12px; border-radius: 50%; background: #fff; flex: none; animation: ev-pulse 1.6s infinite; }
+.ev-live-banner__txt { flex: 1 1 260px; line-height: 1.45; }
+.ev-live-banner__txt strong { letter-spacing: .1em; margin-right: .4rem; color: var(--gold-light); }
+
+/* ── Program card ───────────────────────────────────────── */
+.ev-list { display: grid; grid-template-columns: minmax(0, 1fr); gap: 2.5rem; margin-top: 2.5rem; }
+.ev-program {
+  min-width: 0;
+  background: #fff; border-radius: var(--radius-lg); box-shadow: var(--shadow-md);
+  border-top: 4px solid var(--crimson); overflow: hidden;
+}
+.ev-program--past { border-top-color: var(--gold); }
+.ev-program__top { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 2rem; padding: 2rem; }
+/* the one picture per card — poster that turns into the video player */
+.ev-media { position: relative; border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-sm); align-self: start; background: #111; }
+.ev-media a, .ev-media img { display: block; width: 100%; height: auto; }          /* poster: never cropped */
+.ev-media[data-playing] { aspect-ratio: 16 / 9; }                                   /* player: video shape */
+.ev-media iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.ev-media[data-yt] { cursor: pointer; }
+.ev-media .ev-chip { position: absolute; top: .8rem; left: .8rem; z-index: 1; }
+.ev-media:hover .ev-video__play, .ev-media:focus-visible .ev-video__play { transform: scale(1.08); background: var(--crimson-light); }
+.ev-media:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+
+.ev-program__left { display: grid; gap: .9rem; align-self: start; min-width: 0; }
+.ev-media__link { position: absolute; inset: 0; z-index: 1; }
+.ev-media .ev-video__play { z-index: 2; }
+.ev-media .ev-chip { z-index: 2; }
+
+/* caption strip on the picture: session · date · time · speaker */
+.ev-media__cap {
+  position: absolute; left: 0; right: 0; bottom: 0; z-index: 2; pointer-events: none;
+  display: grid; gap: .15rem; padding: 2.4rem 1.1rem .85rem;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.78) 55%, rgba(0,0,0,.9) 100%);
+  color: #fff; font-size: .86rem; line-height: 1.35; text-shadow: 0 1px 2px rgba(0,0,0,.5);
+}
+.ev-media__cap strong { font-size: 1.02rem; letter-spacing: .01em; }
+.ev-media__cap span { color: rgba(255,255,255,.88); }
+
+/* one row of actions under the picture */
+.ev-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: .6rem; }
+.ev-act {
+  display: inline-flex; align-items: center; gap: .45rem; cursor: pointer; text-decoration: none;
+  font: 600 .88rem 'Inter', 'Noto Sans Telugu', sans-serif; padding: .6rem 1.1rem; border-radius: var(--radius-full);
+  border: 1.5px solid var(--border-light); background: #fff; color: var(--text-dark);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);
+}
+.ev-act:hover, .ev-act:focus-visible { transform: translateY(-1px); box-shadow: var(--shadow-sm); }
+.ev-act--play { background: var(--crimson); border-color: var(--crimson); color: #fff; }
+.ev-act--play:hover { background: var(--crimson-light); }
+.ev-act--wa { background: #25D366; border-color: #25D366; color: #fff; }
+.ev-act--wa:hover { background: #1EBE5A; }
+.ev-program__info { display: flex; flex-direction: column; gap: .9rem; min-width: 0; }
+.ev-program__info .section-eyebrow { margin: 0; }
+.ev-program__title { font-family: 'Playfair Display', 'Noto Sans Telugu', serif; font-size: clamp(1.35rem, 2.4vw, 1.85rem); line-height: 1.3; margin: 0; color: var(--text-dark); text-wrap: balance; }
+.telugu .ev-program__title { font-family: 'Noto Sans Telugu', sans-serif; }
+.ev-meta { list-style: none; padding: 0; margin: 0; display: grid; gap: .45rem; color: var(--text-mid); }
+.ev-verse { font-style: italic; color: var(--text-light); font-size: .92rem; border-left: 3px solid var(--gold); padding-left: .8rem; margin: .2rem 0 0; }
+
+.ev-progress { display: grid; gap: .4rem; }
+.ev-progress__bar { height: 8px; background: var(--off-white); border-radius: var(--radius-full); overflow: hidden; }
+.ev-progress__bar span { display: block; height: 100%; background: linear-gradient(90deg, var(--gold), var(--crimson)); border-radius: inherit; }
+.ev-progress__txt { font-size: .85rem; font-weight: 600; color: var(--crimson); font-variant-numeric: tabular-nums; }
+
+/* ── Play button (on the card picture) ─────────────────── */
+.ev-btn--ghost { border-color: var(--border-light); color: var(--text-mid); }
+.ev-video__play { z-index: 1; position: absolute; inset: 0; margin: auto; width: 74px; height: 52px; border-radius: 14px; background: rgba(155,28,28,.92); transition: transform var(--transition-fast), background var(--transition-fast); }
+.ev-video__play::after { content: ''; position: absolute; inset: 0; margin: auto; width: 0; height: 0; border-style: solid; border-width: 11px 0 11px 19px; border-color: transparent transparent transparent #fff; transform: translateX(3px); }
+
+/* ── Day-by-day list ────────────────────────────────────── */
+.ev-schedule { padding: 0 2rem 2rem; display: grid; gap: .6rem; }
+.ev-schedule .ev-days { padding: 0; }
+.ev-group {
+  display: flex; align-items: center; gap: .7rem; margin: .8rem 0 0;
+  font: 700 .74rem 'Inter', 'Noto Sans Telugu', sans-serif; letter-spacing: .12em; text-transform: uppercase; color: var(--crimson);
+}
+.ev-group:first-child { margin-top: 0; }
+.ev-group::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+.ev-days { list-style: none; margin: 0; padding: 0 2rem 2rem; display: grid; gap: .6rem; }
+.ev-day {
+  display: grid; grid-template-columns: minmax(150px, 1fr) minmax(0, 1.4fr) auto; align-items: center; gap: .4rem 1.2rem;
+  padding: .85rem 1.1rem; border-radius: var(--radius-sm); background: var(--warm-white); border: 1px solid var(--border-light);
+}
+.ev-day--live  { background: #FFF5F3; border-color: rgba(155,28,28,.35); }
+.ev-day--today, .ev-day--now { border-color: var(--gold); }
+.ev-day--done  { background: #fff; }
+.ev-day__main { display: grid; gap: .1rem; }
+.ev-day__main strong { color: var(--text-dark); }
+.ev-day__date { font-size: .82rem; color: var(--text-light); font-variant-numeric: tabular-nums; }
+.ev-day__detail { color: var(--text-mid); font-size: .92rem; }
+.ev-day__detail em { color: var(--text-light); }
+.ev-dot { margin: 0 .45rem; color: var(--gold); }
+.ev-day__right { display: flex; align-items: center; gap: .5rem; justify-content: flex-end; flex-wrap: wrap; }
+.ev-btn {
+  display: inline-flex; align-items: center; font-size: .82rem; font-weight: 600; text-decoration: none;
+  padding: .35rem .8rem; border-radius: var(--radius-full); border: 1.5px solid var(--crimson); color: var(--crimson);
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+.ev-btn:hover, .ev-btn:focus-visible { background: var(--crimson); color: #fff; }
+.ev-btn--live { background: var(--crimson); color: #fff; }
+.ev-count { font-size: .82rem; color: var(--text-mid); }
+.ev-collage { grid-column: 1 / -1; position: relative; display: block; margin-top: .5rem; border-radius: var(--radius-sm); overflow: hidden; box-shadow: var(--shadow-sm); }
+.ev-collage img { width: 100%; display: block; transition: transform var(--transition-slow); }
+.ev-collage:hover img { transform: scale(1.02); }
+.ev-collage__label {
+  position: absolute; top: .7rem; left: .7rem; z-index: 1;
+  font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+  background: rgba(13,13,13,.72); color: var(--gold-light); padding: .3rem .7rem; border-radius: var(--radius-full);
+}
+.ev-photos { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: .5rem; margin-top: .4rem; }
+.ev-photos a { display: block; aspect-ratio: 1; border-radius: var(--radius-xs); overflow: hidden; }
+.ev-photos img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform var(--transition); }
+.ev-photos a:hover img { transform: scale(1.05); }
+
+.ev-more {
+  display: block; margin: -1rem auto 2rem; padding: .55rem 1.3rem; cursor: pointer;
+  font: 600 .88rem 'Inter', 'Noto Sans Telugu', sans-serif; color: var(--crimson);
+  background: #fff; border: 1.5px solid var(--crimson); border-radius: var(--radius-full);
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+.ev-more:hover, .ev-more:focus-visible { background: var(--crimson); color: #fff; }
+
+.ev-empty { margin-top: 2rem; color: var(--text-light); font-style: italic; }
+
+/* ── Phones ─────────────────────────────────────────────── */
+@media (max-width: 820px) {
+  .ev-program__top { grid-template-columns: 1fr; padding: 1.2rem; gap: 1.2rem; }
+  .ev-days { padding: 0 1.2rem 1.2rem; }
+  .ev-schedule { padding: 0 1.2rem 1.2rem; }
+  /* phones: LIVE banner stacked and centred */
+  .ev-live-banner__inner { flex-direction: column; justify-content: center; text-align: center; gap: .6rem; }
+  .ev-live-banner__txt { flex: none; }
+  .ev-media__cap { font-size: .76rem; padding: 1.8rem .8rem .6rem; }
+  .ev-media__cap strong { font-size: .9rem; }
+  .ev-act { padding: .55rem .95rem; font-size: .84rem; }
+  /* phones: day name, then details, then status + buttons on their own line */
+  .ev-day { grid-template-columns: minmax(0, 1fr); }
+  .ev-day__right { justify-content: flex-start; }
+}

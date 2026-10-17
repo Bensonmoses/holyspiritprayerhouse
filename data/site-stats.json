@@ -1,8 +1,8 @@
 {
-  "updated": "2026-10-17T01:12:12.979Z",
-  "totalVisits": 56,
-  "totalPageViews": 224,
-  "totalUsers": 20,
+  "updated": "2026-10-17T06:48:23.238Z",
+  "totalVisits": 75,
+  "totalPageViews": 331,
+  "totalUsers": 35,
   "programs": {
     "a-day-with-jesus-2026": {
       "views": 19,
@@ -14,16 +14,24 @@
     }
   },
   "pages": {
-    "/events.html": 109,
-    "/index.html": 66,
-    "/": 19,
-    "/orphanage.html": 15,
-    "/family.html": 8,
+    "/events.html": 114,
+    "/index.html": 80,
+    "/": 36,
+    "/orphanage.html": 34,
+    "/family.html": 29,
+    "/person-praneed.html": 6,
+    "/about.html": 5,
+    "/sermons.html": 5,
+    "/ministries.html": 4,
+    "/orphan-1.html": 4,
+    "/person-esthar.html": 3,
     "/orphan-3.html": 2,
-    "/about.html": 1,
-    "/person-esthar.html": 1,
-    "/person-mary.html": 1,
-    "/person-moses.html": 1,
-    "/volunteer.html": 1
+    "/person-mary.html": 2,
+    "/volunteer.html": 2,
+    "/contact.html": 1,
+    "/orphan-10.html": 1,
+    "/person-benson.html": 1,
+    "/person-billygraham.html": 1,
+    "/person-moses.html": 1
   }
 }

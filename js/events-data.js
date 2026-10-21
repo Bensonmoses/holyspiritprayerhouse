@@ -146,7 +146,11 @@ window.HSPH_EVENTS = [
         speaker: { en: "Pastor D. Koteswara Rao", te: "పాస్టర్ డి. కోటేశ్వరరావు గారు" },
         poster:  "images/Events/pentecost-fasting-2026/day-11-poster.jpg",
         live:    "https://youtube.com/live/w4JAXQldwqY" },
-      { date: "2026-10-21", time: "18:00", label: { en: "Day 11 · Night", te: "పదకొండవ రోజు రాత్రి" } },
+      { date: "2026-10-21", time: "18:00",
+        label:   { en: "Day 11 · Night", te: "పదకొండవ రోజు రాత్రి" },
+        speaker: { en: "Pastor D. Koteswara Rao", te: "పాస్టర్ డి. కోటేశ్వరరావు గారు" },
+        poster:  "images/Events/pentecost-fasting-2026/day-11-night-poster.jpg",
+        live:    "https://youtube.com/live/dAQXbDhuqiM" },
       { date: "2026-10-22", time: null, label: { en: "Day 12", te: "పన్నెండవ రోజు" } }
     ]
   },

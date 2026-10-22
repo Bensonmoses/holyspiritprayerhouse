@@ -151,7 +151,14 @@ window.HSPH_EVENTS = [
         speaker: { en: "Pastor D. Koteswara Rao", te: "పాస్టర్ డి. కోటేశ్వరరావు గారు" },
         poster:  "images/Events/pentecost-fasting-2026/day-11-night-poster.jpg",
         live:    "https://youtube.com/live/dAQXbDhuqiM" },
-      { date: "2026-10-22", time: null, label: { en: "Day 12", te: "పన్నెండవ రోజు" } }
+      { date: "2026-10-22", time: "10:00",
+        label:   { en: "Day 12 · Morning", te: "పన్నెండవ రోజు పగలు" },
+        speaker: { en: "Pastor Jaya Prasad Vardhanapu", te: "పాస్టర్ జయ ప్రసాద్ వర్ధనపు గారు" },
+        live:    "https://youtube.com/live/8uMyi0EE9Qg" },
+      { date: "2026-10-22", time: "18:00",
+        label:   { en: "Day 12 · Night", te: "పన్నెండవ రోజు రాత్రి" },
+        speaker: { en: "Pastor Jaya Prasad Vardhanapu", te: "పాస్టర్ జయ ప్రసాద్ వర్ధనపు గారు" },
+        live:    "https://youtube.com/live/MGvnJKciEJ8" }
     ]
   },
 

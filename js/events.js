@@ -144,6 +144,14 @@
   // returns { src, x (focus session), yt (YouTube id to play), url (YouTube link) }
   function mediaFor(p, info) {
     var ss = info.ss;
+    // a finished multi-day program: its own poster, ▶ plays the whole playlist (or Day 1)
+    if (isArchive(p, info)) {
+      var firstRec = null;
+      for (var i = 0; i < ss.length && !firstRec; i++) firstRec = recording(ss[i].s);
+      return p.playlist
+        ? { src: p.poster, x: null, yt: 'list:' + p.playlist, url: 'https://www.youtube.com/playlist?list=' + p.playlist, archive: true }
+        : { src: p.poster, x: null, yt: ytId(firstRec), url: firstRec, archive: true };
+    }
     var pick = function (xs) { for (var i = 0; i < xs.length; i++) if (xs[i].s.poster) return xs[i]; return null; };
     var doneDesc = ss.filter(function (x) { return x.st === 'done'; }).reverse();
     var live = ss.filter(function (x) { return x.st === 'live'; })[0];
@@ -182,12 +190,22 @@
   var CHANNEL = 'https://www.youtube.com/@pastorpmoses';
   var SITE = 'https://holyspiritprayerhouse.com/events.html';
 
+  function isArchive(p, info) { return info.state === 'past' && p.sessions.length > 1; }
+  function dayCount(info) { var d = {}; info.ss.forEach(function (x) { d[x.s.date] = 1; }); return Object.keys(d).length; }
+
   // picture with everything on it: status badge, ▶, and a caption strip (session · time · speaker)
   function mediaBlock(p, m, info, total) {
     var x = m.x, st = x ? x.st : info.state;
     var badge = x && st !== 'done' ? chip(CHIP[st]) : chip(PSTATE[info.state]);
     var cap = '';
-    if (x) {
+    if (m.archive) {
+      var nd = dayCount(info);
+      cap = '<div class="ev-media__cap">' +
+              '<strong>' + bi({ en: nd + ' days · ' + total + ' sessions', te: nd + ' రోజులు · ' + total + ' కూడికలు' }) + '</strong>' +
+              '<span>' + bi(fmtRange(info.first, info.last)) + '</span>' +
+              (m.yt ? '<span>▶ ' + bi({ en: 'Every session on YouTube', te: 'అన్ని కూడికలు YouTube లో' }) + '</span>' : '') +
+            '</div>';
+    } else if (x) {
       var t = fmtTime(x.s.time), when = [];
       if (total > 1) when.push(bi(fmtDate(x.s.date)));
       if (t) when.push(bi(t));
@@ -206,10 +224,13 @@
   // one row of actions under the picture: Watch here · YouTube · Share on WhatsApp
   function actionsBlock(p, m) {
     var x = m.x, live = x && x.st === 'live', html = '';
+    var list = m.yt && m.yt.indexOf('list:') === 0;
     if (m.yt) html += '<button type="button" class="ev-act ev-act--play" data-play-yt="' + m.yt + '">' +
-      bi(live ? { en: '▶ Watch live here', te: '▶ ఇక్కడే ప్రత్యక్షంగా చూడండి' } : { en: '▶ Watch here', te: '▶ ఇక్కడే చూడండి' }) + '</button>';
+      bi(live ? { en: '▶ Watch live here', te: '▶ ఇక్కడే ప్రత్యక్షంగా చూడండి' }
+         : list ? { en: '▶ Watch all days', te: '▶ అన్ని రోజులు చూడండి' }
+         : { en: '▶ Watch here', te: '▶ ఇక్కడే చూడండి' }) + '</button>';
     html += '<a class="ev-act ev-act--yt" href="' + esc(m.url || CHANNEL) + '" target="_blank" rel="noopener">' + ICON_YT +
-      bi(m.url ? { en: 'YouTube', te: 'YouTube' } : { en: 'YouTube channel', te: 'YouTube ఛానల్' }) + '</a>';
+      bi(list ? { en: 'YouTube playlist', te: 'YouTube ప్లేలిస్ట్' } : m.url ? { en: 'YouTube', te: 'YouTube' } : { en: 'YouTube channel', te: 'YouTube ఛానల్' }) + '</a>';
     var lines = [p.title.te, p.title.en];
     if (x) {
       var t = fmtTime(x.s.time);
@@ -249,11 +270,59 @@
             (p.place ? '<li>📍 ' + bi(p.place) + '</li>' : '') +
             (p.hosts ? '<li>🎤 ' + bi(p.hosts) + '</li>' : '') +
             statsLine(p) +
-          '</ul>' + progress +
+          '</ul>' + (isArchive(p, info) ? preachersBlock(info) : progress) +
           (p.verse ? '<p class="ev-verse">' + bi(p.verse) + '</p>' : '') +
         '</div>' +
-      '</div>' + daysList(p, info) +
+      '</div>' + (isArchive(p, info) ? archiveList(p, info) : daysList(p, info)) +
     '</article>';
+  }
+
+  // finished program: everyone who preached — church family first (Bishop → Billy Graham → Esthar Roj →
+  // Benson → Praneed), then guests in order of first appearance
+  var FAMILY = [/Bishop P\. Moses/i, /Billy ?Graham/i, /Esth/i, /Benson/i, /Praneed/i];
+  function famRank(sp) { for (var i = 0; i < FAMILY.length; i++) if (FAMILY[i].test(sp.en)) return i; return FAMILY.length; }
+  function preachersBlock(info) {
+    var seen = {}, list = [];
+    info.ss.forEach(function (x) { var sp = x.s.speaker; if (sp && !seen[sp.en]) { seen[sp.en] = 1; list.push(sp); } });
+    list = list.map(function (sp, i) { return { sp: sp, i: i, r: famRank(sp) }; })
+      .sort(function (a, b) { return a.r - b.r || a.i - b.i; }).map(function (o) { return o.sp; });
+    if (!list.length) return '';
+    return '<div class="ev-preachers"><span class="ev-preachers__title">' + bi({ en: 'Preachers', te: 'దైవజనులు' }) + '</span>' +
+      '<ul>' + list.map(function (sp) { return '<li>' + bi(sp) + '</li>'; }).join('') + '</ul></div>';
+  }
+
+  // finished program: Day 1 → last day, one row per day with its Morning / Night side by side
+  function archiveList(p, info) {
+    var days = [], idx = {};
+    info.ss.forEach(function (x) {
+      var d = x.s.date;
+      if (!(d in idx)) { idx[d] = days.length; days.push([]); }
+      days[idx[d]].push(x);
+    });
+    var rows = days.map(function (g) {
+      var lab = g[0].s.label, te = lab.te.split(' ');
+      var day = { en: lab.en.split(' · ')[0], te: te.length > 2 ? te.slice(0, -1).join(' ') : lab.te };
+      var slots = g.map(function (x) {
+        var s = x.s, part = s.label.en.split(' · ')[1], tt = s.label.te.split(' '), rec = recording(s), t = fmtTime(s.time);
+        var when = part ? bi({ en: part, te: tt.length > 2 ? tt[tt.length - 1] : part }) : '';
+        return '<div class="ev-slot">' +
+          '<span class="ev-slot__when">' + when + (t ? '<small>' + bi(t) + '</small>' : '') + '</span>' +
+          '<span class="ev-slot__who">' + (s.speaker ? bi(s.speaker) : '') + '</span>' +
+          '<span class="ev-slot__act">' +
+            (rec ? playLink(rec, 'ev-btn', { en: '▶ Watch', te: '▶ చూడండి' }) : '') +
+            (s.poster ? '<a class="ev-btn ev-btn--ghost" href="' + esc(s.poster) + '" target="_blank" rel="noopener">' + bi({ en: 'Poster', te: 'పోస్టర్' }) + '</a>' : '') +
+            (s.collage ? '<a class="ev-btn ev-btn--ghost" href="' + esc(s.collage) + '" target="_blank" rel="noopener">📷 ' + bi({ en: 'Highlights', te: 'దృశ్యాలు' }) + '</a>' : '') +
+          '</span></div>';
+      }).join('');
+      var photos = [];
+      g.forEach(function (x) { if (x.s.photos) photos = photos.concat(x.s.photos); });
+      return '<li class="ev-arch">' +
+          '<div class="ev-arch__day"><strong>' + bi(day) + '</strong><span class="ev-day__date">' + bi(fmtDate(g[0].s.date)) + '</span></div>' +
+          '<div class="ev-arch__slots">' + slots + '</div>' + photosBlock(photos) +
+        '</li>';
+    }).join('');
+    return '<div class="ev-schedule"><h4 class="ev-group">' + bi({ en: 'Day-by-day schedule', te: 'రోజువారీ కార్యక్రమం' }) + '</h4>' +
+      '<ol class="ev-arch-list">' + rows + '</ol></div>';
   }
 
   // Days grouped by status so what matters now is always on top:
@@ -388,8 +457,10 @@
   function playIn(box, id) {
     if (box.dataset.playing === id) return;
     box.dataset.playing = id;
-    box.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + id +
-      '?autoplay=1&rel=0" title="Video" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>';
+    var src = id.indexOf('list:') === 0
+      ? 'https://www.youtube-nocookie.com/embed/videoseries?list=' + id.slice(5) + '&autoplay=1&rel=0'   // whole playlist
+      : 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0';
+    box.innerHTML = '<iframe src="' + src + '" title="Video" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>';
   }
   document.addEventListener('click', function (e) {
     if (!e.target.closest) return;

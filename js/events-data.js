@@ -9,6 +9,8 @@
      title     { en, te }
      place     { en, te }
      poster    image path (16:9 or any shape)
+     playlist  YouTube playlist id (optional) — once a multi-day program is over, the card
+               shows its poster with "▶ Watch all days" and a Day 1 → last day schedule
      sessions  list of days / meetings (one item for a single program)
 
    Session fields
@@ -39,6 +41,7 @@ window.HSPH_EVENTS = [
     verse: { en: "So the church … had peace and was being built up. — Acts 9:31",
              te: "సంఘము క్షేమాభివృద్ధి నొందుచు సమాధానము కలిగియుండెను. — అపొ 9:31" },
     poster: "images/Events/pentecost-fasting-2026/poster.jpg",
+    playlist: "PLbuE7ilDdduw",
     sessions: [
       { date: "2026-10-11", time: "19:00",
         label:   { en: "Day 1 · Night", te: "మొదటి రోజు రాత్రి" },

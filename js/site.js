@@ -20,6 +20,15 @@ const SITE = {
   whatsapp:  'https://wa.me/919848315170'
 };
 
+// Oduru weekly services (shown in the "Ask Us" help box) — keep in step with events.html "Weekly Services"
+const SERVICES = [
+  { en: 'Sunday School',             te: 'సండే స్కూల్',          dayEn: 'Sunday',       dayTe: 'ఆదివారం',      time: '9:00 AM' },
+  { en: 'Sunday Worship (LIVE)',     te: 'ఆదివారం ఆరాధన (LIVE)', dayEn: 'Sunday',       dayTe: 'ఆదివారం',      time: '10 AM – 12 PM' },
+  { en: 'Youth Meeting',             te: 'యువజన కూడిక',          dayEn: 'Sunday night', dayTe: 'ఆదివారం రాత్రి', time: '7:00 PM' },
+  { en: "Women's Prayer",            te: 'మహిళా ప్రార్థన',        dayEn: 'Wednesday',    dayTe: 'బుధవారం',      time: '7:00 PM' },
+  { en: 'Fasting Prayer',            te: 'ఉపవాస ప్రార్థన',        dayEn: 'Saturday',     dayTe: 'శనివారం',      time: '7:00 PM' }
+];
+
 // ── Language ──────────────────────────────────────────────
 function toggleLanguage(lang) {
   localStorage.setItem('hsph_lang', lang);
@@ -236,13 +245,42 @@ function renderFooter() {
     <span>💬 <span class="english-text">Chat with Us</span><span class="telugu-text">మాతో చాట్ చేయండి</span></span>
     <button id="close-chatbot" class="close-button">&times;</button>
   </div>
-  <div style="padding:1.5rem;text-align:center;color:#666;font-size:0.9rem;">
-    <p style="margin-bottom:1rem;"><span class="english-text">Hello! How can we help you?</span><span class="telugu-text">నమస్కారం! మేము మీకు ఎలా సహాయం చేయగలం?</span></p>
-    <a href="${SITE.whatsapp}" target="_blank" class="btn btn-primary" style="font-size:0.85rem;padding:0.6rem 1.2rem;">
-      <span class="english-text">💬 Chat on WhatsApp</span><span class="telugu-text">💬 WhatsApp లో మాట్లాడండి</span>
-    </a>
-  </div>
+  ${renderHelpBox()}
 </div>`;
+}
+
+// ── "Ask Us" help box: quick answers from our own church details (no AI, nothing sent anywhere) ──
+function renderHelpBox() {
+  const bi = (en, te) => `<span class="english-text">${en}</span><span class="telugu-text">${te}</span>`;
+  const prayer = encodeURIComponent('🙏 Prayer request / ప్రార్థన విన్నపం:\n\nName / పేరు: \nPlace / ఊరు: \nPrayer / విన్నపం: ');
+  const maps = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent('Holy Spirit Prayer House, ' + SITE.address);
+  const row = (key, href, icon, title, sub, ext) =>
+    `<a class="help-row" data-help="${key}" href="${href}"${ext ? ' target="_blank" rel="noopener"' : ''}>
+       <span class="help-row__icon" aria-hidden="true">${icon}</span>
+       <span class="help-row__txt"><strong>${title}</strong><small>${sub}</small></span>
+       <span class="help-row__go" aria-hidden="true">›</span></a>`;
+  const times = SERVICES.map(s =>
+    `<li><span>${bi(s.dayEn, s.dayTe)} · ${bi(s.en, s.te)}</span><b>${s.time}</b></li>`).join('');
+  return `
+  <div class="help-box">
+    <p class="help-box__hello">${bi('Hello! How can we help you?', 'నమస్కారం! మేము మీకు ఎలా సహాయం చేయగలం?')}</p>
+    ${row('live', SITE.youtube + '/live', '🔴', bi('Watch LIVE', 'ప్రత్యక్ష ప్రసారం చూడండి'), bi('Sunday 10 AM IST · YouTube', 'ఆదివారం ఉదయం 10 · YouTube'), true)}
+    <details class="help-row help-times" data-help="times">
+      <summary><span class="help-row__icon" aria-hidden="true">🕙</span>
+        <span class="help-row__txt"><strong>${bi('Service times', 'ఆరాధన సమయాలు')}</strong><small>${bi('Oduru · every week', 'ఓడూరు · ప్రతి వారం')}</small></span>
+        <span class="help-row__go" aria-hidden="true">⌄</span></summary>
+      <ul>${times}</ul>
+    </details>
+    ${row('prayer', SITE.whatsapp + '?text=' + prayer, '🙏', bi('Send a prayer request', 'ప్రార్థన విన్నపం పంపండి'), bi('We will pray for you', 'మీ కొరకు ప్రార్థిస్తాము'), true)}
+    ${row('directions', maps, '📍', bi('Directions', 'దారి చూపించు'), bi('IPC Church, Oduru, West Godavari', 'ఐ.పి.సి చర్చి, ఓడూరు, ప.గో.'), true)}
+    ${row('events', 'events.html', '📅', bi('Events &amp; programs', 'కార్యక్రమాలు'), bi('Upcoming meetings and recordings', 'రాబోయే కూడికలు, వీడియోలు'), false)}
+    ${row('sponsor', 'orphanage.html', '💛', bi('Sponsor a child', 'ఒక బిడ్డను స్పాన్సర్ చేయండి'), bi('Mary House of Compassion Trust', 'మేరీ హౌస్ ఆఫ్ కంపాషన్ ట్రస్ట్'), false)}
+    <div class="help-call">
+      <a data-help="call-bishop" href="tel:${SITE.phone}">📞 ${bi('Bishop P. Moses', 'బిషప్ పి. మోజెస్')}</a>
+      <a data-help="call-billy" href="tel:${SITE.billygrahamPhone}">📞 ${bi('Bro. Billygraham', 'బ్రదర్ బిల్లిగ్రహం')}</a>
+    </div>
+    <a class="help-wa" data-help="whatsapp" href="${SITE.whatsapp}" target="_blank" rel="noopener">💬 ${bi('Chat on WhatsApp', 'WhatsApp లో మాట్లాడండి')}</a>
+  </div>`;
 }
 
 // ── Scroll-reveal (IntersectionObserver) ──────────────
@@ -271,9 +309,9 @@ function initReveal() {
 
 // ── Public view counts ───────────────────────────────────
 // Numbers come from Google Analytics. A GitHub Action (.github/workflows/site-stats.yml)
-// refreshes frontend/data/site-stats.json every hour and publishes it to the public website repo; we read it from there
+// refreshes frontend/data/site-stats.json every hour; we read it straight from the repo
 // so no site rebuild is needed. Footer shows the total once it passes FOOTER_MIN_VISITS.
-const STATS_URL = 'https://raw.githubusercontent.com/Bensonmoses/holyspiritprayerhouse/main/data/site-stats.json';
+const STATS_URL = 'https://raw.githubusercontent.com/Bensonmoses/ministry_website/main/frontend/data/site-stats.json';
 const FOOTER_MIN_VISITS = 1;   // show the real total from the first visit
 function loadSiteStats() {
   fetch(STATS_URL + '?t=' + Math.floor(Date.now() / 300000), { cache: 'no-store' })
@@ -332,6 +370,11 @@ document.addEventListener('DOMContentLoaded', () => {
   if (toggle && popup && closeC) {
     toggle.addEventListener('click', () => popup.classList.toggle('hidden'));
     closeC.addEventListener('click', () => popup.classList.add('hidden'));
+    // count which help options people use (Google Analytics → Events → help_click)
+    popup.addEventListener('click', e => {
+      const el = e.target.closest('[data-help]');
+      if (el && typeof window.gtag === 'function') window.gtag('event', 'help_click', { item: el.dataset.help, page: location.pathname });
+    });
   }
 
   // Scroll shadow on header + progress bar

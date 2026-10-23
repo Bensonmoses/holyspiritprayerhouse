@@ -1317,6 +1317,35 @@ footer {
 }
 .close-button:hover { background: rgba(255,255,255,0.28); }
 
+/* "Ask Us" help box — quick answers */
+.help-box { display: grid; gap: .45rem; padding: 1rem; max-height: min(70vh, 560px); overflow-y: auto; }
+.help-box__hello { margin: 0 0 .3rem; color: var(--text-mid); font-size: .9rem; }
+.help-row {
+  display: grid; grid-template-columns: 34px minmax(0, 1fr) auto; align-items: center; gap: .7rem;
+  padding: .6rem .75rem; border-radius: var(--radius-md); border: 1px solid var(--border-light);
+  background: #fff; color: var(--text-dark); text-decoration: none;
+  transition: border-color var(--transition-fast), background var(--transition-fast);
+}
+a.help-row:hover, a.help-row:focus-visible, .help-times summary:hover { border-color: var(--gold); background: var(--warm-white); }
+.help-row__icon { width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; background: var(--warm-white); font-size: 1.05rem; }
+.help-row__txt { display: grid; gap: .05rem; min-width: 0; }
+.help-row__txt strong { font-size: .9rem; }
+.help-row__txt small { font-size: .76rem; color: var(--text-light); }
+.help-row__go { color: var(--gold); font-size: 1.2rem; font-weight: 700; }
+.help-times { display: block; padding: 0; }
+.help-times summary { list-style: none; display: grid; grid-template-columns: 34px minmax(0, 1fr) auto; align-items: center; gap: .7rem; padding: .6rem .75rem; cursor: pointer; border-radius: var(--radius-md); }
+.help-times summary::-webkit-details-marker { display: none; }
+.help-times[open] .help-row__go { transform: rotate(180deg); }
+.help-times ul { list-style: none; margin: 0; padding: .2rem .9rem .7rem 3.6rem; display: grid; gap: .35rem; }
+.help-times li { display: flex; justify-content: space-between; gap: .6rem; font-size: .8rem; color: var(--text-mid); }
+.help-times li b { color: var(--crimson); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.help-call { display: grid; grid-template-columns: 1fr 1fr; gap: .45rem; }
+.help-call a { text-align: center; padding: .55rem .4rem; border-radius: var(--radius-full); border: 1.5px solid var(--crimson); color: var(--crimson); font-size: .8rem; font-weight: 600; text-decoration: none; }
+.help-call a:hover { background: var(--crimson); color: #fff; }
+.help-wa { text-align: center; padding: .7rem; border-radius: var(--radius-full); background: #25D366; color: #fff; font-weight: 600; font-size: .88rem; text-decoration: none; }
+.help-wa:hover { background: #1EBE5A; color: #fff; }
+.help-row:focus-visible, .help-call a:focus-visible, .help-wa:focus-visible, .help-times summary:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+
 /* ── Page Hero (inner pages) ────────────────────── */
 .page-hero {
   background: linear-gradient(135deg, #0D0D0D 0%, var(--dark-2) 100%);

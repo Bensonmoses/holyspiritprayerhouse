@@ -7,12 +7,19 @@
 // [data-reveal] elements get opacity:0 before any paint
 document.documentElement.classList.add('js');
 
+// browser-tab icon (church logo) for pages that don't declare one
+if (!document.querySelector('link[rel~="icon"]')) {
+  const ic = document.createElement('link'); ic.rel = 'icon'; ic.type = 'image/png'; ic.href = 'images/favicon.png';
+  document.head.appendChild(ic);
+}
+
 const SITE = {
   phone:               '+919848315170',
   phoneDisplay:        '+91 98483 15170',
   billygrahamPhone:    '+919866378567',
   billygrahamPhoneDisplay: '+91 98663 78567',
   email:     'pastorpmoses2014@gmail.com',
+  email2:    'info@holyspiritprayerhouse.com',   // second email: website & official matters
   address:   '4-92, Kotha Colony, Oduru, Penumantra Mandal, West Godavari - 534126, AP, India',
   youtube:   'https://www.youtube.com/@pastorpmoses',
   instagram: 'https://www.instagram.com/hsph_oduru/',
@@ -74,7 +81,7 @@ function renderHeader() {
       <div class="logo-text">
         <strong>
           <span class="english-text">Holy Spirit Prayer House (IPC)</span>
-          <span class="telugu-text">హోలీ స్పిరిట్ మందిరం (IPC)</span>
+          <span class="telugu-text">హోలీ స్పిరిట్ ప్రేయర్ హౌస్ (IPC)</span>
         </strong>
         <span>
           <span class="english-text">Faith · Hope · Love</span>
@@ -131,15 +138,15 @@ function renderFooter() {
             <img src="images/logo_new.jpeg" alt="Holy Spirit Prayer House (IPC)" style="width:52px;height:52px;border-radius:50%;border:2px solid rgba(201,168,76,0.35);">
             <div class="logo-text">
               <strong style="color:#fff;font-size:0.92rem;letter-spacing:0.02em;">
-                <span class="english-text">Holy Spirit Prayer House (IPC)</span>
-                <span class="telugu-text">హోలీ స్పిరిట్ మందిరం (IPC)</span>
+                <span class="english-text">Holy Spirit Prayer House (IPC) Oduru</span>
+                <span class="telugu-text">హోలీ స్పిరిట్ ప్రేయర్ హౌస్ (IPC) ఓడూరు</span>
               </strong>
             </div>
           </a>
           <div class="footer-divider"></div>
           <p>
             <span class="english-text">A beacon of faith, hope, and love in Oduru, West Godavari, Andhra Pradesh. Serving the community for over 30 years.</span>
-            <span class="telugu-text">ఒడూరులో విశ్వాసం, ఆశ మరియు ప్రేమ యొక్క దీపస్తంభం. 30 సంవత్సరాలకు పైగా సమాజానికి సేవ చేస్తున్నాం.</span>
+            <span class="telugu-text">ఓడూరులో విశ్వాసం, ఆశ మరియు ప్రేమ యొక్క దీపస్తంభం. 30 సంవత్సరాలకు పైగా సమాజానికి సేవ చేస్తున్నాం.</span>
           </p>
           <div class="footer-social">
             <a href="${SITE.youtube}" target="_blank" class="social-btn" aria-label="YouTube" title="YouTube">▶</a>
@@ -180,7 +187,7 @@ function renderFooter() {
           <ul class="footer-contact">
             <li>
               <span class="fc-icon">📍</span>
-              <span><span class="english-text">Oduru, Penumantra Mandal, West Godavari, AP — 534126</span><span class="telugu-text">ఒడూరు, పెనుమంత్ర మండలం, పశ్చిమ గోదావరి — 534126</span></span>
+              <span><span class="english-text">Oduru, Penumantra Mandal, West Godavari, AP — 534126</span><span class="telugu-text">ఓడూరు, పెనుమంత్ర మండలం, పశ్చిమ గోదావరి — 534126</span></span>
             </li>
             <li>
               <span class="fc-icon">📞</span>
@@ -201,6 +208,13 @@ function renderFooter() {
               <span><a href="mailto:${SITE.email}" style="color:var(--gold);">${SITE.email}</a></span>
             </li>
             <li>
+              <span class="fc-icon">✉</span>
+              <div style="display:flex;flex-direction:column;gap:0.18rem;">
+                <span style="color:rgba(255,255,255,0.28);font-size:0.65rem;text-transform:uppercase;letter-spacing:0.1em;"><span class="english-text">Website &amp; official matters</span><span class="telugu-text">వెబ్‌సైట్ &amp; అధికారిక విషయాలు</span></span>
+                <a href="mailto:${SITE.email2}" style="color:var(--gold);">${SITE.email2}</a>
+              </div>
+            </li>
+            <li>
               <span class="fc-icon">💬</span>
               <span><a href="${SITE.whatsapp}" target="_blank" style="color:#25D366;font-weight:600;"><span class="english-text">Chat on WhatsApp</span><span class="telugu-text">WhatsApp లో మాట్లాడండి</span></a></span>
             </li>
@@ -215,7 +229,7 @@ function renderFooter() {
     <div class="container" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;width:100%;">
       <span style="display:inline-flex;align-items:center;gap:0.4rem;">
         <span style="color:var(--gold);">✝</span>
-        &copy; 2025 Holy Spirit Prayer House (IPC).
+        &copy; ${new Date().getFullYear()} Holy Spirit Prayer House (IPC) Oduru.
         <span class="english-text">All Rights Reserved.</span>
         <span class="telugu-text">అన్ని హక్కులు పరిరక్షించబడినవి.</span>
       </span>

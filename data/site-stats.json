@@ -1,11 +1,11 @@
 {
-  "updated": "2026-10-26T04:14:40.771Z",
+  "updated": "2026-10-26T10:54:46.086Z",
   "totalVisits": 129,
-  "totalPageViews": 556,
+  "totalPageViews": 580,
   "totalUsers": 59,
   "programs": {
     "a-day-with-jesus-2026": {
-      "views": 27,
+      "views": 28,
       "shares": 2
     },
     "pentecost-fasting-2026": {
@@ -14,10 +14,10 @@
     }
   },
   "pages": {
-    "/events.html": 161,
-    "/index.html": 154,
+    "/index.html": 175,
+    "/events.html": 162,
     "/": 75,
-    "/orphanage.html": 72,
+    "/orphanage.html": 74,
     "/family.html": 41,
     "/orphan-1.html": 9,
     "/about.html": 8,

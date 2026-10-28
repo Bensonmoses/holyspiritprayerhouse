@@ -19,6 +19,12 @@
 .bk-empty { grid-column: 1 / -1; text-align: center; max-width: 560px; margin: 0 auto; padding: 2.5rem 1.5rem;
   border: 1px dashed rgba(155,28,28,0.35); border-radius: 12px; background: #fdf7f4; }
 .bk-empty__icon { font-size: 2.5rem; display: block; margin-bottom: .5rem; }
+.bk-publish { text-align: center; max-width: 560px; margin: 2rem auto 0; padding: 1.5rem; border-top: 3px solid var(--gold);
+  border-radius: 12px; background: #fffaf0; box-shadow: 0 2px 16px rgba(155,28,28,0.09); }
+.bk-publish h3 { margin: 0 0 .5rem; color: var(--crimson); }
+.bk-publish p { margin: 0; }
+.bk-publish a[href^="tel"] { color: var(--crimson); font-weight: 600; white-space: nowrap; }
+.bk-publish .bk-actions { margin: 1rem 0 0; }
 
 .bk-layout { display: grid; grid-template-columns: 260px 1fr; gap: 2rem; padding-block: 2.5rem; align-items: start; }
 .bk-toc { position: sticky; top: 1rem; background: #fdf5f2; border: 1px solid rgba(155,28,28,0.13); border-radius: 12px; padding: 1rem 1.25rem; }

@@ -96,6 +96,7 @@ function renderHeader() {
         <li><a href="about.html"><span class="english-text">About</span><span class="telugu-text">గురించి</span></a></li>
         <li><a href="family.html"><span class="english-text">Our Family</span><span class="telugu-text">మా కుటుంబం</span></a></li>
         <li><a href="sermons.html"><span class="english-text">Sermons</span><span class="telugu-text">ప్రసంగాలు</span></a></li>
+        <li><a href="books.html"><span class="english-text">Books</span><span class="telugu-text">పుస్తకాలు</span></a></li>
         <li><a href="ministries.html"><span class="english-text">Ministries</span><span class="telugu-text">సేవలు</span></a></li>
         <li><a href="events.html"><span class="english-text">Events</span><span class="telugu-text">ఈవెంట్స్</span></a></li>
         <li><a href="contact.html"><span class="english-text">Contact</span><span class="telugu-text">సంప్రదించండి</span></a></li>
@@ -114,6 +115,7 @@ function renderHeader() {
       <li><a href="about.html"><span class="english-text">About</span><span class="telugu-text">గురించి</span></a></li>
       <li><a href="family.html"><span class="english-text">Our Family</span><span class="telugu-text">మా కుటుంబం</span></a></li>
       <li><a href="sermons.html"><span class="english-text">Sermons</span><span class="telugu-text">ప్రసంగాలు</span></a></li>
+      <li><a href="books.html"><span class="english-text">Books</span><span class="telugu-text">పుస్తకాలు</span></a></li>
       <li><a href="ministries.html"><span class="english-text">Ministries</span><span class="telugu-text">సేవలు</span></a></li>
       <li><a href="events.html"><span class="english-text">Events</span><span class="telugu-text">ఈవెంట్స్</span></a></li>
       <li><a href="contact.html"><span class="english-text">Contact</span><span class="telugu-text">సంప్రదించండి</span></a></li>
@@ -162,6 +164,7 @@ function renderFooter() {
           <ul>
             <li><a href="about.html"><span class="english-text">About Us</span><span class="telugu-text">మా గురించి</span></a></li>
             <li><a href="sermons.html"><span class="english-text">Sermons</span><span class="telugu-text">ప్రసంగాలు</span></a></li>
+            <li><a href="books.html"><span class="english-text">Books</span><span class="telugu-text">పుస్తకాలు</span></a></li>
             <li><a href="ministries.html"><span class="english-text">Ministries</span><span class="telugu-text">సేవలు</span></a></li>
             <li><a href="orphanage.html"><span class="english-text">Orphanage</span><span class="telugu-text">అనాథాశ్రమం</span></a></li>
             <li><a href="family.html"><span class="english-text">Our Family</span><span class="telugu-text">మా కుటుంబం</span></a></li>

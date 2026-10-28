@@ -1,7 +1,7 @@
 {
-  "updated": "2026-10-28T11:14:46.249Z",
-  "totalVisits": 139,
-  "totalPageViews": 615,
+  "updated": "2026-10-28T23:03:40.036Z",
+  "totalVisits": 141,
+  "totalPageViews": 632,
   "totalUsers": 65,
   "programs": {
     "a-day-with-jesus-2026": {
@@ -14,16 +14,17 @@
     }
   },
   "pages": {
-    "/index.html": 194,
+    "/index.html": 205,
     "/events.html": 164,
-    "/": 88,
+    "/": 89,
     "/orphanage.html": 75,
-    "/family.html": 41,
+    "/family.html": 42,
     "/orphan-1.html": 9,
     "/about.html": 8,
     "/person-praneed.html": 7,
-    "/sermons.html": 6,
+    "/sermons.html": 7,
     "/ministries.html": 4,
+    "/books.html": 3,
     "/contact.html": 3,
     "/person-esthar.html": 3,
     "/volunteer.html": 3,

@@ -27,6 +27,51 @@
 
 window.HSPH_EVENTS = [
   {
+    id: "brahmana-cheruvu-fasting-2026",
+    title: {
+      en: "Pentecost Fasting Prayer Meetings",
+      te: "పెంతెకొస్తు ఉపవాస ప్రార్థన కూడికలు"
+    },
+    tagline: { en: "Organized by Holy Spirit Prayer House", te: "హోలీ స్పిరిట్ ప్రేయర్ హౌస్ వారు నిర్వహించు" },
+    place: {
+      en: "Brahmana Cheruvu, West Godavari",
+      te: "బ్రాహ్మణ చెరువు, ప.గో. జిల్లా"
+    },
+    hosts: { en: "Invited by Bro. P. Billygraham Moses, church elders & believers",
+             te: "ప్రేమతో ఆహ్వానించువారు: బ్రదర్. పి. బిల్లిగ్రహం మోజెస్, సంఘపెద్దలు, విశ్వాసులు" },
+    verse: { en: "So the church … had peace and was being built up. — Acts 9:31",
+             te: "సంఘము క్షేమాభివృద్ధి నొందుచు సమాధానము కలిగియుండెను. — అపొ 9:31" },
+    poster: "images/Events/brahmana-cheruvu-fasting-2026/day-01-night-poster.jpg",
+    sessions: [
+      { date: "2026-11-05", time: "19:00",
+        label:   { en: "Day 1 · Night", te: "మొదటి రోజు రాత్రి" },
+        speaker: { en: "Pastor B. Bowden Beer", te: "పాస్టర్ బి. బౌడన్ బీర్ గారు" },
+        poster:  "images/Events/brahmana-cheruvu-fasting-2026/day-01-night-poster.jpg",
+        live:    "https://youtube.com/live/WOldQEg0fj4" },
+      { date: "2026-11-06", time: "10:00",
+        label:   { en: "Day 2 · Morning", te: "రెండవ రోజు పగలు" },
+        speaker: { en: "Pastor Y. Kishan Kumar", te: "పాస్టర్ వై. కిషన్ కుమార్ గారు" },
+        poster:  "images/Events/brahmana-cheruvu-fasting-2026/day-02-poster.jpg",
+        live:    "https://youtube.com/live/MmHEJsG-pcA" },
+      { date: "2026-11-06", time: "18:00",
+        label:   { en: "Day 2 · Night", te: "రెండవ రోజు రాత్రి" },
+        speaker: { en: "Pastor Y. Kishan Kumar", te: "పాస్టర్ వై. కిషన్ కుమార్ గారు" },
+        poster:  "images/Events/brahmana-cheruvu-fasting-2026/day-02-night-poster.jpg",
+        live:    "https://youtube.com/live/slSt6bewc4w" },
+      { date: "2026-11-07", time: "10:00",
+        label:   { en: "Day 3 · Morning", te: "మూడవ రోజు పగలు" },
+        speaker: { en: "Bishop B. David Raju", te: "బిషప్ బి. డేవిడ్ రాజు గారు" },
+        poster:  "images/Events/brahmana-cheruvu-fasting-2026/day-03-poster.jpg",
+        live:    "https://youtube.com/live/cuy9uMxHaqM" },
+      { date: "2026-11-07", time: "18:00",
+        label:   { en: "Day 3 · Night", te: "మూడవ రోజు రాత్రి" },
+        speaker: { en: "Bishop B. David Raju", te: "బిషప్ బి. డేవిడ్ రాజు గారు" },
+        poster:  "images/Events/brahmana-cheruvu-fasting-2026/day-03-night-poster.jpg",
+        live:    "https://youtube.com/live/e0Yrz0dlzGY" }
+    ]
+  },
+
+  {
     id: "pentecost-fasting-2026",
     title: {
       en: "Pentecost Prayer — Altar of Incense Fasting Meetings",
@@ -157,10 +202,12 @@ window.HSPH_EVENTS = [
       { date: "2026-10-22", time: "10:00",
         label:   { en: "Day 12 · Morning", te: "పన్నెండవ రోజు పగలు" },
         speaker: { en: "Pastor Jaya Prasad Vardhanapu", te: "పాస్టర్ జయ ప్రసాద్ వర్ధనపు గారు" },
+        poster:  "images/Events/pentecost-fasting-2026/day-12-poster.jpg",
         live:    "https://youtube.com/live/8uMyi0EE9Qg" },
       { date: "2026-10-22", time: "18:00",
         label:   { en: "Day 12 · Night", te: "పన్నెండవ రోజు రాత్రి" },
         speaker: { en: "Pastor Jaya Prasad Vardhanapu", te: "పాస్టర్ జయ ప్రసాద్ వర్ధనపు గారు" },
+        poster:  "images/Events/pentecost-fasting-2026/day-12-night-poster.jpg",
         live:    "https://youtube.com/live/MGvnJKciEJ8" }
     ]
   },

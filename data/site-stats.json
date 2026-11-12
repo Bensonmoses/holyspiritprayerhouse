@@ -1,8 +1,8 @@
 {
-  "updated": "2026-11-11T01:09:19.402Z",
-  "totalVisits": 177,
-  "totalPageViews": 699,
-  "totalUsers": 92,
+  "updated": "2026-11-12T08:07:22.057Z",
+  "totalVisits": 178,
+  "totalPageViews": 702,
+  "totalUsers": 93,
   "programs": {
     "a-day-with-jesus-2026": {
       "views": 28,
@@ -18,9 +18,9 @@
     }
   },
   "pages": {
-    "/index.html": 223,
+    "/index.html": 225,
     "/events.html": 167,
-    "/": 118,
+    "/": 119,
     "/orphanage.html": 80,
     "/family.html": 44,
     "/books.html": 10,

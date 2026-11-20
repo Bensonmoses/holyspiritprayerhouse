@@ -1,32 +1,19 @@
 {
-  "updated": "2026-11-19T03:03:30.563Z",
-  "totalVisits": 185,
-  "totalPageViews": 709,
-  "totalUsers": 97,
-  "programs": {
-    "a-day-with-jesus-2026": {
-      "views": 28,
-      "shares": 2
-    },
-    "pentecost-fasting-2026": {
-      "views": 23,
-      "shares": 4
-    },
-    "brahmana-cheruvu-fasting-2026": {
-      "views": 1,
-      "shares": 0
-    }
-  },
+  "updated": "2026-11-20T11:12:54.282Z",
+  "totalVisits": 186,
+  "totalPageViews": 716,
+  "totalUsers": 98,
+  "programs": {},
   "pages": {
-    "/index.html": 226,
+    "/index.html": 227,
     "/events.html": 167,
-    "/": 123,
-    "/orphanage.html": 82,
+    "/": 125,
+    "/orphanage.html": 83,
     "/family.html": 44,
+    "/about.html": 11,
     "/books.html": 10,
-    "/about.html": 9,
     "/orphan-1.html": 9,
-    "/sermons.html": 8,
+    "/sermons.html": 9,
     "/person-praneed.html": 7,
     "/contact.html": 4,
     "/ministries.html": 4,
